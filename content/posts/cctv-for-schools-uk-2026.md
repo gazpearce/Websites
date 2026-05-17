@@ -16,6 +16,8 @@ showToc: true
 weight: 5
 ---
 
+![CCTV camera at UK school entrance](https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1200&h=630&fit=crop)
+
 ## Why Schools Need CCTV in 2026
 
 Schools face unique security challenges including safeguarding students, preventing vandalism, managing access control, and protecting staff and pupils from external threats. CCTV supports safeguarding obligations under the Education Act and provides vital evidence for incident management.

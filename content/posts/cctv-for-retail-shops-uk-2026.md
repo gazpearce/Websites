@@ -16,6 +16,8 @@ showToc: true
 weight: 3
 ---
 
+![CCTV camera installation in UK retail shop](https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&h=630&fit=crop)
+
 ## Why Retail Shops Need CCTV in 2026
 
 Retail crime in the UK has surged to record levels in 2026. The British Retail Consortium reports that shoplifting incidents have increased by 30% since 2023, with organised retail crime rings targeting high streets across the country. For shop owners, CCTV is not just a deterrent - it is an essential tool for loss prevention, staff protection, and insurance compliance.

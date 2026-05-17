@@ -16,6 +16,8 @@ showToc: true
 weight: 3
 ---
 
+![CCTV camera in UK care home communal area](https://images.unsplash.com/photo-1559526324-593bc073d938?w=1200&h=630&fit=crop)
+
 ## Why Care Homes Need CCTV in 2026
 
 Care homes face unique security and safeguarding challenges. CCTV protects vulnerable residents, supports CQC compliance, deters abuse, and provides evidence for investigations. But it must be installed correctly — with strict attention to privacy, consent, and data protection.

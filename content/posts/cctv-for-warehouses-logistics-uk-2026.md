@@ -16,6 +16,8 @@ showToc: true
 weight: 4
 ---
 
+![CCTV camera in UK warehouse loading bay](https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1200&h=630&fit=crop)
+
 ## Why Warehouses Need CCTV in 2026
 
 Warehouses and logistics centres handle high-value goods, operate around the clock, and face risks from internal theft, external break-ins, and health and safety incidents. A comprehensive CCTV system protects inventory, monitors loading bays, ensures compliance with safety protocols, and provides vital evidence for investigations.

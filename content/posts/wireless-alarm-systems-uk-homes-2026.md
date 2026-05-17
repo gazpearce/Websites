@@ -19,6 +19,8 @@ showToc: true
 weight: 2
 ---
 
+![Wireless alarm system control panel in modern UK home](https://images.unsplash.com/photo-1558002038-1055907df827?w=1200&h=630&fit=crop)
+
 ## The State of Wireless Alarms in 2026
 
 Wireless alarm technology has matured to the point where it's now a genuine alternative to wired systems for most UK homes. The big question isn't "are wireless alarms reliable?" anymore — it's "which wireless alarm system is right for your property?"

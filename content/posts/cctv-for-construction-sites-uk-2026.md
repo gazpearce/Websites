@@ -16,6 +16,8 @@ showToc: true
 weight: 4
 ---
 
+![Temporary CCTV camera on UK construction site](https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&h=630&fit=crop)
+
 ## Why Construction Sites Need CCTV in 2026
 
 Construction sites are prime targets for theft. Plant machinery, tools, copper cable, building materials, and fuel are all valuable and easily resold. The Construction Industry Training Board estimates that construction site theft costs the UK industry over £800 million annually.
