@@ -78,4 +78,7 @@ def generate_high_quality_posts(force=False):
     print(f"DONE: Generated and published 1 premium forensic article ({slug}).")
 
 if __name__ == "__main__":
-    generate_high_quality_posts()
+    import sys
+    force = "--force" in sys.argv
+    generate_high_quality_posts(force=force)
+
