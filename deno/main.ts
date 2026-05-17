@@ -1,4 +1,4 @@
-const STATIC_DIR = "public";
+const STATIC_DIR = ".";
 
 const MIME_TYPES: Record<string, string> = {
   ".html": "text/html; charset=utf-8",
