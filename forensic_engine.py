@@ -154,7 +154,7 @@ class ForensicEngine:
 </head>
 <body>
     <div class="container">
-        <a href="index.html" style="border:none; color: var(--muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px;">&larr; Back to Main Domain</a>
+        <a href="../index.html" style="border:none; color: var(--muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px;">&larr; Back to Main Domain</a>
         <header style="margin-top: 2rem;">
             <div class="forensic-stamp">Verified Forensic Intelligence 2026</div>
             <h1>{title}</h1>
