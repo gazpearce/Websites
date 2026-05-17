@@ -119,3 +119,8 @@ business-security-hartlepool-2026-audit.html
 cctv-installation-bradford-2026-audit.html
 structured-cabling-installation-basics.html
 cctv-installation-cost-newcastle.html
+network-monitoring-solutions-overview.html
+fiber-optic-upgrade-guide.html
+poe-power-budget-planning.html
+cable-management-best-practices.html
+secure-iot-device-integration.html
