@@ -19,8 +19,10 @@ class ForensicEngine:
         "cctv_forensic_infographic.png"
     ]
     DATA_IMAGES = [
-        "structured_cabling_overview.jpg",
-        "telecom_room_setup.jpg"
+        "structured_cabling_overview.png",
+        "six_subsystems_cabling.png",
+        "telecom_room_setup.png",
+        "cabling_standards_comparison.png"
     ]
 
     @staticmethod
@@ -38,6 +40,18 @@ class ForensicEngine:
         """
         agg_data = ForensicEngine.get_aggregated_data()
         markdown = agg_data.get("body_markdown", "")
+        
+        # Stateful image pools to guarantee unique images per post
+        cctv_pool = list(ForensicEngine.CCTV_IMAGES)
+        alarm_pool = list(ForensicEngine.ALARM_IMAGES)
+        data_pool = list(ForensicEngine.DATA_IMAGES)
+        random.shuffle(cctv_pool)
+        random.shuffle(alarm_pool)
+        random.shuffle(data_pool)
+        
+        cctv_idx = 0
+        alarm_idx = 0
+        data_idx = 0
         
         # Simple Markdown to HTML parser
         html_lines = []
@@ -57,11 +71,14 @@ class ForensicEngine:
             # Images
             elif '[Image:' in line:
                 if "cctv" in service.lower() or "hikvision" in service.lower():
-                    img_src = random.choice(ForensicEngine.CCTV_IMAGES)
+                    img_src = cctv_pool[cctv_idx % len(cctv_pool)]
+                    cctv_idx += 1
                 elif "alarm" in service.lower() or "security" in service.lower():
-                    img_src = random.choice(ForensicEngine.ALARM_IMAGES)
+                    img_src = alarm_pool[alarm_idx % len(alarm_pool)]
+                    alarm_idx += 1
                 else:
-                    img_src = random.choice(ForensicEngine.DATA_IMAGES)
+                    img_src = data_pool[data_idx % len(data_pool)]
+                    data_idx += 1
                     
                 alt_text = "Technical Implementation"
                 if "Alt text:" in line:
