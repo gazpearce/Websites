@@ -138,6 +138,10 @@ Yes. CCTV footage is admissible in UK courts as long as it was obtained legally.
 
 Construction site security is non-negotiable. The cost of a single theft can exceed the cost of an entire CCTV system. Invest in proper surveillance from day one.
 
+For a complete site security strategy, pair your CCTV with a [wireless alarm system](/posts/wireless-alarm-systems-uk-homes-2026/) for after-hours protection. If you also manage [warehouse facilities](/posts/cctv-for-warehouses-logistics-uk-2026/), the same ANPR and perimeter monitoring principles apply.
+
+You can also explore my [open-source security tools on GitHub](https://github.com/gazpearce) for configuration templates and deployment scripts.
+
 For professional construction site CCTV across Northern England, [contact Gary Pearce](tel:07830638337).
 
 ---

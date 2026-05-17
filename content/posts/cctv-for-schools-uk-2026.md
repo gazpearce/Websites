@@ -138,7 +138,11 @@ Ofsted doesn't specifically assess CCTV, but a well-managed CCTV system demonstr
 
 ## Final Thoughts
 
-School CCTV is about protecting children — not surveillance. Done correctly, it supports safeguarding, improves site security, and gives parents confidence.
+School CCTV is about protecting children - not surveillance. Done correctly, it supports safeguarding, improves site security, and gives parents confidence.
+
+For a complete school security strategy, pair your CCTV with [access control and alarm systems](/posts/wireless-alarm-systems-uk-homes-2026/). If you also manage care facilities, my guide on [care home CCTV and CQC compliance](/posts/cctv-for-care-homes-uk-2026/) covers similar safeguarding requirements.
+
+You can also find my [open-source security tools on GitHub](https://github.com/gazpearce) — including configuration templates and compliance checklists.
 
 For professional school CCTV across Northern England, [contact Gary Pearce](tel:07830638337).
 

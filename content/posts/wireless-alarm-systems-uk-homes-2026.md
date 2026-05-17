@@ -248,6 +248,10 @@ The best wireless alarm system for your home depends on three things: **your bud
 - If you have Hikvision CCTV: **Hikvision AX Pro**
 - If you're on a tight budget: **Ring Alarm Pro**
 
+For a complete home security setup, pair your alarm with a professional [CCTV camera installation](/posts/best-cctv-cameras-uk-homes-2026/). If you run a business, my guides on [CCTV for care homes](/posts/cctv-for-care-homes-uk-2026/) and [school security systems](/posts/cctv-for-schools-uk-2026/) cover compliance requirements in detail.
+
+You can also browse my [security automation projects on GitHub](https://github.com/gazpearce) for open-source tools and configuration templates.
+
 If you're in the North East, Yorkshire, or North West and need a professional installation, [get in touch](tel:07830638337). I'll survey your property, recommend the right system, and install it to EN 50131 standards.
 
 ---

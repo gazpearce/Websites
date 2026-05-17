@@ -91,6 +91,8 @@ This is the single most common question I get asked. Here's the honest answer: i
 
 For permanent home installations, **wired PoE is always the better choice**. The reliability, video quality, and lack of ongoing costs make it worth the higher upfront investment. Wireless is fine for renters or as a temporary measure, but I've lost count of how many wireless systems I've been called to "fix" because the WiFi dropped, the battery died, or the cloud subscription expired.
 
+If you're also considering a [wireless alarm system for your home](/posts/wireless-alarm-systems-uk-homes-2026/), the same principle applies — wired systems are more reliable long-term.
+
 ---
 
 ## Top CCTV Cameras for UK Homes in 2026
@@ -255,6 +257,10 @@ Yes. Modern CCTV cameras use one of three technologies for night vision: **IR (i
 ## Final Thoughts
 
 The best CCTV system for your home is one that's **correctly positioned, properly configured, and regularly maintained**. A £500 system installed by a professional will outperform a £2,000 system installed by someone who doesn't know what they're doing.
+
+If you're also looking at [wireless alarm systems](/posts/wireless-alarm-systems-uk-homes-2026/) for your home, I've written a detailed comparison of Ajax vs Hikvision AX Pro vs Ring. For business owners, check out my guides on [CCTV for retail shops](/posts/cctv-for-retail-shops-uk-2026/) and [warehouse security](/posts/cctv-for-warehouses-logistics-uk-2026/).
+
+You can also find my [open-source security tools on GitHub](https://github.com/gazpearce) — including automation scripts and configuration templates.
 
 If you're in the North East, Yorkshire, or North West and need a professional installation, [get in touch](tel:07830638337). I'll survey your property, recommend the right system, and install it to NSI/SSAIB standards. No hard sell, no unnecessary cameras — just honest advice and quality workmanship.
 
