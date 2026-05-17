@@ -41,12 +41,12 @@ def deploy():
     # 0. Create/Update a Heartbeat file to ensure there's ALWAYS a change
     heartbeat_path = os.path.join(WEBSITE_DIR, "HEARTBEAT.md")
     with open(heartbeat_path, "w") as f:
-                f.write(f"# Forensic Swarm Heartbeat\nLast Active: {timestamp}\nStatus: Autonomous 24/7 Propagation Active")
-        # Sync generated blog posts to public folder for Cloudflare
-        subprocess.run(["cmd", "/c", "xcopy /S /E /Y blog\\ public\\blog\\"], cwd=WEBSITE_DIR, capture_output=True)
-        # Ensure images are also synced
-        subprocess.run(["cmd", "/c", "xcopy /S /E /Y Images\\ public\\Images\\"], cwd=WEBSITE_DIR, capture_output=True)
+        f.write(f"# Forensic Swarm Heartbeat\nLast Active: {timestamp}\nStatus: Autonomous 24/7 Propagation Active")
     
+    # Sync generated blog posts to public folder for Cloudflare
+    subprocess.run(["cmd", "/c", "xcopy /S /E /Y blog\\ public\\blog\\"], cwd=WEBSITE_DIR, capture_output=True)
+    # Ensure images are also synced
+    subprocess.run(["cmd", "/c", "xcopy /S /E /Y Images\\ public\\Images\\"], cwd=WEBSITE_DIR, capture_output=True)
     # 1. Add all files
     run_command("git add .")
     
