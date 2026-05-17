@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Series on CCTV Systems UK | Expert Security Guides 2026</title>
-    <link>https://cctv-blog-render.onrender.com/series/</link>
+    <link>https://cctv-hugo-blog.gazpearce.deno.net/series/</link>
     <description>Recent content in Series on CCTV Systems UK | Expert Security Guides 2026</description>
     <generator>Hugo</generator>
     <language>en-gb</language>
     <lastBuildDate>Sun, 17 May 2026 20:18:03 +0000</lastBuildDate>
-    <atom:link href="https://cctv-blog-render.onrender.com/series/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://cctv-hugo-blog.gazpearce.deno.net/series/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Security Guides 2026</title>
-      <link>https://cctv-blog-render.onrender.com/series/security-guides-2026/</link>
+      <link>https://cctv-hugo-blog.gazpearce.deno.net/series/security-guides-2026/</link>
       <pubDate>Sun, 17 May 2026 20:18:03 +0000</pubDate>
-      <guid>https://cctv-blog-render.onrender.com/series/security-guides-2026/</guid>
+      <guid>https://cctv-hugo-blog.gazpearce.deno.net/series/security-guides-2026/</guid>
       <description></description>
     </item>
     <item>
       <title>Security Systems 2026</title>
-      <link>https://cctv-blog-render.onrender.com/series/security-systems-2026/</link>
+      <link>https://cctv-hugo-blog.gazpearce.deno.net/series/security-systems-2026/</link>
       <pubDate>Sun, 17 May 2026 09:00:00 +0100</pubDate>
-      <guid>https://cctv-blog-render.onrender.com/series/security-systems-2026/</guid>
+      <guid>https://cctv-hugo-blog.gazpearce.deno.net/series/security-systems-2026/</guid>
       <description></description>
     </item>
     <item>
       <title>CCTV Buyer Guides 2026</title>
-      <link>https://cctv-blog-render.onrender.com/series/cctv-buyer-guides-2026/</link>
+      <link>https://cctv-hugo-blog.gazpearce.deno.net/series/cctv-buyer-guides-2026/</link>
       <pubDate>Sun, 17 May 2026 08:00:00 +0100</pubDate>
-      <guid>https://cctv-blog-render.onrender.com/series/cctv-buyer-guides-2026/</guid>
+      <guid>https://cctv-hugo-blog.gazpearce.deno.net/series/cctv-buyer-guides-2026/</guid>
       <description></description>
     </item>
   </channel>

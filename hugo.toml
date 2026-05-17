@@ -1,4 +1,4 @@
-baseURL = "https://cctv-blog-render.onrender.com/"
+baseURL = "https://cctv-hugo-blog.gazpearce.deno.net/"
 languageCode = "en-gb"
 title = "CCTV Systems UK | Expert Security Guides 2026"
 theme = "PaperMod"
