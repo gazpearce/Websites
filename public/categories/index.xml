@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Categories on CCTV Systems UK | Expert Security Guides 2026</title>
+    <link>https://cctv-blog-render.onrender.com/categories/</link>
+    <description>Recent content in Categories on CCTV Systems UK | Expert Security Guides 2026</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sun, 17 May 2026 09:00:00 +0100</lastBuildDate>
+    <atom:link href="https://cctv-blog-render.onrender.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Alarm Systems</title>
+      <link>https://cctv-blog-render.onrender.com/categories/alarm-systems/</link>
+      <pubDate>Sun, 17 May 2026 09:00:00 +0100</pubDate>
+      <guid>https://cctv-blog-render.onrender.com/categories/alarm-systems/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Buyer Guides</title>
+      <link>https://cctv-blog-render.onrender.com/categories/buyer-guides/</link>
+      <pubDate>Sun, 17 May 2026 09:00:00 +0100</pubDate>
+      <guid>https://cctv-blog-render.onrender.com/categories/buyer-guides/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Home Security</title>
+      <link>https://cctv-blog-render.onrender.com/categories/home-security/</link>
+      <pubDate>Sun, 17 May 2026 08:00:00 +0100</pubDate>
+      <guid>https://cctv-blog-render.onrender.com/categories/home-security/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
