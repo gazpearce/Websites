@@ -34,7 +34,7 @@ def run_master():
                 if script == "swarm_push.py":
                     log_master("SYNCING ROOT TO PUBLIC FOR CLOUDFLARE")
                     subprocess.run(["cmd", "/c", "xcopy /Y index.html public\\"], cwd=WEBSITE_DIR, capture_output=True)
-                    subprocess.run(["cmd", "/c", "xcopy /S /E /Y blog public\\blog\\"], cwd=WEBSITE_DIR, capture_output=True)
+                    subprocess.run(["cmd", "/c", "xcopy /S /E /Y static\\blog public\\blog\\"], cwd=WEBSITE_DIR, capture_output=True)
                 
                 # 2. Run the script
                 script_path = os.path.join(WEBSITE_DIR, script)

@@ -3,7 +3,7 @@ import json
 from forensic_engine import ForensicEngine
 
 WEBSITE_DIR = r"C:\Users\Gary\.gemini\antigravity\scratch\Websites"
-BLOG_DIR = os.path.join(WEBSITE_DIR, "blog")
+BLOG_DIR = os.path.join(WEBSITE_DIR, "static", "blog")
 TRACKER_FILE = os.path.join(WEBSITE_DIR, "completed_slugs.txt")
 DATA_FILE = os.path.join(WEBSITE_DIR, "aggregated_data.json")
 
