@@ -254,19 +254,6 @@ Yes. Modern CCTV cameras use one of three technologies for night vision: **IR (i
 
 ---
 
-## Quick Navigation — Table of Contents
-
-| Section | Topic |
-|---|---|
-| [Choosing the Right CCTV System](#choosing-the-right-cctv-system-for-your-uk-home-in-2026) | Overview and why this guide matters |
-| [What's Changed in 2026](#whats-changed-in-home-cctv-for-2026) | 4K, AI detection, colour night vision, GDPR |
-| [Wired vs Wireless](#wired-vs-wireless-cctv--which-is-right-for-your-home) | PoE vs WiFi comparison with pros and cons |
-| [Top Camera Recommendations](#top-cctv-cameras-for-uk-homes-in-2026) | Hikvision, Reolink, Eufy, and doorbell cameras |
-| [Legal Requirements](#uk-legal-requirements-for-home-cctv-in-2026) | ICO registration, GDPR, planning permission |
-| [Cost Breakdown](#how-much-does-home-cctv-cost-in-2026) | Pricing table for all system types |
-| [Camera Placement](#where-to-position-cctv-cameras-on-your-home) | Essential positions, height, angle, mistakes |
-| [FAQs](#frequently-asked-questions) | 10 common questions answered |
-
 ## Camera Comparison Table
 
 | Camera | Resolution | Type | Night Vision | Price | Best For |
@@ -296,6 +283,23 @@ Yes. Modern CCTV cameras use one of three technologies for night vision: **IR (i
 | Subject Access Requests | All systems | Free | Respond within 30 days |
 | 31-Day Retention | All systems | Included | Configure NVR auto-overwrite |
 | Listed Building Consent | Listed properties | £100-£200 | Apply to local authority |
+
+---
+
+## Quick Navigation — Table of Contents
+
+| Section | Topic |
+|---|---|
+| [Choosing the Right CCTV System](#choosing-the-right-cctv-system-for-your-uk-home-in-2026) | Overview and why this guide matters |
+| [What's Changed in 2026](#whats-changed-in-home-cctv-for-2026) | 4K, AI detection, colour night vision, GDPR |
+| [Wired vs Wireless](#wired-vs-wireless-cctv--which-is-right-for-your-home) | PoE vs WiFi comparison with pros and cons |
+| [Top Camera Recommendations](#top-cctv-cameras-for-uk-homes-in-2026) | Hikvision, Reolink, Eufy, and doorbell cameras |
+| [Legal Requirements](#uk-legal-requirements-for-home-cctv-in-2026) | ICO registration, GDPR, planning permission |
+| [Cost Breakdown](#how-much-does-home-cctv-cost-in-2026) | Pricing table for all system types |
+| [Camera Placement](#where-to-position-cctv-cameras-on-your-home) | Essential positions, height, angle, mistakes |
+| [FAQs](#frequently-asked-questions) | 10 common questions answered |
+
+---
 
 ## Final Thoughts
 

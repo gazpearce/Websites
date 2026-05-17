@@ -163,19 +163,6 @@ For multi-site operations, I recommend a centralised NVR system with remote acce
 
 ---
 
-## Quick Navigation — Table of Contents
-
-| Section | Topic |
-|---|---|
-| [Why Retail Needs CCTV](#why-retail-shops-need-cctv-in-2026) | Shoplifting surge and crime statistics |
-| [Legal Requirements](#legal-requirements-for-retail-cctv) | ICO, GDPR, audio recording rules |
-| [Best Cameras](#best-cctv-cameras-for-retail-shops) | Hikvision, Reolink, fisheye options |
-| [Camera Placement](#camera-placement-for-retail-shops) | 7 essential positions and common mistakes |
-| [Cost Breakdown](#how-much-does-retail-cctv-cost) | Pricing by shop size |
-| [Insurance Benefits](#cctv-and-insurance) | Premium reductions and compliance |
-| [System Integration](#integrating-cctv-with-other-security-systems) | EAS, access control, POS integration |
-| [FAQs](#frequently-asked-questions) | 6 common questions answered |
-
 ## Camera Recommendations for Retail
 
 | Camera | Resolution | Type | Best For | Price |
@@ -201,6 +188,23 @@ For multi-site operations, I recommend a centralised NVR system with remote acce
 | Claim acceptance | Prevents rejection | ICO-registered system |
 | Evidence quality | Meets insurer standards | 4K resolution, 31-day retention |
 | Police partnership | Crime prevention support | Signage, access controls |
+
+---
+
+## Quick Navigation — Table of Contents
+
+| Section | Topic |
+|---|---|
+| [Why Retail Needs CCTV](#why-retail-shops-need-cctv-in-2026) | Shoplifting surge and crime statistics |
+| [Legal Requirements](#legal-requirements-for-retail-cctv) | ICO, GDPR, audio recording rules |
+| [Best Cameras](#best-cctv-cameras-for-retail-shops) | Hikvision, Reolink, fisheye options |
+| [Camera Placement](#camera-placement-for-retail-shops) | 7 essential positions and common mistakes |
+| [Cost Breakdown](#how-much-does-retail-cctv-cost) | Pricing by shop size |
+| [Insurance Benefits](#cctv-and-insurance) | Premium reductions and compliance |
+| [System Integration](#integrating-cctv-with-other-security-systems) | EAS, access control, POS integration |
+| [FAQs](#frequently-asked-questions) | 6 common questions answered |
+
+---
 
 ## Final Thoughts
 

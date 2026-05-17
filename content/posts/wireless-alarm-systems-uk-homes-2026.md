@@ -240,19 +240,6 @@ Test your alarm monthly by triggering each detector individually. Most systems h
 
 ---
 
-## Quick Navigation — Table of Contents
-
-| Section | Topic |
-|---|---|
-| [State of Wireless Alarms](#the-state-of-wireless-alarms-in-2026) | How wireless alarm tech has matured |
-| [How They Work](#how-wireless-alarms-work-in-2026) | 868MHz vs WiFi protocols |
-| [Top Alarm Systems](#top-wireless-alarm-systems-for-uk-homes-in-2026) | Ajax, Hikvision AX Pro, Ring compared |
-| [Grade 2 vs Grade 3](#grade-2-vs-grade-3--what-does-it-mean) | EN 50131 certification explained |
-| [Wired vs Wireless](#wireless-vs-wired-alarms--which-should-you-choose) | Reliability, cost, and flexibility |
-| [Cost Breakdown](#how-much-does-a-wireless-alarm-cost-in-2026) | Pricing table for all systems |
-| [Detector Placement](#where-to-position-alarm-detectors-in-your-home) | Essential positions and common mistakes |
-| [FAQs](#frequently-asked-questions) | 9 common questions answered |
-
 ## Alarm System Comparison
 
 | System | Grade | Protocol | Battery Life | Device Limit | Price |
@@ -281,6 +268,23 @@ Test your alarm monthly by triggering each detector individually. Most systems h
 | Grade 2 | Low-to-medium | Most homes, small businesses | Yes (most insurers) |
 | Grade 3 | Medium-to-high | Large properties, commercial | Yes |
 | Grade 4 | High | Banks, jewellery shops | Yes |
+
+---
+
+## Quick Navigation — Table of Contents
+
+| Section | Topic |
+|---|---|
+| [State of Wireless Alarms](#the-state-of-wireless-alarms-in-2026) | How wireless alarm tech has matured |
+| [How They Work](#how-wireless-alarms-work-in-2026) | 868MHz vs WiFi protocols |
+| [Top Alarm Systems](#top-wireless-alarm-systems-for-uk-homes-in-2026) | Ajax, Hikvision AX Pro, Ring compared |
+| [Grade 2 vs Grade 3](#grade-2-vs-grade-3--what-does-it-mean) | EN 50131 certification explained |
+| [Wired vs Wireless](#wireless-vs-wired-alarms--which-should-you-choose) | Reliability, cost, and flexibility |
+| [Cost Breakdown](#how-much-does-a-wireless-alarm-cost-in-2026) | Pricing table for all systems |
+| [Detector Placement](#where-to-position-alarm-detectors-in-your-home) | Essential positions and common mistakes |
+| [FAQs](#frequently-asked-questions) | 9 common questions answered |
+
+---
 
 ## Final Thoughts
 

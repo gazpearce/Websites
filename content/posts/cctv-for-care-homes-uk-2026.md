@@ -135,18 +135,6 @@ CCTV demonstrates that the care home takes safety and safeguarding seriously. It
 
 ---
 
-## Quick Navigation — Table of Contents
-
-| Section | Topic |
-|---|---|
-| [Why Care Homes Need CCTV](#why-care-homes-need-cctv-in-2026) | Safeguarding and CQC compliance |
-| [CQC Requirements](#cqc-requirements-for-cctv) | Safety, leadership, responsiveness |
-| [Legal Requirements](#legal-requirements) | GDPR, DPIA, where cameras must not go |
-| [Best Cameras](#best-cctv-cameras-for-care-homes) | Hikvision ColorVu, corridor cameras |
-| [Cost Breakdown](#how-much-does-care-home-cctv-cost) | Pricing by care home size |
-| [Staff Training](#staff-training-and-policies) | Policies, training, access logs |
-| [FAQs](#frequently-asked-questions) | 4 common questions answered |
-
 ## Care Home CCTV Camera Recommendations
 
 | Camera | Resolution | Type | Best For | Price |
@@ -175,6 +163,22 @@ CCTV demonstrates that the care home takes safety and safeguarding seriously. It
 | Bedrooms | Only with consent | Must not capture bed/personal care |
 | Bathrooms/toilets | No | Strictly prohibited |
 | Staff changing rooms | No | Strictly prohibited |
+
+---
+
+## Quick Navigation — Table of Contents
+
+| Section | Topic |
+|---|---|
+| [Why Care Homes Need CCTV](#why-care-homes-need-cctv-in-2026) | Safeguarding and CQC compliance |
+| [CQC Requirements](#cqc-requirements-for-cctv) | Safety, leadership, responsiveness |
+| [Legal Requirements](#legal-requirements) | GDPR, DPIA, where cameras must not go |
+| [Best Cameras](#best-cctv-cameras-for-care-homes) | Hikvision ColorVu, corridor cameras |
+| [Cost Breakdown](#how-much-does-care-home-cctv-cost) | Pricing by care home size |
+| [Staff Training](#staff-training-and-policies) | Policies, training, access logs |
+| [FAQs](#frequently-asked-questions) | 4 common questions answered |
+
+---
 
 ## Final Thoughts
 

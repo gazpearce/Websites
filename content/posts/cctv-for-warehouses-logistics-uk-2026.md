@@ -112,18 +112,6 @@ Yes. CCTV footage is commonly used in HSE investigations to reconstruct accident
 
 ---
 
-## Quick Navigation — Table of Contents
-
-| Section | Topic |
-|---|---|
-| [Why Warehouses Need CCTV](#why-warehouses-need-cctv-in-2026) | Theft, safety, insurance compliance |
-| [Security Challenges](#key-security-challenges-for-warehouses) | Internal theft, loading bay risks |
-| [Best Cameras](#best-cctv-cameras-for-warehouses) | Loading bay, PTZ, thermal options |
-| [Camera Placement](#camera-placement-for-warehouses) | 7 essential positions |
-| [Health & Safety](#health-and-safety-applications) | Accident investigation, PPE monitoring |
-| [Cost Breakdown](#how-much-does-warehouse-cctv-cost) | Pricing by warehouse size |
-| [FAQs](#frequently-asked-questions) | 3 common questions answered |
-
 ## Warehouse CCTV Camera Recommendations
 
 | Camera | Resolution | Type | Best For | Price |
@@ -149,6 +137,22 @@ Yes. CCTV footage is commonly used in HSE investigations to reconstruct accident
 | PPE monitoring | Verify staff wear safety equipment | Reduced injuries |
 | Fire detection | Thermal cameras detect heat anomalies | Early warning |
 | Traffic management | Monitor vehicle movement in loading areas | Fewer incidents |
+
+---
+
+## Quick Navigation — Table of Contents
+
+| Section | Topic |
+|---|---|
+| [Why Warehouses Need CCTV](#why-warehouses-need-cctv-in-2026) | Theft, safety, insurance compliance |
+| [Security Challenges](#key-security-challenges-for-warehouses) | Internal theft, loading bay risks |
+| [Best Cameras](#best-cctv-cameras-for-warehouses) | Loading bay, PTZ, thermal options |
+| [Camera Placement](#camera-placement-for-warehouses) | 7 essential positions |
+| [Health & Safety](#health-and-safety-applications) | Accident investigation, PPE monitoring |
+| [Cost Breakdown](#how-much-does-warehouse-cctv-cost) | Pricing by warehouse size |
+| [FAQs](#frequently-asked-questions) | 3 common questions answered |
+
+---
 
 ## Final Thoughts
 

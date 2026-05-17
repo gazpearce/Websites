@@ -134,18 +134,6 @@ Yes. CCTV footage is admissible in UK courts as long as it was obtained legally.
 
 ---
 
-## Quick Navigation — Table of Contents
-
-| Section | Topic |
-|---|---|
-| [Why Construction Sites Need CCTV](#why-construction-sites-need-cctv-in-2026) | £800m annual theft cost |
-| [Unique Challenges](#unique-challenges-of-construction-site-cctv) | No power, harsh conditions, large perimeters |
-| [Best Solutions](#best-cctv-solutions-for-construction-sites) | Solar 4G, temporary PoE, ANPR |
-| [Camera Placement](#camera-placement-for-construction-sites) | 6 essential positions |
-| [Legal Requirements](#legal-requirements) | GDPR, CDM, planning conditions |
-| [Cost Breakdown](#how-much-does-construction-site-cctv-cost) | Rental vs purchase comparison |
-| [FAQs](#frequently-asked-questions) | 4 common questions answered |
-
 ## Construction CCTV Solutions Comparison
 
 | Solution | Cameras | Power | Connectivity | Price | Best For |
@@ -170,6 +158,22 @@ Yes. CCTV footage is admissible in UK courts as long as it was obtained legally.
 | CCTV Signage | All sites | Display at all entrances |
 | CDM Regulations | Principal contractors | Ensure site security plan includes CCTV |
 | Planning Conditions | Some sites | Check planning permission requirements |
+
+---
+
+## Quick Navigation — Table of Contents
+
+| Section | Topic |
+|---|---|
+| [Why Construction Sites Need CCTV](#why-construction-sites-need-cctv-in-2026) | £800m annual theft cost |
+| [Unique Challenges](#unique-challenges-of-construction-site-cctv) | No power, harsh conditions, large perimeters |
+| [Best Solutions](#best-cctv-solutions-for-construction-sites) | Solar 4G, temporary PoE, ANPR |
+| [Camera Placement](#camera-placement-for-construction-sites) | 6 essential positions |
+| [Legal Requirements](#legal-requirements) | GDPR, CDM, planning conditions |
+| [Cost Breakdown](#how-much-does-construction-site-cctv-cost) | Rental vs purchase comparison |
+| [FAQs](#frequently-asked-questions) | 4 common questions answered |
+
+---
 
 ## Final Thoughts
 
