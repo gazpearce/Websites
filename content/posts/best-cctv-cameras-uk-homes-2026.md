@@ -254,6 +254,49 @@ Yes. Modern CCTV cameras use one of three technologies for night vision: **IR (i
 
 ---
 
+## Quick Navigation — Table of Contents
+
+| Section | Topic |
+|---|---|
+| [Choosing the Right CCTV System](#choosing-the-right-cctv-system-for-your-uk-home-in-2026) | Overview and why this guide matters |
+| [What's Changed in 2026](#whats-changed-in-home-cctv-for-2026) | 4K, AI detection, colour night vision, GDPR |
+| [Wired vs Wireless](#wired-vs-wireless-cctv--which-is-right-for-your-home) | PoE vs WiFi comparison with pros and cons |
+| [Top Camera Recommendations](#top-cctv-cameras-for-uk-homes-in-2026) | Hikvision, Reolink, Eufy, and doorbell cameras |
+| [Legal Requirements](#uk-legal-requirements-for-home-cctv-in-2026) | ICO registration, GDPR, planning permission |
+| [Cost Breakdown](#how-much-does-home-cctv-cost-in-2026) | Pricing table for all system types |
+| [Camera Placement](#where-to-position-cctv-cameras-on-your-home) | Essential positions, height, angle, mistakes |
+| [FAQs](#frequently-asked-questions) | 10 common questions answered |
+
+## Camera Comparison Table
+
+| Camera | Resolution | Type | Night Vision | Price | Best For |
+|---|---|---|---|---|---|
+| Hikvision DS-2CD2387G2H | 8MP (4K) | PoE | ColorVu (full colour) | £180-£220 | Best overall |
+| Reolink RLC-811A | 8MP (4K) | PoE | IR (30m) | £70-£90 | Best budget |
+| EufyCam 3 (S330) | 4K | Wireless | IR + spotlight | £500-£650 (4-pack) | Best wireless |
+| Hikvision DS-HD12A | 1080p | WiFi | IR (10m) | £120-£150 | Best doorbell |
+| Hikvision DS-2CD2187G2H | 8MP (4K) | PoE | ColorVu (full colour) | £200-£250 | Best wide-angle |
+
+## System Cost Comparison
+
+| System Type | Cameras | Resolution | Recording | Installed Cost | Best For |
+|---|---|---|---|---|---|
+| Basic wired | 4 | 4MP (2K) | NVR 1TB | £800-£1,200 | Small homes |
+| Standard wired | 4 | 8MP (4K) | NVR 2TB | £1,200-£2,000 | Most homes |
+| Premium wired | 8 | 8MP (4K) | NVR 4TB | £2,000-£3,500 | Large homes |
+| Wireless DIY | 4 | 4K | SD card / cloud | £300-£650 | Rentals |
+| Doorbell only | 1 | 1080p | Cloud | £100-£250 | Entry-level |
+
+## Legal Compliance Checklist
+
+| Requirement | Applies To | Cost | Action Needed |
+|---|---|---|---|
+| ICO Registration | Any CCTV capturing beyond property | £40-£60/year | Register at ico.org.uk |
+| CCTV Signage | All systems | £5-£15 per sign | Display at all entrances |
+| Subject Access Requests | All systems | Free | Respond within 30 days |
+| 31-Day Retention | All systems | Included | Configure NVR auto-overwrite |
+| Listed Building Consent | Listed properties | £100-£200 | Apply to local authority |
+
 ## Final Thoughts
 
 The best CCTV system for your home is one that's **correctly positioned, properly configured, and regularly maintained**. A £500 system installed by a professional will outperform a £2,000 system installed by someone who doesn't know what they're doing.

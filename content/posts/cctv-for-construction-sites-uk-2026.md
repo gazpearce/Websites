@@ -134,6 +134,43 @@ Yes. CCTV footage is admissible in UK courts as long as it was obtained legally.
 
 ---
 
+## Quick Navigation — Table of Contents
+
+| Section | Topic |
+|---|---|
+| [Why Construction Sites Need CCTV](#why-construction-sites-need-cctv-in-2026) | £800m annual theft cost |
+| [Unique Challenges](#unique-challenges-of-construction-site-cctv) | No power, harsh conditions, large perimeters |
+| [Best Solutions](#best-cctv-solutions-for-construction-sites) | Solar 4G, temporary PoE, ANPR |
+| [Camera Placement](#camera-placement-for-construction-sites) | 6 essential positions |
+| [Legal Requirements](#legal-requirements) | GDPR, CDM, planning conditions |
+| [Cost Breakdown](#how-much-does-construction-site-cctv-cost) | Rental vs purchase comparison |
+| [FAQs](#frequently-asked-questions) | 4 common questions answered |
+
+## Construction CCTV Solutions Comparison
+
+| Solution | Cameras | Power | Connectivity | Price | Best For |
+|---|---|---|---|---|---|
+| Solar 4G | 1-4 | Solar panel | 4G LTE | £300-£500 each | Remote sites |
+| Temporary PoE | 4-8 | Generator/mains | 4G router | £1,500-£3,000 | Sites with power |
+| ANPR Vehicle | 1-2 | Mains/solar | 4G/WiFi | £400-£800 each | Vehicle tracking |
+
+## Construction Site CCTV Cost by Size
+
+| Site Size | Cameras | System Type | Monthly Rental | Purchase |
+|---|---|---|---|---|
+| Small (under 1 acre) | 4 | Solar 4G | £150-£300/month | £1,200-£2,000 |
+| Medium (1-5 acres) | 8 | Solar 4G + PoE | £300-£600/month | £3,000-£5,000 |
+| Large (5+ acres) | 16+ | Mixed system | £600-£1,200/month | £5,000-£8,000 |
+
+## Legal Compliance for Construction Sites
+
+| Requirement | Applies To | Action Needed |
+|---|---|---|
+| ICO Registration | All CCTV capturing beyond site | Register at ico.org.uk (£40-£60/year) |
+| CCTV Signage | All sites | Display at all entrances |
+| CDM Regulations | Principal contractors | Ensure site security plan includes CCTV |
+| Planning Conditions | Some sites | Check planning permission requirements |
+
 ## Final Thoughts
 
 Construction site security is non-negotiable. The cost of a single theft can exceed the cost of an entire CCTV system. Invest in proper surveillance from day one.

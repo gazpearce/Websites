@@ -163,6 +163,45 @@ For multi-site operations, I recommend a centralised NVR system with remote acce
 
 ---
 
+## Quick Navigation — Table of Contents
+
+| Section | Topic |
+|---|---|
+| [Why Retail Needs CCTV](#why-retail-shops-need-cctv-in-2026) | Shoplifting surge and crime statistics |
+| [Legal Requirements](#legal-requirements-for-retail-cctv) | ICO, GDPR, audio recording rules |
+| [Best Cameras](#best-cctv-cameras-for-retail-shops) | Hikvision, Reolink, fisheye options |
+| [Camera Placement](#camera-placement-for-retail-shops) | 7 essential positions and common mistakes |
+| [Cost Breakdown](#how-much-does-retail-cctv-cost) | Pricing by shop size |
+| [Insurance Benefits](#cctv-and-insurance) | Premium reductions and compliance |
+| [System Integration](#integrating-cctv-with-other-security-systems) | EAS, access control, POS integration |
+| [FAQs](#frequently-asked-questions) | 6 common questions answered |
+
+## Camera Recommendations for Retail
+
+| Camera | Resolution | Type | Best For | Price |
+|---|---|---|---|---|
+| Hikvision DS-2CD2387G2H | 8MP (4K) | PoE | Overall best | £180-£220 |
+| Reolink RLC-811A | 8MP (4K) | PoE | Till areas | £70-£90 |
+| Hikvision DS-2CD2187G2H | 8MP (4K) | PoE | Wide-angle shop floor | £200-£250 |
+
+## Retail CCTV Cost by Shop Size
+
+| Shop Size | Cameras | System Type | Installed Cost |
+|---|---|---|---|
+| Small (under 500 sq ft) | 4 | 4K PoE | £1,200-£2,000 |
+| Medium (500-1,500 sq ft) | 8 | 4K PoE | £2,000-£3,500 |
+| Large (1,500-3,000 sq ft) | 16 | 4K PoE | £3,500-£6,000 |
+| Multi-site | 32+ | 4K PoE + central NVR | £6,000-£15,000 |
+
+## Insurance Benefits of CCTV
+
+| Benefit | Typical Saving | Requirement |
+|---|---|---|
+| Premium reduction | 10-25% | NSI/SSAIB certified install |
+| Claim acceptance | Prevents rejection | ICO-registered system |
+| Evidence quality | Meets insurer standards | 4K resolution, 31-day retention |
+| Police partnership | Crime prevention support | Signage, access controls |
+
 ## Final Thoughts
 
 Retail CCTV is an investment that pays for itself in reduced theft, lower insurance premiums, and improved staff safety. The key is getting it right first time - correct camera placement, proper configuration, and legal compliance.

@@ -135,6 +135,47 @@ CCTV demonstrates that the care home takes safety and safeguarding seriously. It
 
 ---
 
+## Quick Navigation — Table of Contents
+
+| Section | Topic |
+|---|---|
+| [Why Care Homes Need CCTV](#why-care-homes-need-cctv-in-2026) | Safeguarding and CQC compliance |
+| [CQC Requirements](#cqc-requirements-for-cctv) | Safety, leadership, responsiveness |
+| [Legal Requirements](#legal-requirements) | GDPR, DPIA, where cameras must not go |
+| [Best Cameras](#best-cctv-cameras-for-care-homes) | Hikvision ColorVu, corridor cameras |
+| [Cost Breakdown](#how-much-does-care-home-cctv-cost) | Pricing by care home size |
+| [Staff Training](#staff-training-and-policies) | Policies, training, access logs |
+| [FAQs](#frequently-asked-questions) | 4 common questions answered |
+
+## Care Home CCTV Camera Recommendations
+
+| Camera | Resolution | Type | Best For | Price |
+|---|---|---|---|---|
+| Hikvision DS-2CD2387G2H | 8MP (4K) | PoE | Entrances, communal areas | £180-£220 |
+| Hikvision DS-2CD2147G2H | 4MP | PoE | Corridors, large areas | £120-£150 |
+| Hikvision DS-2CD2387G2H-A | 8MP (4K) | PoE + Audio | Entrances with audio | £200-£240 |
+
+## Care Home CCTV Cost by Size
+
+| Care Home Size | Beds | Cameras | Installed Cost |
+|---|---|---|---|
+| Small | 10-20 | 8 | £2,000-£3,500 |
+| Medium | 20-40 | 16 | £3,500-£6,000 |
+| Large | 40-80 | 32 | £6,000-£12,000 |
+| Very large | 80+ | 64+ | £12,000-£25,000 |
+
+## Camera Placement Rules for Care Homes
+
+| Area | Allowed | Notes |
+|---|---|---|
+| Entrances/exits | Yes | Essential for access control |
+| Communal lounges | Yes | Monitor communal areas |
+| Corridors | Yes | Not pointing into bedrooms |
+| Gardens | Yes | Outdoor security |
+| Bedrooms | Only with consent | Must not capture bed/personal care |
+| Bathrooms/toilets | No | Strictly prohibited |
+| Staff changing rooms | No | Strictly prohibited |
+
 ## Final Thoughts
 
 Care home CCTV is about protecting vulnerable people - not surveillance. Done correctly, it supports safeguarding, improves care quality, and gives families peace of mind.

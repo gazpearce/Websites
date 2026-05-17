@@ -240,6 +240,48 @@ Test your alarm monthly by triggering each detector individually. Most systems h
 
 ---
 
+## Quick Navigation — Table of Contents
+
+| Section | Topic |
+|---|---|
+| [State of Wireless Alarms](#the-state-of-wireless-alarms-in-2026) | How wireless alarm tech has matured |
+| [How They Work](#how-wireless-alarms-work-in-2026) | 868MHz vs WiFi protocols |
+| [Top Alarm Systems](#top-wireless-alarm-systems-for-uk-homes-in-2026) | Ajax, Hikvision AX Pro, Ring compared |
+| [Grade 2 vs Grade 3](#grade-2-vs-grade-3--what-does-it-mean) | EN 50131 certification explained |
+| [Wired vs Wireless](#wireless-vs-wired-alarms--which-should-you-choose) | Reliability, cost, and flexibility |
+| [Cost Breakdown](#how-much-does-a-wireless-alarm-cost-in-2026) | Pricing table for all systems |
+| [Detector Placement](#where-to-position-alarm-detectors-in-your-home) | Essential positions and common mistakes |
+| [FAQs](#frequently-asked-questions) | 9 common questions answered |
+
+## Alarm System Comparison
+
+| System | Grade | Protocol | Battery Life | Device Limit | Price |
+|---|---|---|---|---|---|
+| Ajax HomeWise | Grade 2 | 868MHz | 7 years | 200 | £400-£800 |
+| Hikvision AX Pro | Grade 2 | 868MHz | 5 years | 128 | £500-£1,000 |
+| Ring Alarm Pro | Not graded | WiFi + 4G | 2 years | 100 | £200-£400 |
+| Texecom Premier | Grade 2/3 | 868MHz | 5 years | 256 | £600-£1,200 |
+| Yale Smart Alarm | Not graded | WiFi | 1-2 years | 50 | £150-£350 |
+
+## Cost Comparison Table
+
+| System | Grade | Hardware Cost | Installed Cost | Monitoring |
+|---|---|---|---|---|
+| Ajax HomeWise | Grade 2 | £400-£800 | £700-£1,300 | Self or £10-£15/month |
+| Hikvision AX Pro | Grade 2 | £500-£1,000 | £800-£1,500 | Self or £10-£15/month |
+| Ring Alarm Pro | Not graded | £200-£400 | £200-£400 (DIY) | £5/month optional |
+| Texecom Premier | Grade 2/3 | £600-£1,200 | £1,000-£2,000 | Self or £10-£20/month |
+| Yale Smart Alarm | Not graded | £150-£350 | £150-£350 (DIY) | None |
+
+## Grade Comparison
+
+| Grade | Risk Level | Suitable For | Insurance Accepted |
+|---|---|---|---|
+| Grade 1 | Low | Internal use only | Rarely |
+| Grade 2 | Low-to-medium | Most homes, small businesses | Yes (most insurers) |
+| Grade 3 | Medium-to-high | Large properties, commercial | Yes |
+| Grade 4 | High | Banks, jewellery shops | Yes |
+
 ## Final Thoughts
 
 The best wireless alarm system for your home depends on three things: **your budget, your insurance requirements, and whether you already have a CCTV system**.

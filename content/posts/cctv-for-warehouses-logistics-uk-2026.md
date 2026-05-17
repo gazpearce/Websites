@@ -112,6 +112,44 @@ Yes. CCTV footage is commonly used in HSE investigations to reconstruct accident
 
 ---
 
+## Quick Navigation — Table of Contents
+
+| Section | Topic |
+|---|---|
+| [Why Warehouses Need CCTV](#why-warehouses-need-cctv-in-2026) | Theft, safety, insurance compliance |
+| [Security Challenges](#key-security-challenges-for-warehouses) | Internal theft, loading bay risks |
+| [Best Cameras](#best-cctv-cameras-for-warehouses) | Loading bay, PTZ, thermal options |
+| [Camera Placement](#camera-placement-for-warehouses) | 7 essential positions |
+| [Health & Safety](#health-and-safety-applications) | Accident investigation, PPE monitoring |
+| [Cost Breakdown](#how-much-does-warehouse-cctv-cost) | Pricing by warehouse size |
+| [FAQs](#frequently-asked-questions) | 3 common questions answered |
+
+## Warehouse CCTV Camera Recommendations
+
+| Camera | Resolution | Type | Best For | Price |
+|---|---|---|---|---|
+| Hikvision DS-2CD2687G2H | 8MP (4K) | PoE | Loading bays | £180-£220 |
+| Hikvision DS-2DE4A425IW-DE | 4MP | PTZ | Large warehouse floors | £400-£600 |
+| Hikvision DS-2TD2617B-15/PA | Thermal | Thermal | Perimeter security | £800-£1,200 |
+
+## Warehouse CCTV Cost by Size
+
+| Warehouse Size | Cameras | System Type | Installed Cost |
+|---|---|---|---|
+| Small (under 5,000 sq ft) | 8 | 4K PoE | £2,000-£3,500 |
+| Medium (5,000-20,000 sq ft) | 16 | 4K PoE + PTZ | £3,500-£7,000 |
+| Large (20,000-50,000 sq ft) | 32 | 4K PoE + PTZ + thermal | £7,000-£15,000 |
+| Very large (50,000+ sq ft) | 64+ | Enterprise system | £15,000-£40,000 |
+
+## Health & Safety Applications
+
+| Application | How CCTV Helps | Benefit |
+|---|---|---|
+| Accident investigation | Reconstruct forklift accidents, slips, falls | HSE compliance |
+| PPE monitoring | Verify staff wear safety equipment | Reduced injuries |
+| Fire detection | Thermal cameras detect heat anomalies | Early warning |
+| Traffic management | Monitor vehicle movement in loading areas | Fewer incidents |
+
 ## Final Thoughts
 
 Warehouse CCTV is an essential investment. The cost of a single theft or accident far exceeds the cost of a comprehensive CCTV system.
