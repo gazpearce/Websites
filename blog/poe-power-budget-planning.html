@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PoE Power Budget Planning</title>
-    <meta name="description" content="Professional guide on poe power budget planning for UK businesses.">
+    <meta name="description" content="Expert guide on PoE power budget planning, IEEE 802.3bt standards, thermal management, and commercial switch infrastructure deployment.">
     <link rel="canonical" href="https://gary-pearce-home-services.pages.dev/blog/poe-power-budget-planning.html">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Montserrat:wght@900&display=swap" rel="stylesheet">
     
@@ -44,16 +44,38 @@
             <h1>PoE Power Budget Planning</h1>
 
                 <div style="margin: 3rem 0; background: #000; padding: 1rem; border-radius: 12px; border: 1px solid rgba(245, 158, 11, 0.3);">
-                     <img src="../Images/telecom_room_setup.png" alt="Technical Implementation" style="width: 100%; border-radius: 8px;">
+                     <img src="../Images/structured_cabling_overview.png" alt="Technical Implementation" style="width: 100%; border-radius: 8px;">
                      <div style="padding-top: 1rem; font-size: 0.8rem; color: #f59e0b; text-align: center;">Technical Implementation</div>
                 </div>
                 
-<h2>Overview</h2>
-<p>This article covers the essential aspects of poe power budget planning for modern enterprises.</p>
+<h2>Executive Summary</h2>
+<p>Power over Ethernet (PoE) has revolutionized commercial building management by converging data transmission and electrical power delivery onto a single cable infrastructure. Successful deployment of dense PoE networks—powering IP surveillance, VoIP telephony, wireless access points, and smart LED lighting—requires meticulous power budget planning to ensure system stability, prevent switch overloads, and maintain thermal safety standards.</p>
+<h2>Core Architecture & Technical Specifications</h2>
+<p>Modern PoE architectures adhere to standardized IEEE specifications: 802.3af (PoE up to 15.4W), 802.3at (PoE+ up to 30W), and 802.3bt (PoE++ Type 3 up to 60W / Type 4 up to 100W). Power sourcing equipment (PSE), such as enterprise core switches, must be carefully matched to the total aggregate power demand of all powered devices (PD).</p>
+<p>Engineering teams must calculate total PSE power capacity, accounting for internal power supply ratings and inline cable resistance losses. Deployed switches must feature intelligent power management algorithms capable of dynamically allocating wattage based on actual PD consumption rather than maximum hardware allocation class.</p>
+<h2>Installation Standards & Best Practices</h2>
+<li style="margin-left: 2rem; margin-bottom: 0.5rem; color: #cbd5e1;">&bull; <strong>Cable Selection for High PoE</strong>: Mandate the use of certified Cat6a or Cat7 copper cabling featuring minimum 23 AWG solid conductors to minimize resistance heat generation in 100W PoE++ runs.</li>
+<li style="margin-left: 2rem; margin-bottom: 0.5rem; color: #cbd5e1;">&bull; <strong>Bundle Size Limitations</strong>: Restrict cable bundle sizes in ceiling pathways to a maximum of 24 cables per bundle to allow adequate ambient airflow and prevent core thermal buildup.</li>
+<li style="margin-left: 2rem; margin-bottom: 0.5rem; color: #cbd5e1;">&bull; <strong>Dedicated PSE Cooling</strong>: Ensure telecommunications closets housing dense PoE switches maintain strict environmental controls (20°C to 24°C) with dedicated redundant cooling infrastructure.</li>
+
+                <div style="margin: 3rem 0; background: #000; padding: 1rem; border-radius: 12px; border: 1px solid rgba(245, 158, 11, 0.3);">
+                     <img src="../Images/cabling_standards_comparison.png" alt="Technical Implementation" style="width: 100%; border-radius: 8px;">
+                     <div style="padding-top: 1rem; font-size: 0.8rem; color: #f59e0b; text-align: center;">Technical Implementation</div>
+                </div>
+                
+<h2>Verification & Testing Protocols</h2>
+<p>PoE commissioning protocols require inline testing using specialized digital PoE verification equipment. Technicians measure true delivered voltage and wattage at the exact PD termination point under maximum load conditions. Engineers confirm that PSE switches gracefully manage power priority settings, shedding low-priority ports during simulated primary power supply failures to keep critical security infrastructure online.</p>
+<h2>Frequently Asked Questions</h2>
+<h3>What happens if a PoE switch exceeds its total power budget?</h3>
+<p>When a PSE switch's aggregate power demand exceeds its total available power budget, the switch's internal safety mechanisms engage. Depending on configuration, it will either refuse to power on newly connected devices or automatically shut down power to lower-priority ports, resulting in unannounced device disconnections.</p>
+<h3>How does cable length affect delivered PoE power?</h3>
+<p>Copper cabling presents inherent electrical resistance that increases with cable length. As power travels along a 100-meter run, some electrical energy is lost as heat. IEEE standards account for this; for example, a PSE port delivering 30W (802.3at) guarantees at least 25.5W available at the PD termination point 100 meters away.</p>
+<h3>What is the difference between active and passive PoE?</h3>
+<p>Active PoE (IEEE compliant) initiates an intelligent negotiation handshake between the switch and the device before sending power, ensuring compatibility and protecting non-PoE equipment from electrical damage. Passive PoE sends constant, un-negotiated voltage down the cable regardless of what is connected, presenting a severe burn-out risk to incompatible hardware.</p>
         <section style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1);">
             <h3 style="color: #f59e0b;">Related Forensic Intelligence</h3>
             <ul style="list-style: none; padding: 0;">
-                <li style="margin-bottom: 0.5rem;">&rarr; <a href="cctv-maintenance-doncaster-2026-audit.html">Cctv Maintenance Doncaster 2026 Audit</a></li> <li style="margin-bottom: 0.5rem;">&rarr; <a href="cctv-installation-newcastle-2026-audit.html">Cctv Installation Newcastle 2026 Audit</a></li> <li style="margin-bottom: 0.5rem;">&rarr; <a href="smart-home-security-gateshead-2026-audit.html">Smart Home Security Gateshead 2026 Audit</a></li>
+                <li style="margin-bottom: 0.5rem;">&rarr; <a href="business-security-hartlepool-2026-audit.html">Business Security Hartlepool 2026 Audit</a></li> <li style="margin-bottom: 0.5rem;">&rarr; <a href="structured-cabling-installation-basics.html">Structured Cabling Installation Basics</a></li> <li style="margin-bottom: 0.5rem;">&rarr; <a href="poe-power-budget-planning.html">Poe Power Budget Planning</a></li>
             </ul>
         </section>
 

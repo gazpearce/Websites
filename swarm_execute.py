@@ -32,7 +32,7 @@ def get_related_links():
             related.append({"title": title, "url": s})
     return related
 
-def generate_high_quality_posts():
+def generate_high_quality_posts(force=False):
     print("--- STARTING HIGH-QUALITY FORENSIC GENERATION ---")
     
     if not os.path.exists(DATA_FILE):
@@ -52,7 +52,7 @@ def generate_high_quality_posts():
         slug = slug + ".html"
         
     completed = get_completed_slugs()
-    if slug in completed:
+    if not force and slug in completed:
         print(f"Skipping: {slug} has already been published.")
         return
 

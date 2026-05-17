@@ -15,12 +15,12 @@ def run_command(cmd):
         print(f"CRITICAL ERROR: {e}")
         return False
 
-def deploy():
+def deploy(force=False):
     timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     
     # SAFETY GOVERNOR: Check if we pushed too recently
     status_log = os.path.join(WEBSITE_DIR, "DEPLOYMENT_STATUS.log")
-    if os.path.exists(status_log):
+    if not force and os.path.exists(status_log):
         with open(status_log, "r") as f:
             last_lines = f.readlines()[-5:]
             for line in reversed(last_lines):
@@ -68,4 +68,7 @@ def deploy():
             log.write(f"[{timestamp}] FAILED: Push error\n")
 
 if __name__ == "__main__":
-    deploy()
+    import sys
+    force = "--force" in sys.argv
+    deploy(force=force)
+
