@@ -15,13 +15,11 @@ categories:
   - "Buyer Guides"
 series: "CCTV Buyer Guides 2026"
 author: "Gary Pearce"
-cover:
-  image: "images/cctv-home-installation-2026.jpg"
-  alt: "Professional CCTV camera installation on UK home exterior"
-  relative: false
 showToc: true
 weight: 1
 ---
+
+![Professional CCTV camera installation on UK home](https://images.unsplash.com/photo-1558002038-1055907df827?w=1200&h=630&fit=crop)
 
 ## Choosing the Right CCTV System for Your UK Home in 2026
 
