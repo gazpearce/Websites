@@ -1,1 +1,3 @@
 User-agent: *
+Disallow:
+Sitemap: https://cctv-blog-render.onrender.com/sitemap.xml
