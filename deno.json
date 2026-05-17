@@ -1,0 +1,11 @@
+{
+  "name": "@gazpearce/cctv-blog",
+  "version": "1.0.0",
+  "tasks": {
+    "start": "deno run --allow-read --allow-net deno/main.ts"
+  },
+  "deploy": {
+    "project": "gazpearce-cctv-blog",
+    "entrypoint": "deno/main.ts"
+  }
+}
