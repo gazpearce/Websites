@@ -167,9 +167,9 @@ For multi-site operations, I recommend a centralised NVR system with remote acce
 
 Retail CCTV is an investment that pays for itself in reduced theft, lower insurance premiums, and improved staff safety. The key is getting it right first time - correct camera placement, proper configuration, and legal compliance.
 
-For a complete security strategy, consider integrating your CCTV with a [wireless alarm system](/posts/wireless-alarm-systems-uk-homes-2026/) and access control. If you manage multiple sites, my guide on [warehouse and logistics CCTV](/posts/cctv-for-warehouses-logistics-uk-2026/) covers enterprise-scale deployments.
+For a complete security strategy, consider integrating your CCTV with a <a href="/posts/wireless-alarm-systems-uk-homes-2026/">wireless alarm system</a> and access control. If you manage multiple sites, my guide on <a href="/posts/cctv-for-warehouses-logistics-uk-2026/">warehouse and logistics CCTV</a> covers enterprise-scale deployments.
 
-You can also find my [security installation tools on GitHub](https://github.com/gazpearce) — including configuration templates and automation scripts.
+You can also find my <a href="https://github.com/gazpearce" target="_blank" rel="noopener">security installation tools on GitHub</a> — including configuration templates and automation scripts.
 
 If you are in the North East, Yorkshire, or North West and need a professional retail CCTV installation, [get in touch](tel:07830638337). I will survey your shop, recommend the right system, and install it to NSI/SSAIB standards.
 

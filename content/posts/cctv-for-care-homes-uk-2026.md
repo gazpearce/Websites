@@ -139,9 +139,9 @@ CCTV demonstrates that the care home takes safety and safeguarding seriously. It
 
 Care home CCTV is about protecting vulnerable people - not surveillance. Done correctly, it supports safeguarding, improves care quality, and gives families peace of mind.
 
-For a complete security strategy, pair your CCTV with a [wireless alarm system](/posts/wireless-alarm-systems-uk-homes-2026/) for after-hours protection. If you also manage educational facilities, my guide on [school CCTV and safeguarding](/posts/cctv-for-schools-uk-2026/) covers similar compliance requirements.
+For a complete security strategy, pair your CCTV with a <a href="/posts/wireless-alarm-systems-uk-homes-2026/">wireless alarm system</a> for after-hours protection. If you also manage educational facilities, my guide on <a href="/posts/cctv-for-schools-uk-2026/">school CCTV and safeguarding</a> covers similar compliance requirements.
 
-You can also find my [security configuration templates on GitHub](https://github.com/gazpearce) for NVR setup and compliance documentation.
+You can also find my <a href="https://github.com/gazpearce" target="_blank" rel="noopener">security configuration templates on GitHub</a> for NVR setup and compliance documentation.
 
 For professional care home CCTV across Northern England, [contact Gary Pearce](tel:07830638337).
 

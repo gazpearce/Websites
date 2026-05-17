@@ -116,9 +116,9 @@ Yes. CCTV footage is commonly used in HSE investigations to reconstruct accident
 
 Warehouse CCTV is an essential investment. The cost of a single theft or accident far exceeds the cost of a comprehensive CCTV system.
 
-For a complete warehouse security strategy, integrate your CCTV with [access control and alarm systems](/posts/wireless-alarm-systems-uk-homes-2026/). If you also manage retail operations, my guide on [shop CCTV and theft prevention](/posts/cctv-for-retail-shops-uk-2026/) covers similar loss prevention strategies.
+For a complete warehouse security strategy, integrate your CCTV with <a href="/posts/wireless-alarm-systems-uk-homes-2026/">access control and alarm systems</a>. If you also manage retail operations, my guide on <a href="/posts/cctv-for-retail-shops-uk-2026/">shop CCTV and theft prevention</a> covers similar loss prevention strategies.
 
-You can also explore my [security automation projects on GitHub](https://github.com/gazpearce) for NVR configuration templates and monitoring scripts.
+You can also explore my <a href="https://github.com/gazpearce" target="_blank" rel="noopener">security automation projects on GitHub</a> for NVR configuration templates and monitoring scripts.
 
 For professional warehouse CCTV across Northern England, [contact Gary Pearce](tel:07830638337).
 
