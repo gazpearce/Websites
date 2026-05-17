@@ -3,3 +3,4 @@
 /.hugo_build.lock
 /__pycache__/
 /DEPLOYMENT_STATUS.log
+/forensic-hugo/
