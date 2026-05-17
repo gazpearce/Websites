@@ -42,7 +42,7 @@ disableHugoGeneratorInject = true
 
   [params.assets]
     disableHLJS = true
-    disableFingerprinting = false
+    disableFingerprinting = true
 
   [params.label]
     text = "CCTV Systems UK"
