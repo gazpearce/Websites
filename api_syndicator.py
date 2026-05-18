@@ -33,7 +33,14 @@ CREDS = {
 def load_state():
     if os.path.exists(STATE_FILE):
         with open(STATE_FILE, "r") as f:
-            return json.load(f)
+            state = json.load(f)
+            if "published_slugs" not in state:
+                state["published_slugs"] = []
+            if "daily_counts" not in state:
+                state["daily_counts"] = {}
+            if "last_run_date" not in state:
+                state["last_run_date"] = str(datetime.now().date())
+            return state
     return {"published_slugs": [], "daily_counts": {}, "last_run_date": str(datetime.now().date())}
 
 def save_state(state):
@@ -59,12 +66,12 @@ def push_to_mataroa(title, markdown_content, slug):
     try:
         resp = requests.post(url, headers=headers, json=data)
         if resp.status_code in [200, 201]:
-            print("âœ” Mataroa success!")
+            print("[SUCCESS] Mataroa success!")
             return True
         else:
-            print(f"âœ˜ Mataroa failed: {resp.text}")
+            print(f"[FAILED] Mataroa failed: {resp.text}")
     except Exception as e:
-        print(f"âœ˜ Mataroa error: {e}")
+        print(f"[ERROR] Mataroa error: {e}")
     return False
 
 def push_to_pika(title, markdown_content, slug):
@@ -79,12 +86,12 @@ def push_to_pika(title, markdown_content, slug):
     try:
         resp = requests.post(url, headers=headers, data=data)
         if resp.status_code in [200, 201, 202]:
-            print("âœ” Pika success!")
+            print("[SUCCESS] Pika success!")
             return True
         else:
-            print(f"âœ˜ Pika failed: {resp.text}")
+            print(f"[FAILED] Pika failed: {resp.text}")
     except Exception as e:
-        print(f"âœ˜ Pika error: {e}")
+        print(f"[ERROR] Pika error: {e}")
     return False
 
 def push_to_beehiiv(title, markdown_content, slug):
@@ -101,10 +108,10 @@ def push_to_beehiiv(title, markdown_content, slug):
     }
     try:
         # resp = requests.post(url, headers=headers, json=data)
-        print("✔ Beehiiv success! (Simulated until Token is provided)")
+        print("[SUCCESS] Beehiiv success! (Simulated until Token is provided)")
         return True
     except Exception as e:
-        print(f"✘ Beehiiv error: {e}")
+        print(f"[ERROR] Beehiiv error: {e}")
     return False
 
 def push_to_wordpress(title, markdown_content, slug):
@@ -120,10 +127,10 @@ def push_to_wordpress(title, markdown_content, slug):
     }
     try:
         # resp = requests.post(url, auth=auth, json=data)
-        print("✔ WordPress success! (Simulated until Domain is provided)")
+        print("[SUCCESS] WordPress success! (Simulated until Domain is provided)")
         return True
     except Exception as e:
-        print(f"✘ WordPress error: {e}")
+        print(f"[ERROR] WordPress error: {e}")
     return False
 
 def run_syndicator():

@@ -1,6 +1,5 @@
 {
   "tier1_pending": [
-    "Fiber Optic Upgrade Guide",
     "PoE Power Budget Planning",
     "Cable Management Best Practices",
     "Enterprise Wi-Fi Deployment",
@@ -11,18 +10,13 @@
     "Data Cabling Darlington 2026 Audit",
     "Business Security Hartlepool 2026 Audit",
     "Intruder Alarms Bolton 2026 Audit",
-    "Network Monitoring Solutions Overview"
+    "Network Monitoring Solutions Overview",
+    "Fiber Optic Upgrade Guide"
   ],
   "tier2_faqs_pool": [
     {
-      "q": "What are the legal storage retention requirements for commercial Video Management Systems (VMS) under ICO GDPR?",
-      "a": "The rapid adoption of ultra-high-definition 4K surveillance cameras generates massive volumes of digital video data that must be securely archived. Commercial enterprises must ensure active recording servers utilize enterprise-grade, RAID-configured surveillance drives to maintain the mandatory 31-day video archive required by commercial insurers while strictly adhering to ICO public privacy guidelines.",
-      "category": "CCTV & VMS",
-      "canonical": "https://gary-pearce-home-services.pages.dev/blog/business-security-hartlepool-2026-audit.html"
-    },
-    {
       "q": "Why is dual-path signaling necessary for commercial intruder alarm compliance?",
-      "a": "Dual-path signaling utilizes two independent communication channels—typically a primary wired IP connection backed up by a dual-SIM cellular transmission path. If an experienced intruder physically cuts your building's external telephone or internet lines, the cellular backup immediately transmits a confirmed line-fault alert to the Alarm Receiving Centre (ARC), guaranteeing that police dispatch is never compromised.",
+      "a": "Dual-path signaling utilizes two independent communication channels\u00e2\u20ac\u201dtypically a primary wired IP connection backed up by a dual-SIM cellular transmission path. If an experienced intruder physically cuts your building's external telephone or internet lines, the cellular backup immediately transmits a confirmed line-fault alert to the Alarm Receiving Centre (ARC), guaranteeing that police dispatch is never compromised.",
       "category": "Intruder Alarms",
       "canonical": "https://gary-pearce-home-services.pages.dev/blog/business-security-hartlepool-2026-audit.html"
     },
@@ -75,6 +69,21 @@
       "a": "Return loss measures the amount of signal energy that reflects back toward the transmitting switch port due to minor impedance mismatches along the cable run. High return loss reflections collide with outgoing data packets, causing severe jitter, CRC errors on switch interfaces, and forced packet retransmissions that dramatically slow down overall network performance during heavy usage.",
       "category": "Data Cabling",
       "canonical": "https://gary-pearce-home-services.pages.dev/blog/data-cabling-darlington-2026-audit.html"
+    },
+    {
+      "q": "What are the legal storage retention requirements for commercial Video Management Systems (VMS) under ICO GDPR?",
+      "a": "The rapid adoption of ultra-high-definition 4K surveillance cameras generates massive volumes of digital video data that must be securely archived. Commercial enterprises must ensure active recording servers utilize enterprise-grade, RAID-configured surveillance drives to maintain the mandatory 31-day video archive required by commercial insurers while strictly adhering to ICO public privacy guidelines.",
+      "category": "CCTV & VMS",
+      "canonical": "https://gary-pearce-home-services.pages.dev/blog/business-security-hartlepool-2026-audit.html"
     }
-  ]
+  ],
+  "published_slugs": [
+    "network-monitoring-solutions-overview.html"
+  ],
+  "daily_counts": {
+    "mataroa": 1,
+    "beehiiv": 1,
+    "wordpress": 1
+  },
+  "last_run_date": "2026-05-18"
 }
