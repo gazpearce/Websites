@@ -151,6 +151,81 @@
             font-size: 1.125rem;
             position: relative;
         }
+        .faq-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin: 2.5rem 0;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            transition: all 0.2s ease;
+        }
+        .faq-card:hover {
+            border-color: var(--brand-blue);
+            box-shadow: 0 10px 15px -3px rgba(37,99,235,0.1);
+            transform: translateY(-2px);
+        }
+        .faq-question {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.25rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1.5rem;
+        }
+        .faq-q-badge {
+            background: var(--brand-blue);
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 1.25rem;
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            box-shadow: 0 4px 6px -1px rgba(37,99,235,0.3);
+        }
+        .faq-question h3 {
+            margin: 0;
+            font-size: 1.35rem;
+            color: var(--brand-dark);
+            line-height: 1.4;
+        }
+        .faq-answer {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.25rem;
+        }
+        .faq-a-badge {
+            background: #f1f5f9;
+            color: var(--text-muted);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 1.25rem;
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .faq-answer-text {
+            flex: 1;
+        }
+        .faq-answer-text p {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 1.125rem;
+            color: var(--text-main);
+            line-height: 1.8;
+        }
+        .faq-answer-text p:last-child {
+            margin-bottom: 0;
+        }
         table { 
             width: 100%; 
             border-collapse: collapse; 
@@ -373,20 +448,25 @@
 <p>```</p>
 <p>Enterprise cabinets must deploy flush-mounted Zero-U Vertical PDUs installed entirely within the extreme side upright bays of the rack frame. All server power cords must be selected to exact required lengths and dressed vertically utilizing Velcro straps directly into the side management troughs. This structured cabling geometry guarantees that 100% of the active server exhaust fan bezels remain completely unobstructed, facilitating rapid, laminar heat evacuation into the hot containment aisle.</p>
 <h2>5. Comprehensive Expert Frequently Asked Questions</h2>
-<h3>What is the exact thermodynamic difference between Hot Aisle and Cold Aisle Containment architectures?</h3>
+<div class="faq-card"><div class="faq-question"><span class="faq-q-badge">Q</span><h3>What is the exact thermodynamic difference between Hot Aisle and Cold Aisle Containment architectures?</h3></div><div class="faq-answer"><span class="faq-a-badge">A</span><div class="faq-answer-text">
 <p>Cold Aisle Containment (CAC) encloses the central intake aisle utilizing roof panels and doors; CRAC units pump chilled air into this sealed aisle, forcing it entirely through server intake bezels while hot exhaust is expelled into the open data center room. CAC is highly cost-effective for retrofitting legacy facilities. Hot Aisle Containment (HAC) encloses the rear exhaust aisle, connecting directly to a drop-ceiling return plenum. CRAC units flood the open room with chilled air, creating an agreeable working environment for IT staff while hot server exhaust is trapped in the sealed aisle and returned directly to CRAC coils. HAC represents the gold standard for new hyperscale facilities supporting extreme power densities (`>40 kW`).</p>
-<h3>How do Differential Pressure Transducers and VFDs optimize CRAC cooling energy consumption?</h3>
+</div></div></div>
+<div class="faq-card"><div class="faq-question"><span class="faq-q-badge">Q</span><h3>How do Differential Pressure Transducers and VFDs optimize CRAC cooling energy consumption?</h3></div><div class="faq-answer"><span class="faq-a-badge">A</span><div class="faq-answer-text">
 <p>In a sealed containment aisle, if CRAC units supply chilled air faster than server fans consume it, positive static pressure forces chilled air to leak out through cabinet seams. If servers pull air faster than CRACs supply it, negative pressure sucks hot room exhaust backward into server intakes. Differential Pressure Transducers continuously measure aisle static pressure, maintaining a perfect balance of `+0.02 to +0.05 inches wg`. The transducers interface with Variable Frequency Drives (VFDs) controlling CRAC blower motors; when server workloads increase, the VFD autonomously ramps up blower RPM to deliver exact required CFM, throttling down during low workloads to unlock massive electrical energy savings and lower PUE.</p>
-<h3>Why is installing blanking panels across 100% of unpopulated rack spaces mandatory for thermal compliance?</h3>
+</div></div></div>
+<div class="faq-card"><div class="faq-question"><span class="faq-q-badge">Q</span><h3>Why is installing blanking panels across 100% of unpopulated rack spaces mandatory for thermal compliance?</h3></div><div class="faq-answer"><span class="faq-a-badge">A</span><div class="faq-answer-text">
 <p>In a standard server cabinet, any unpopulated rack space (e.g., an open 1U or 2U slot) represents a catastrophic thermal breach. Hot exhaust air accumulating at the rear of the cabinet seeks the path of least resistance, flowing forward through the open server slots directly into the cold intake aisle—a destructive phenomenon known as Exhaust Recirculation. Installing solid, toolless composite Blanking Panels across 100% of unpopulated rack spaces creates a solid aerodynamic barrier, completely blocking hot exhaust recirculation and forcing intake air to flow exclusively through the internal heat sinks of active server hardware, preventing thermal throttling.</p>
-<h3>How do KoldLok brush strip grommets eliminate bypass airflow waste in raised floor data centers?</h3>
+</div></div></div>
+<div class="faq-card"><div class="faq-question"><span class="faq-q-badge">Q</span><h3>How do KoldLok brush strip grommets eliminate bypass airflow waste in raised floor data centers?</h3></div><div class="faq-answer"><span class="faq-a-badge">A</span><div class="faq-answer-text">
 <p>In raised floor data centers, heavy copper and fiber optic trunks exit floor tile cutouts to enter server cabinets. If these cutouts are unsealed, chilled air within the pressurized under-floor plenum escapes aggressively into the open room, bypassing server intake bezels entirely—a severe inefficiency known as Bypass Airflow. KoldLok brush strip grommets feature dense, double-layered nylon brush bristles installed around floor penetrations. The bristles conform perfectly around the physical contours of the cable bundles, physically sealing the raised floor plenum and ensuring that 100% of conditioned CRAC air is directed upward into the sealed cold containment aisle.</p>
-<h3>How does Zero-U PDU cabling geometry prevent server thermal throttling in high-density cabinets?</h3>
+</div></div></div>
+<div class="faq-card"><div class="faq-question"><span class="faq-q-badge">Q</span><h3>How does Zero-U PDU cabling geometry prevent server thermal throttling in high-density cabinets?</h3></div><div class="faq-answer"><span class="faq-a-badge">A</span><div class="faq-answer-text">
 <p>At the rear of high-density server cabinets, managing heavy C13/C19 power cords connecting to Power Distribution Units (PDUs) is critical for maintaining exhaust airflow. If heavy power cords are draped haphazardly across the rear of the servers, they physically block the equipment exhaust fan bezels, creating severe backpressure that forces server internal fans to spin at maximum RPM and leads to immediate thermal throttling. Enterprise cabinets deploy flush-mounted Zero-U Vertical PDUs installed entirely within the side upright bays of the rack frame. Power cords are dressed vertically into side troughs, guaranteeing that 100% of active server exhaust bezels remain completely unobstructed for rapid heat evacuation.</p>
+</div></div></div>
         <section class="related-section">
             <h3>Related Forensic Intelligence</h3>
             <ul>
-                <li>&rarr; <a href="network-monitoring-solutions-overview.html">Network Monitoring Solutions Overview</a></li> <li>&rarr; <a href="secure-iot-device-integration.html">Secure Iot Device Integration</a></li> <li>&rarr; <a href="poe-power-budget-planning.html">Poe Power Budget Planning</a></li>
+                <li>&rarr; <a href="business-security-hartlepool-2026-audit.html">Business Security Hartlepool 2026 Audit</a></li> <li>&rarr; <a href="enterprise-anpr-vehicle-access.html">Enterprise Anpr Vehicle Access</a></li> <li>&rarr; <a href="structured-cabling-installation-basics.html">Structured Cabling Installation Basics</a></li>
             </ul>
         </section>
 

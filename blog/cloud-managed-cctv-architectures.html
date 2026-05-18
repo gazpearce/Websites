@@ -151,6 +151,81 @@
             font-size: 1.125rem;
             position: relative;
         }
+        .faq-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin: 2.5rem 0;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            transition: all 0.2s ease;
+        }
+        .faq-card:hover {
+            border-color: var(--brand-blue);
+            box-shadow: 0 10px 15px -3px rgba(37,99,235,0.1);
+            transform: translateY(-2px);
+        }
+        .faq-question {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.25rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1.5rem;
+        }
+        .faq-q-badge {
+            background: var(--brand-blue);
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 1.25rem;
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            box-shadow: 0 4px 6px -1px rgba(37,99,235,0.3);
+        }
+        .faq-question h3 {
+            margin: 0;
+            font-size: 1.35rem;
+            color: var(--brand-dark);
+            line-height: 1.4;
+        }
+        .faq-answer {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.25rem;
+        }
+        .faq-a-badge {
+            background: #f1f5f9;
+            color: var(--text-muted);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 1.25rem;
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .faq-answer-text {
+            flex: 1;
+        }
+        .faq-answer-text p {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 1.125rem;
+            color: var(--text-main);
+            line-height: 1.8;
+        }
+        .faq-answer-text p:last-child {
+            margin-bottom: 0;
+        }
         table { 
             width: 100%; 
             border-collapse: collapse; 
@@ -360,20 +435,25 @@
 <p>All video data-in-transit streaming from the camera to the cloud vault is encapsulated within mandatory Transport Layer Security (TLS 1.3) protocols utilizing AES-GCM 256-bit encryption and Ephemeral Diffie-Hellman (ECDHE) perfect forward secrecy.</p>
 <p>Simultaneously, all video data-at-rest stored within the cloud vault or buffered on the camera's internal MicroSDXC card is encrypted at the storage volume level utilizing AES-256. This cryptographic architecture ensures that even if an advanced threat actor intercepts the physical WAN transmission line or physically steals the camera's internal SD card, the video footage remains entirely unreadable, safeguarding corporate privacy and preserving evidentiary chain of custody.</p>
 <h2>5. Comprehensive Expert Frequently Asked Questions</h2>
-<h3>What is the exact difference between Direct-to-Cloud and Cloud-Managed Hybrid NVR surveillance architectures?</h3>
+<div class="faq-card"><div class="faq-question"><span class="faq-q-badge">Q</span><h3>What is the exact difference between Direct-to-Cloud and Cloud-Managed Hybrid NVR surveillance architectures?</h3></div><div class="faq-answer"><span class="faq-a-badge">A</span><div class="faq-answer-text">
 <p>Direct-to-Cloud (Camera-to-Cloud) architectures eliminate on-premise recording servers entirely; IP cameras connect directly to the enterprise switch and stream video over outbound cryptographic tunnels directly to cloud storage, making it highly cost-effective for distributed multi-site enterprises with low camera counts per site. Cloud-Managed Hybrid NVR architectures utilize an on-premise bridge appliance or cloud NVR to ingest high-bandwidth 4K video from dozens of local cameras, storing primary footage on local surveillance drives while streaming lightweight sub-streams and AI event clips to the cloud dashboard. This topology is mandatory for high-density corporate headquarters to prevent local WAN bandwidth saturation.</p>
-<h3>How do cloud-enabled IP cameras maintain video recording integrity during a complete external WAN internet outage?</h3>
+</div></div></div>
+<div class="faq-card"><div class="faq-question"><span class="faq-q-badge">Q</span><h3>How do cloud-enabled IP cameras maintain video recording integrity during a complete external WAN internet outage?</h3></div><div class="faq-answer"><span class="faq-a-badge">A</span><div class="faq-answer-text">
 <p>Cloud-enabled enterprise IP cameras maintain absolute video recording integrity during WAN outages through robust Camera Edge Buffering. Every camera is equipped with an industrial-grade, high-endurance MicroSDXC storage card (typically 256GB to 512GB). When the external internet connection fails, the camera detects the loss of the cloud heartbeat and autonomously shunts the active 4K video stream directly to the internal SD card buffer. Once the external fiber connection is restored, the camera automatically re-establishes its secure TLS 1.3 cloud tunnel and executes a background trickle sync, uploading the missing video blocks to the cloud vault without disrupting live streaming.</p>
-<h3>How do Smart Bandwidth Throttling Schedules prevent CCTV streams from saturating enterprise fiber circuits?</h3>
+</div></div></div>
+<div class="faq-card"><div class="faq-question"><span class="faq-q-badge">Q</span><h3>How do Smart Bandwidth Throttling Schedules prevent CCTV streams from saturating enterprise fiber circuits?</h3></div><div class="faq-answer"><span class="faq-a-badge">A</span><div class="faq-answer-text">
 <p>Smart Bandwidth Throttling Schedules allow network architects to configure strict, time-based Quality of Service (QoS) governors within the cloud CCTV dashboard to protect corporate network performance. During peak business hours (e.g., `08:00 to 18:00`), outgoing CCTV traffic is aggressively throttled; cameras transmit only ultra-lightweight video sub-streams (`<500 Kbps`) to the cloud for live situational awareness, while primary 4K footage is buffered locally. During off-peak hours (`18:00 to 08:00`), the governors are automatically lifted, and cameras execute high-speed background trickle synchronization utilizing the uncapped fiber circuit to upload full-resolution primary video files to the cloud vault.</p>
-<h3>Why is eliminating inbound port forwarding and DDNS critical for commercial CCTV cybersecurity?</h3>
+</div></div></div>
+<div class="faq-card"><div class="faq-question"><span class="faq-q-badge">Q</span><h3>Why is eliminating inbound port forwarding and DDNS critical for commercial CCTV cybersecurity?</h3></div><div class="faq-answer"><span class="faq-a-badge">A</span><div class="faq-answer-text">
 <p>In legacy CCTV installations, enabling remote mobile viewing required technicians to configure inbound port forwarding rules (opening TCP ports `80, 8000, or 554`) across the perimeter firewall, frequently paired with unencrypted Dynamic DNS (DDNS). This egregious practice exposed internal recording hardware directly to automated public internet port scanners, credential brute-forcing, and IoT botnets like Mirai. 2026 enterprise VSaaS architectures operate on an Outbound-Only communication model; cameras initiate secure outbound TCP Port 443 micro-tunnels directly to the cloud vault. Zero inbound firewall ports are opened, leaving the enterprise perimeter completely sealed against external scanning.</p>
-<h3>What are the mandatory cryptographic standards for securing cloud CCTV video data-in-transit and data-at-rest?</h3>
+</div></div></div>
+<div class="faq-card"><div class="faq-question"><span class="faq-q-badge">Q</span><h3>What are the mandatory cryptographic standards for securing cloud CCTV video data-in-transit and data-at-rest?</h3></div><div class="faq-answer"><span class="faq-a-badge">A</span><div class="faq-answer-text">
 <p>To guarantee absolute data confidentiality and comply with strict statutory privacy mandates (such as ICO GDPR guidelines and ISO 27001), enterprise VSaaS platforms enforce rigorous encryption across the entire video lifecycle. All video data-in-transit streaming from the camera to the cloud vault is encapsulated within mandatory Transport Layer Security (TLS 1.3) protocols utilizing AES-GCM 256-bit encryption and Ephemeral Diffie-Hellman (ECDHE) perfect forward secrecy. Simultaneously, all video data-at-rest stored within the cloud vault or buffered on the camera's internal MicroSDXC card is encrypted at the storage volume level utilizing AES-256, ensuring footage remains unreadable if physical hardware is stolen.</p>
+</div></div></div>
         <section class="related-section">
             <h3>Related Forensic Intelligence</h3>
             <ul>
-                <li>&rarr; <a href="secure-iot-device-integration.html">Secure Iot Device Integration</a></li> <li>&rarr; <a href="intruder-alarms-bolton-2026-audit.html">Intruder Alarms Bolton 2026 Audit</a></li> <li>&rarr; <a href="network-monitoring-solutions-overview.html">Network Monitoring Solutions Overview</a></li>
+                <li>&rarr; <a href="ai-powered-perimeter-surveillance.html">Ai Powered Perimeter Surveillance</a></li> <li>&rarr; <a href="business-security-hartlepool-2026-audit.html">Business Security Hartlepool 2026 Audit</a></li> <li>&rarr; <a href="data-cabling-darlington-2026-audit.html">Data Cabling Darlington 2026 Audit</a></li>
             </ul>
         </section>
 

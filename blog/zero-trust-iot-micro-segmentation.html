@@ -151,6 +151,81 @@
             font-size: 1.125rem;
             position: relative;
         }
+        .faq-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin: 2.5rem 0;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            transition: all 0.2s ease;
+        }
+        .faq-card:hover {
+            border-color: var(--brand-blue);
+            box-shadow: 0 10px 15px -3px rgba(37,99,235,0.1);
+            transform: translateY(-2px);
+        }
+        .faq-question {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.25rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1.5rem;
+        }
+        .faq-q-badge {
+            background: var(--brand-blue);
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 1.25rem;
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            box-shadow: 0 4px 6px -1px rgba(37,99,235,0.3);
+        }
+        .faq-question h3 {
+            margin: 0;
+            font-size: 1.35rem;
+            color: var(--brand-dark);
+            line-height: 1.4;
+        }
+        .faq-answer {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.25rem;
+        }
+        .faq-a-badge {
+            background: #f1f5f9;
+            color: var(--text-muted);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 1.25rem;
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .faq-answer-text {
+            flex: 1;
+        }
+        .faq-answer-text p {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 1.125rem;
+            color: var(--text-main);
+            line-height: 1.8;
+        }
+        .faq-answer-text p:last-child {
+            margin-bottom: 0;
+        }
         table { 
             width: 100%; 
             border-collapse: collapse; 
@@ -348,20 +423,25 @@
 <p>```</p>
 <p>For example, a commercial smart thermostat is strictly permitted to establish outbound TCP connections on Port 8883 (MQTT over TLS) directly to its verified vendor cloud gateway, alongside local UDP Port 123 connections to the internal NTP time server. Any attempt by the thermostat to initiate an outbound SSH connection (TCP 22), execute a DNS query to an external unapproved resolver, or ping an internal database server is instantly dropped, logged, and flagged as a critical security anomaly in the Security Operations Center (SOC).</p>
 <h2>5. Comprehensive Expert Frequently Asked Questions</h2>
-<h3>How does dynamic Downloadable ACL (DACL) enforcement function in Cisco ISE IoT deployments?</h3>
+<div class="faq-card"><div class="faq-question"><span class="faq-q-badge">Q</span><h3>How does dynamic Downloadable ACL (DACL) enforcement function in Cisco ISE IoT deployments?</h3></div><div class="faq-answer"><span class="faq-a-badge">A</span><div class="faq-answer-text">
 <p>When an unknown IoT device associates with an enterprise switch port, Cisco ISE executes AI-driven device profiling using DHCP options, LLDP packets, and MAC OUI matching. Once classified, ISE dynamically assigns the port to an isolated IoT VLAN and pushes a Downloadable ACL (DACL) directly into the switch's active memory. This DACL enforces whitelist-only micro-segmentation at the hardware level, permitting the device to communicate only with its mandatory vendor cloud gateway while instantly dropping all unauthorized lateral traffic.</p>
-<h3>What are the mechanical vulnerabilities of MAC Authentication Bypass (MAB) and how are they mitigated?</h3>
+</div></div></div>
+<div class="faq-card"><div class="faq-question"><span class="faq-q-badge">Q</span><h3>What are the mechanical vulnerabilities of MAC Authentication Bypass (MAB) and how are they mitigated?</h3></div><div class="faq-answer"><span class="faq-a-badge">A</span><div class="faq-answer-text">
 <p>MAC Authentication Bypass (MAB) relies on unencrypted Layer 2 MAC addresses, making it inherently vulnerable to MAC spoofing attacks where a threat actor clones the MAC address of an authorized IoT printer or camera onto a rogue laptop. To mitigate this vulnerability, 2026 enterprise architectures pair MAB with AI Dynamic Profiling and anomalous behavior analytics. If a device authenticates via an authorized printer MAC address but suddenly begins transmitting HTTP User-Agent headers matching a Linux OS or initiating unapproved port scans, the identity engine instantly detects the profile mismatch, revokes the port authorization, and shunts the rogue device into a quarantined containment VLAN.</p>
-<h3>How does Zero-Trust micro-segmentation physically contain Mirai and IoT botnet propagation?</h3>
+</div></div></div>
+<div class="faq-card"><div class="faq-question"><span class="faq-q-badge">Q</span><h3>How does Zero-Trust micro-segmentation physically contain Mirai and IoT botnet propagation?</h3></div><div class="faq-answer"><span class="faq-a-badge">A</span><div class="faq-answer-text">
 <p>The Mirai botnet and similar IoT malware propagate by executing aggressive internal IP port scans across TCP ports 23 (Telnet) and 22 (SSH) to locate and infect vulnerable peer devices. Zero-Trust micro-segmentation deploys Private VLANs (PVLANs) and port-based ACLs that configure all IoT switch ports as "Isolated." Because isolated ports are structurally barred from communicating with one another at the switching silicon layer, an infected IoT camera is physically unable to transmit scan packets to adjacent cameras, instantly halting botnet propagation in its tracks.</p>
-<h3>Why is MQTT over TLS 1.3 (Port 8883) mandatory for commercial IoT sensor grids?</h3>
+</div></div></div>
+<div class="faq-card"><div class="faq-question"><span class="faq-q-badge">Q</span><h3>Why is MQTT over TLS 1.3 (Port 8883) mandatory for commercial IoT sensor grids?</h3></div><div class="faq-answer"><span class="faq-a-badge">A</span><div class="faq-answer-text">
 <p>Legacy IoT sensor deployments frequently utilize unencrypted MQTT (Port 1883) or basic HTTP to transmit telemetry data, exposing sensitive building operational metrics to cleartext packet sniffing and man-in-the-middle (MitM) command injection. 2026 enterprise standards strictly mandate MQTT over TLS 1.3 (Port 8883). TLS 1.3 provides robust payload encryption using AES-GCM, perfect forward secrecy via Ephemeral Diffie-Hellman (ECDHE), and mutual cryptographic certificate authentication, ensuring that operational technology (OT) telemetry cannot be intercepted or manipulated by unauthorized actors.</p>
-<h3>How does micro-segmentation protect corporate Active Directory from IoT-originated ransomware?</h3>
+</div></div></div>
+<div class="faq-card"><div class="faq-question"><span class="faq-q-badge">Q</span><h3>How does micro-segmentation protect corporate Active Directory from IoT-originated ransomware?</h3></div><div class="faq-answer"><span class="faq-a-badge">A</span><div class="faq-answer-text">
 <p>In a flat network, ransomware infecting a vulnerable smart TV or IoT controller easily executes lateral East-West hops to compromise corporate Active Directory (AD) domain controllers and file encryption shares. Micro-segmentation establishes a definitive Layer 3 firewall boundary between the IoT VLAN and corporate data planes. By enforcing strict, whitelist-only access control lists at the Next-Generation Firewall gateway, all lateral traffic attempting to reach AD ports (such as Kerberos TCP 88, LDAP TCP 389, or SMB TCP 445) from an IoT subnet is completely blocked, ensuring that enterprise data storage remains pristine and uncompromised during an IoT breach.</p>
+</div></div></div>
         <section class="related-section">
             <h3>Related Forensic Intelligence</h3>
             <ul>
-                <li>&rarr; <a href="network-monitoring-solutions-overview.html">Network Monitoring Solutions Overview</a></li> <li>&rarr; <a href="poe-power-budget-planning.html">Poe Power Budget Planning</a></li> <li>&rarr; <a href="structured-cabling-installation-basics.html">Structured Cabling Installation Basics</a></li>
+                <li>&rarr; <a href="business-security-hartlepool-2026-audit.html">Business Security Hartlepool 2026 Audit</a></li> <li>&rarr; <a href="secure-iot-device-integration.html">Secure Iot Device Integration</a></li> <li>&rarr; <a href="fiber-optic-upgrade-guide.html">Fiber Optic Upgrade Guide</a></li>
             </ul>
         </section>
 

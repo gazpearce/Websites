@@ -151,6 +151,81 @@
             font-size: 1.125rem;
             position: relative;
         }
+        .faq-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin: 2.5rem 0;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            transition: all 0.2s ease;
+        }
+        .faq-card:hover {
+            border-color: var(--brand-blue);
+            box-shadow: 0 10px 15px -3px rgba(37,99,235,0.1);
+            transform: translateY(-2px);
+        }
+        .faq-question {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.25rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1.5rem;
+        }
+        .faq-q-badge {
+            background: var(--brand-blue);
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 1.25rem;
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            box-shadow: 0 4px 6px -1px rgba(37,99,235,0.3);
+        }
+        .faq-question h3 {
+            margin: 0;
+            font-size: 1.35rem;
+            color: var(--brand-dark);
+            line-height: 1.4;
+        }
+        .faq-answer {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.25rem;
+        }
+        .faq-a-badge {
+            background: #f1f5f9;
+            color: var(--text-muted);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 1.25rem;
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .faq-answer-text {
+            flex: 1;
+        }
+        .faq-answer-text p {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 1.125rem;
+            color: var(--text-main);
+            line-height: 1.8;
+        }
+        .faq-answer-text p:last-child {
+            margin-bottom: 0;
+        }
         table { 
             width: 100%; 
             border-collapse: collapse; 
@@ -383,20 +458,25 @@
 <p>```</p>
 <p>Conversely, testing the exact same splice in the opposite direction (`B -> A`) produces an exaggerated decibel drop. To calculate the true, physical insertion loss of the fusion splice, 2026 engineering standards mandate True Bi-Directional OTDR Testing. Technicians capture high-resolution traces from both ends of the fiber link (`A -> B` and `B -> A`). Advanced Fluke LinkWare software autonomously merges the two directional traces, executing precise mathematical averaging to eliminate backscatter coefficient mismatches and reveal the true, pristine physical loss of the fusion weld.</p>
 <h2>5. Comprehensive Expert Frequently Asked Questions</h2>
-<h3>What causes an OTDR "Dead Zone" and how do Launch and Receive Cords eliminate this limitation?</h3>
+<div class="faq-card"><div class="faq-question"><span class="faq-q-badge">Q</span><h3>What causes an OTDR "Dead Zone" and how do Launch and Receive Cords eliminate this limitation?</h3></div><div class="faq-answer"><span class="faq-a-badge">A</span><div class="faq-answer-text">
 <p>An OTDR Dead Zone is caused by the intense Fresnel reflection generated when the high-power laser pulse enters the front panel connector. This massive burst of reflected light temporarily blinds the OTDR's highly sensitive avalanche photodiode (APD) detector, preventing it from measuring close-in optical events. Calibrated Launch and Receive Cords (typically 150m for multimode) act as optical buffers installed at both ends of the enterprise fiber link. This geometric separation forces the initial blinding reflection to occur entirely within the launch cord, allowing the APD detector to fully recover and stabilize before the laser pulse enters the active enterprise link, ensuring flawless certification of the first and last patch panel connectors.</p>
-<h3>How does dual-wavelength OTDR testing decisively differentiate between a fusion splice and a macro-bend?</h3>
+</div></div></div>
+<div class="faq-card"><div class="faq-question"><span class="faq-q-badge">Q</span><h3>How does dual-wavelength OTDR testing decisively differentiate between a fusion splice and a macro-bend?</h3></div><div class="faq-answer"><span class="faq-a-badge">A</span><div class="faq-answer-text">
 <p>Dual-wavelength OTDR testing (e.g., testing at `850nm` and `1300nm` simultaneously) leverages the physical properties of light propagation across different mode field diameters. Because a fusion splice is a permanent physical weld of the glass cores, its decibel loss remains constant across all operating wavelengths. Conversely, a macro-bend is a physical distortion of the cable geometry. Higher wavelengths (such as `1300nm` or `1550nm`) possess larger mode field diameters, making them exceptionally vulnerable to escaping through the cladding when bent. If the OTDR trace reveals a minor loss at `850nm` but a massive decibel drop at `1300nm`, the engineer instantly identifies a physical macro-bend rather than a fusion splice.</p>
-<h3>What is Encircled Flux (EF) compliance and why is it mandatory under ISO/IEC 14763-3?</h3>
+</div></div></div>
+<div class="faq-card"><div class="faq-question"><span class="faq-q-badge">Q</span><h3>What is Encircled Flux (EF) compliance and why is it mandatory under ISO/IEC 14763-3?</h3></div><div class="faq-answer"><span class="faq-a-badge">A</span><div class="faq-answer-text">
 <p>Encircled Flux (EF) is a mandatory international optical launch standard defined under ISO/IEC 14763-3 and TIA-526-14-C that regulates the exact modal power distribution curve injected into a multimode fiber core. Legacy uncalibrated light sources produced unpredictable overfilled or underfilled launches, resulting in up to 40% measurement variance between different testing sets. EF-compliant test equipment (such as the Fluke CertiFiber Pro) utilizes specialized mode-conditioning launch cords to inject a perfectly standardized light profile, guaranteeing that optical loss measurements are flawlessly repeatable, highly accurate, and legally binding for enterprise warranty certification.</p>
-<h3>Why do OTDR traces occasionally exhibit apparent "Gainers" across fusion splices, and how is the true loss calculated?</h3>
+</div></div></div>
+<div class="faq-card"><div class="faq-question"><span class="faq-q-badge">Q</span><h3>Why do OTDR traces occasionally exhibit apparent "Gainers" across fusion splices, and how is the true loss calculated?</h3></div><div class="faq-answer"><span class="faq-a-badge">A</span><div class="faq-answer-text">
 <p>An OTDR "Gainer" is an optical anomaly where a fusion splice appears to gain decibel power rather than lose it on the trace screen. This occurs when splicing two fiber strands manufactured from different production batches that possess slightly different internal Rayleigh backscatter coefficients. When the laser pulse passes from a fiber with a high backscatter coefficient into a fiber with a lower coefficient, the sudden increase in captured backscatter tricks the OTDR into displaying a power gain. To calculate the true physical insertion loss of the weld, engineers execute True Bi-Directional Testing, capturing traces from both directions (`A -> B` and `B -> A`) and mathematically averaging the two decibel values to eliminate the backscatter mismatch.</p>
-<h3>What is the maximum allowable insertion loss for a professional fusion splice under TIA-568.3-D standards?</h3>
+</div></div></div>
+<div class="faq-card"><div class="faq-question"><span class="faq-q-badge">Q</span><h3>What is the maximum allowable insertion loss for a professional fusion splice under TIA-568.3-D standards?</h3></div><div class="faq-answer"><span class="faq-a-badge">A</span><div class="faq-answer-text">
 <p>Under TIA-568.3-D and ISO/IEC 11801 standards, the maximum allowable insertion loss for a single fusion splice is `0.3 dB`. However, in modern 2026 multi-gigabit enterprise deployments (supporting 40Gbps and 100Gbps optical backhauls), optical loss budgets are exceptionally tight. Professional fiber optic contractors utilizing advanced core-alignment fusion splicers strictly enforce an internal engineering quality threshold of `0.02 dB to 0.05 dB` per fusion splice, ensuring maximum optical headroom and pristine signal integrity across the entire cabling plant.</p>
+</div></div></div>
         <section class="related-section">
             <h3>Related Forensic Intelligence</h3>
             <ul>
-                <li>&rarr; <a href="business-security-hartlepool-2026-audit.html">Business Security Hartlepool 2026 Audit</a></li> <li>&rarr; <a href="ai-powered-perimeter-surveillance.html">Ai Powered Perimeter Surveillance</a></li> <li>&rarr; <a href="enterprise-wi-fi-deployment.html">Enterprise Wi Fi Deployment</a></li>
+                <li>&rarr; <a href="data-cabling-darlington-2026-audit.html">Data Cabling Darlington 2026 Audit</a></li> <li>&rarr; <a href="fiber-optic-otdr-diagnostics.html">Fiber Optic Otdr Diagnostics</a></li> <li>&rarr; <a href="intruder-alarms-bolton-2026-audit.html">Intruder Alarms Bolton 2026 Audit</a></li>
             </ul>
         </section>
 

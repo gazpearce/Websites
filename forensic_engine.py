@@ -53,6 +53,9 @@ class ForensicEngine:
         
         # Simple Markdown to HTML parser
         html_lines = []
+        in_faq_section = False
+        faq_card_open = False
+
         for line in markdown.split('\n'):
             line = line.strip()
             if not line:
@@ -60,14 +63,31 @@ class ForensicEngine:
             
             # Headers
             if line.startswith('### '):
-                html_lines.append(f'<h3>{line[4:]}</h3>')
+                if in_faq_section:
+                    if faq_card_open:
+                        html_lines.append('</div></div></div>') # close previous faq-answer-text, faq-answer, faq-card
+                    faq_card_open = True
+                    html_lines.append(f'<div class="faq-card"><div class="faq-question"><span class="faq-q-badge">Q</span><h3>{line[4:]}</h3></div><div class="faq-answer"><span class="faq-a-badge">A</span><div class="faq-answer-text">')
+                else:
+                    html_lines.append(f'<h3>{line[4:]}</h3>')
             elif line.startswith('## '):
+                if faq_card_open:
+                    html_lines.append('</div></div></div>')
+                    faq_card_open = False
+                if 'frequently asked questions' in line.lower() or 'expert faq' in line.lower():
+                    in_faq_section = True
                 html_lines.append(f'<h2>{line[3:]}</h2>')
             elif line.startswith('# '):
+                if faq_card_open:
+                    html_lines.append('</div></div></div>')
+                    faq_card_open = False
                 html_lines.append(f'<h1>{line[2:]}</h1>')
             
             # Images
             elif '[Image:' in line:
+                if faq_card_open:
+                    html_lines.append('</div></div></div>')
+                    faq_card_open = False
                 alt_text = "Technical Implementation"
                 img_src = ""
                 
@@ -116,6 +136,9 @@ class ForensicEngine:
                 import re
                 line = re.sub(r'\*\*(.*?)\*\*', r'<strong>\1</strong>', line)
                 html_lines.append(f'<p>{line}</p>')
+
+        if faq_card_open:
+            html_lines.append('</div></div></div>')
 
         content = "\n".join(html_lines)
 
@@ -301,6 +324,81 @@ class ForensicEngine:
             color: var(--text-main);
             font-size: 1.125rem;
             position: relative;
+        }}
+        .faq-card {{
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin: 2.5rem 0;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            transition: all 0.2s ease;
+        }}
+        .faq-card:hover {{
+            border-color: var(--brand-blue);
+            box-shadow: 0 10px 15px -3px rgba(37,99,235,0.1);
+            transform: translateY(-2px);
+        }}
+        .faq-question {{
+            display: flex;
+            align-items: flex-start;
+            gap: 1.25rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1.5rem;
+        }}
+        .faq-q-badge {{
+            background: var(--brand-blue);
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 1.25rem;
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            box-shadow: 0 4px 6px -1px rgba(37,99,235,0.3);
+        }}
+        .faq-question h3 {{
+            margin: 0;
+            font-size: 1.35rem;
+            color: var(--brand-dark);
+            line-height: 1.4;
+        }}
+        .faq-answer {{
+            display: flex;
+            align-items: flex-start;
+            gap: 1.25rem;
+        }}
+        .faq-a-badge {{
+            background: #f1f5f9;
+            color: var(--text-muted);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 1.25rem;
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }}
+        .faq-answer-text {{
+            flex: 1;
+        }}
+        .faq-answer-text p {{
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 1.125rem;
+            color: var(--text-main);
+            line-height: 1.8;
+        }}
+        .faq-answer-text p:last-child {{
+            margin-bottom: 0;
         }}
         table {{ 
             width: 100%; 

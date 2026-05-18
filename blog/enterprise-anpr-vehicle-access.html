@@ -151,6 +151,81 @@
             font-size: 1.125rem;
             position: relative;
         }
+        .faq-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin: 2.5rem 0;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            transition: all 0.2s ease;
+        }
+        .faq-card:hover {
+            border-color: var(--brand-blue);
+            box-shadow: 0 10px 15px -3px rgba(37,99,235,0.1);
+            transform: translateY(-2px);
+        }
+        .faq-question {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.25rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1.5rem;
+        }
+        .faq-q-badge {
+            background: var(--brand-blue);
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 1.25rem;
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            box-shadow: 0 4px 6px -1px rgba(37,99,235,0.3);
+        }
+        .faq-question h3 {
+            margin: 0;
+            font-size: 1.35rem;
+            color: var(--brand-dark);
+            line-height: 1.4;
+        }
+        .faq-answer {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.25rem;
+        }
+        .faq-a-badge {
+            background: #f1f5f9;
+            color: var(--text-muted);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 1.25rem;
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .faq-answer-text {
+            flex: 1;
+        }
+        .faq-answer-text p {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 1.125rem;
+            color: var(--text-main);
+            line-height: 1.8;
+        }
+        .faq-answer-text p:last-child {
+            margin-bottom: 0;
+        }
         table { 
             width: 100%; 
             border-collapse: collapse; 
@@ -365,20 +440,25 @@
 <p>Technicians saw-cut two distinct inductive wire loops directly into the concrete entry lane. The Arming Loop (`Loop 1`) is buried approximately 15 meters upstream of the barrier gate. When a vehicle drives over Loop 1, the change in magnetic inductance instantly wakes the ANPR camera, triggering the high-speed electronic shutter and pulsed IR array to capture the plate.</p>
 <p>The Safety Loop (`Loop 2`) is buried directly beneath the physical trajectory of the aluminum barrier arm. While a vehicle's metal chassis remains positioned over Loop 2, the barrier controller's internal safety relay is structurally latched open. Under no circumstances will the barrier arm descend, even if the access control panel issues an explicit close command. The arm will only initiate its downward trajectory once the vehicle has completely cleared Loop 2 and broken a secondary optical photocell beam matrix, guaranteeing absolute physical safety for passing vehicular traffic.</p>
 <h2>5. Comprehensive Expert Frequently Asked Questions</h2>
-<h3>Why is shutter speed calibration to 1/1000s mandatory for commercial ANPR camera deployments?</h3>
+<div class="faq-card"><div class="faq-question"><span class="faq-q-badge">Q</span><h3>Why is shutter speed calibration to 1/1000s mandatory for commercial ANPR camera deployments?</h3></div><div class="faq-answer"><span class="faq-a-badge">A</span><div class="faq-answer-text">
 <p>Standard surveillance cameras operating at default shutter speeds (`1/30s` or `1/60s`) capture blurred, distorted streaks of light when vehicles pass an entry lane at speeds exceeding 15 mph, rendering the license plate completely unreadable by Optical Character Recognition (OCR) algorithms. 2026 enterprise ANPR standards mandate clamping the camera's electronic global shutter to a minimum speed of `1/1000s`. This lightning-fast exposure freezes vehicle motion instantly, eliminating motion blur and ensuring crisp, high-contrast character definition across the plate surface for flawless OCR extraction.</p>
-<h3>How do ANPR cameras suppress blinding vehicle headlights utilizing pulsed infrared illumination?</h3>
+</div></div></div>
+<div class="faq-card"><div class="faq-question"><span class="faq-q-badge">Q</span><h3>How do ANPR cameras suppress blinding vehicle headlights utilizing pulsed infrared illumination?</h3></div><div class="faq-answer"><span class="faq-a-badge">A</span><div class="faq-answer-text">
 <p>During nighttime operations, oncoming vehicle headlights produce intense optical blooming and lens flare that blinds standard optical sensors. Professional ANPR cameras utilize a dual-component optical filtering system paired with high-output pulsed 850nm infrared LED arrays. The camera lens is fitted with a specialized bandpass filter that completely blocks visible light (including blinding halogen/LED headlight glare), permitting only infrared light to pass. Simultaneously, the pulsed IR array floods the approaching vehicle; the IR light bounces aggressively off the retro-reflective license plate sheeting, returning a pristine, high-contrast image to the sensor while surrounding headlights are suppressed.</p>
-<h3>What is the security vulnerability of direct camera relay wiring, and how does Wiegand isolation resolve it?</h3>
+</div></div></div>
+<div class="faq-card"><div class="faq-question"><span class="faq-q-badge">Q</span><h3>What is the security vulnerability of direct camera relay wiring, and how does Wiegand isolation resolve it?</h3></div><div class="faq-answer"><span class="faq-a-badge">A</span><div class="faq-answer-text">
 <p>In legacy ANPR installations, the camera contained an internal dry-contact relay wired directly to the barrier gate's motor control board. A threat actor could physically detach the external camera from its pole, short the exposed internal relay wires together, and autonomously open the high-security barrier gate. 2026 enterprise standards strictly prohibit direct camera relays, mandating Wiegand Controller Isolation. The ANPR camera contains no active relays; instead, upon matching a plate, it transmits a secure Wiegand or OSDP data stream to an isolated intelligent door controller located inside a protected building closet. The controller evaluates the string and fires its own internal relay to open the barrier, eliminating external tampering risks.</p>
-<h3>How does edge Neural Processing Unit (NPU) OCR extraction ensure uninterrupted commercial gate operations?</h3>
+</div></div></div>
+<div class="faq-card"><div class="faq-question"><span class="faq-q-badge">Q</span><h3>How does edge Neural Processing Unit (NPU) OCR extraction ensure uninterrupted commercial gate operations?</h3></div><div class="faq-answer"><span class="faq-a-badge">A</span><div class="faq-answer-text">
 <p>Legacy ANPR architectures relied on streaming uncompressed video feeds back to a centralized server farm for Optical Character Recognition (OCR) evaluation. If the external WAN connection failed or the central server crashed, gate operations ground to a halt. Modern ANPR cameras feature dedicated edge Neural Processing Units (NPUs) running advanced deep learning Convolutional Neural Networks (CNNs) directly on the camera silicon. The camera autonomously captures, segments, and extracts plate characters in sub-second timeframes (`<0.15s`), ensuring that vehicle authorization and barrier gate operations continue to function flawlessly even during complete network or central server outages.</p>
-<h3>What is the operational function of Dual-Loop Induction Safety Logic in automated barrier gate lanes?</h3>
+</div></div></div>
+<div class="faq-card"><div class="faq-question"><span class="faq-q-badge">Q</span><h3>What is the operational function of Dual-Loop Induction Safety Logic in automated barrier gate lanes?</h3></div><div class="faq-answer"><span class="faq-a-badge">A</span><div class="faq-answer-text">
 <p>Dual-Loop Induction Safety Logic utilizes two distinct magnetic wire loops saw-cut into the concrete entry lane to ensure rapid throughput and absolute physical safety. The Arming Loop (`Loop 1`), buried 15 meters upstream, detects approaching metal mass and instantly wakes the ANPR camera to capture the plate. The Safety Loop (`Loop 2`), buried directly beneath the barrier arm, acts as a structural failsafe. While a vehicle's chassis remains positioned over Loop 2, the barrier controller's internal safety relay is latched open, structurally preventing the aluminum arm from descending and striking the vehicle, even if the access controller issues a close command.</p>
+</div></div></div>
         <section class="related-section">
             <h3>Related Forensic Intelligence</h3>
             <ul>
-                <li>&rarr; <a href="high-density-cat8-structured-cabling.html">High Density Cat8 Structured Cabling</a></li> <li>&rarr; <a href="cable-management-best-practices.html">Cable Management Best Practices</a></li> <li>&rarr; <a href="zero-trust-iot-micro-segmentation.html">Zero Trust Iot Micro Segmentation</a></li>
+                <li>&rarr; <a href="commercial-access-control-biometrics.html">Commercial Access Control Biometrics</a></li> <li>&rarr; <a href="enterprise-anpr-vehicle-access.html">Enterprise Anpr Vehicle Access</a></li> <li>&rarr; <a href="intruder-alarms-bolton-2026-audit.html">Intruder Alarms Bolton 2026 Audit</a></li>
             </ul>
         </section>
 

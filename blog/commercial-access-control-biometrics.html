@@ -151,6 +151,81 @@
             font-size: 1.125rem;
             position: relative;
         }
+        .faq-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin: 2.5rem 0;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            transition: all 0.2s ease;
+        }
+        .faq-card:hover {
+            border-color: var(--brand-blue);
+            box-shadow: 0 10px 15px -3px rgba(37,99,235,0.1);
+            transform: translateY(-2px);
+        }
+        .faq-question {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.25rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1.5rem;
+        }
+        .faq-q-badge {
+            background: var(--brand-blue);
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 1.25rem;
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            box-shadow: 0 4px 6px -1px rgba(37,99,235,0.3);
+        }
+        .faq-question h3 {
+            margin: 0;
+            font-size: 1.35rem;
+            color: var(--brand-dark);
+            line-height: 1.4;
+        }
+        .faq-answer {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.25rem;
+        }
+        .faq-a-badge {
+            background: #f1f5f9;
+            color: var(--text-muted);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 1.25rem;
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .faq-answer-text {
+            flex: 1;
+        }
+        .faq-answer-text p {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 1.125rem;
+            color: var(--text-main);
+            line-height: 1.8;
+        }
+        .faq-answer-text p:last-child {
+            margin-bottom: 0;
+        }
         table { 
             width: 100%; 
             border-collapse: collapse; 
@@ -384,20 +459,25 @@
 <p>Anti-passback logic prevents credential sharing and establishes logical zone containment. When an employee enters a secure facility through an entry turnstile (`Outside -> Inside`), the centralized access control database updates their logical state to "Inside Secure Zone 1."</p>
 <p>If that employee attempts to pass their physical badge out a window to an unauthorized friend, or if a threat actor clones their credential and attempts to enter the same lobby turnstile, the door controller inspects the database, identifies the logical state mismatch (the user is already marked as "Inside"), instantly denies entry, and flags a critical anti-passback security violation. The employee cannot re-enter the facility until they have successfully executed a verified egress transaction (`Inside -> Outside`) through an exit turnstile.</p>
 <h2>5. Comprehensive Expert Frequently Asked Questions</h2>
-<h3>What is the exact difference between Wiegand and OSDP v2.2 protocols in commercial access control?</h3>
+<div class="faq-card"><div class="faq-question"><span class="faq-q-badge">Q</span><h3>What is the exact difference between Wiegand and OSDP v2.2 protocols in commercial access control?</h3></div><div class="faq-answer"><span class="faq-a-badge">A</span><div class="faq-answer-text">
 <p>Wiegand is an obsolete, unencrypted access control protocol developed in the 1980s that transmits raw credential data in cleartext electrical pulses over point-to-point wiring (6-8 wires), making it highly vulnerable to covert man-in-the-middle (MitM) wiretapping and credential skimming. Open Supervised Device Protocol (OSDP v2.2) is a modern international standard (IEC 60839-11-5) that utilizes a 4-wire RS-485 multi-drop bus architecture. Crucially, OSDP enforces Secure Channel, encapsulating all bi-directional communication within robust AES-128 encryption and continuous wiring supervision, completely eliminating wiretapping vulnerabilities and ensuring absolute data integrity between readers and controllers.</p>
-<h3>How do Hikvision MinMoe biometric terminals prevent spoofing attacks utilizing 3D Structured Light?</h3>
+</div></div></div>
+<div class="faq-card"><div class="faq-question"><span class="faq-q-badge">Q</span><h3>How do Hikvision MinMoe biometric terminals prevent spoofing attacks utilizing 3D Structured Light?</h3></div><div class="faq-answer"><span class="faq-a-badge">A</span><div class="faq-answer-text">
 <p>Hikvision MinMoe biometric terminals utilize advanced 3D Structured Light and dual-lens infrared optical systems to project an invisible matrix of thousands of infrared dots onto an approaching user's face. The terminal captures the geometric distortion of the dot matrix to create a highly precise, millimeter-accurate 3D topographic depth map of the facial skeletal structure. Paired with AI Liveness Detection that analyzes micro-behavioral indicators and sub-surface infrared skin reflection coefficients, the terminal instantly detects and blocks spoofing presentation attacks—such as high-resolution photographs, digital tablet videos, or lifelike silicone masks—achieving a liveness accuracy exceeding 99%.</p>
-<h3>How does Hard Anti-Passback logic physically secure enterprise data centers and corporate campuses?</h3>
+</div></div></div>
+<div class="faq-card"><div class="faq-question"><span class="faq-q-badge">Q</span><h3>How does Hard Anti-Passback logic physically secure enterprise data centers and corporate campuses?</h3></div><div class="faq-answer"><span class="faq-a-badge">A</span><div class="faq-answer-text">
 <p>Hard Anti-Passback logic is an advanced access control rule designed to prevent credential sharing and track precise employee zone containment. When an employee enters a secure facility through an entry turnstile, the centralized database updates their logical state to "Inside." If that employee attempts to pass their badge back to an unauthorized individual outside, or if a cloned card is presented at the entry reader, the controller identifies the state mismatch (the user is already marked as "Inside"), instantly denies portal access, and triggers a security violation alarm. The employee cannot re-enter until they have executed a verified exit transaction through an authorized egress portal.</p>
-<h3>Why is continuous wiring supervision critical in OSDP access control architectures?</h3>
+</div></div></div>
+<div class="faq-card"><div class="faq-question"><span class="faq-q-badge">Q</span><h3>Why is continuous wiring supervision critical in OSDP access control architectures?</h3></div><div class="faq-answer"><span class="faq-a-badge">A</span><div class="faq-answer-text">
 <p>In legacy Wiegand installations, the door controller is completely blind to the physical state of the communication wiring; if an intruder cuts the wires to a card reader or attaches a covert skimming bleeder, the controller registers no anomaly. OSDP resolves this vulnerability through continuous bi-directional wiring supervision. The controller continuously polls peripheral biometric terminals utilizing encrypted challenge-response packets. If a communication line is severed or tampered with, the controller instantly detects the polling disruption, locks down the associated door strike, and triggers a priority tamper alarm in the VMS dashboard.</p>
-<h3>How do optical glass turnstiles utilize infrared beam matrices to intercept tailgating intruders?</h3>
+</div></div></div>
+<div class="faq-card"><div class="faq-question"><span class="faq-q-badge">Q</span><h3>How do optical glass turnstiles utilize infrared beam matrices to intercept tailgating intruders?</h3></div><div class="faq-answer"><span class="faq-a-badge">A</span><div class="faq-answer-text">
 <p>High-speed optical glass turnstiles feature motorized retracting glass wings and an internal array of high-density infrared optical beams lining the pedestrian lane. When an authorized employee authenticates, the wings retract and the infrared beam matrix tracks their exact physical location, velocity, and body mass profile as they traverse the lane. If an unauthorized intruder attempts to tailgate by closely trailing behind the employee, the infrared beam matrix instantly detects the presence of a second distinct body mass. The turnstile's internal motor drive immediately clamps the glass wings shut, blocking the intruder while triggering a high-decibel localized siren and flashing red barrier LEDs.</p>
+</div></div></div>
         <section class="related-section">
             <h3>Related Forensic Intelligence</h3>
             <ul>
-                <li>&rarr; <a href="fiber-optic-upgrade-guide.html">Fiber Optic Upgrade Guide</a></li> <li>&rarr; <a href="poe-power-budget-planning.html">Poe Power Budget Planning</a></li> <li>&rarr; <a href="secure-iot-device-integration.html">Secure Iot Device Integration</a></li>
+                <li>&rarr; <a href="cable-management-best-practices.html">Cable Management Best Practices</a></li> <li>&rarr; <a href="enterprise-wi-fi-deployment.html">Enterprise Wi Fi Deployment</a></li> <li>&rarr; <a href="commercial-access-control-biometrics.html">Commercial Access Control Biometrics</a></li>
             </ul>
         </section>
 

@@ -151,6 +151,81 @@
             font-size: 1.125rem;
             position: relative;
         }
+        .faq-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin: 2.5rem 0;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            transition: all 0.2s ease;
+        }
+        .faq-card:hover {
+            border-color: var(--brand-blue);
+            box-shadow: 0 10px 15px -3px rgba(37,99,235,0.1);
+            transform: translateY(-2px);
+        }
+        .faq-question {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.25rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1.5rem;
+        }
+        .faq-q-badge {
+            background: var(--brand-blue);
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 1.25rem;
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            box-shadow: 0 4px 6px -1px rgba(37,99,235,0.3);
+        }
+        .faq-question h3 {
+            margin: 0;
+            font-size: 1.35rem;
+            color: var(--brand-dark);
+            line-height: 1.4;
+        }
+        .faq-answer {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.25rem;
+        }
+        .faq-a-badge {
+            background: #f1f5f9;
+            color: var(--text-muted);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 1.25rem;
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .faq-answer-text {
+            flex: 1;
+        }
+        .faq-answer-text p {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 1.125rem;
+            color: var(--text-main);
+            line-height: 1.8;
+        }
+        .faq-answer-text p:last-child {
+            margin-bottom: 0;
+        }
         table { 
             width: 100%; 
             border-collapse: collapse; 
@@ -383,20 +458,25 @@
 <p>To manage this transition, network architects must configure rigid Quality of Service (QoS) Traffic Shedding governors within the bridge management plane. The bridge inspects incoming Layer 2 802.1p CoS tags and Layer 3 DSCP headers. During a failover event, the bridge autonomously sheds all low-priority traffic (such as background SAN storage replication, guest Wi-Fi access, and large file downloads).</p>
 <p>The entire 500 Mbps capacity of the 5 GHz backup link is reserved exclusively for mission-critical, high-priority traffic queues—specifically real-time VoIP telephony trunks, active Active Directory authentication packets, and uncompressed 4K IP security camera streams. Once the storm clears and the 60 GHz link fully restabilizes, the bridge autonomously restores the primary 10 Gbps pipe and resumes normal, uncapped data forwarding.</p>
 <h2>5. Comprehensive Expert Frequently Asked Questions</h2>
-<h3>Why does atmospheric oxygen absorption at 60 GHz provide an operational advantage for enterprise wireless bridges?</h3>
+<div class="faq-card"><div class="faq-question"><span class="faq-q-badge">Q</span><h3>Why does atmospheric oxygen absorption at 60 GHz provide an operational advantage for enterprise wireless bridges?</h3></div><div class="faq-answer"><span class="faq-a-badge">A</span><div class="faq-answer-text">
 <p>Operating at exactly 60 GHz introduces highly unique atmospheric attenuation physics where the 5mm physical wavelength perfectly matches the molecular resonant frequency of atmospheric oxygen (`O2`). Oxygen molecules actively absorb the RF energy, introducing a massive attenuation penalty of ~16 dB/km that restricts maximum operational range to 1.5km - 3km. However, this aggressive decibel loss provides an immense operational advantage: Frequency Re-Use. Because the signal attenuates so rapidly in the atmosphere, a 60 GHz bridge on Building A will not bleed interference into an identical 60 GHz bridge on Building B just two kilometers away, allowing engineers to deploy dense arrays of co-located multi-gigabit bridges across a single campus without co-channel interference.</p>
-<h3>How does heavy rain fade impact 60 GHz millimeter-wave links, and how do Link Budget Fade Margins mitigate it?</h3>
+</div></div></div>
+<div class="faq-card"><div class="faq-question"><span class="faq-q-badge">Q</span><h3>How does heavy rain fade impact 60 GHz millimeter-wave links, and how do Link Budget Fade Margins mitigate it?</h3></div><div class="faq-answer"><span class="faq-a-badge">A</span><div class="faq-answer-text">
 <p>Heavy rain fade is a dynamic weather anomaly that severely impacts millimeter-wave links because physical raindrops are roughly identical in size to the 5mm wavelength of a 60 GHz signal, causing falling precipitation to scatter and absorb the traveling RF energy. During a torrential cloudburst (`100 mm/hr`), rain fade can introduce an additional `30+ dB/km` of signal attenuation. RF engineers mitigate this by calculating meticulous Link Budget Fade Margins during the predictive design phase, ensuring the bridge hardware possesses sufficient transmit power (EIRP) and high-gain parabolic dish antennas to maintain the necessary SNR headroom to sustain multi-gigabit forwarding during extreme storms.</p>
-<h3>What is the First Fresnel Zone and why must 60% of it remain completely free of physical obstructions?</h3>
+</div></div></div>
+<div class="faq-card"><div class="faq-question"><span class="faq-q-badge">Q</span><h3>What is the First Fresnel Zone and why must 60% of it remain completely free of physical obstructions?</h3></div><div class="faq-answer"><span class="faq-a-badge">A</span><div class="faq-answer-text">
 <p>The First Fresnel Zone is an elongated, football-shaped elliptical boundary of expanding RF energy formed between two directional bridge antennas. If physical obstructions—such as growing tree canopies, new building construction, or street lighting poles—penetrate into this zone, the traveling RF waves strike the obstruction and reflect off-phase. These out-of-phase reflections collide with the primary direct wave at the receiving antenna, causing destructive multipath interference that severely degrades link capacity and introduces massive packet jitter. 2026 RF engineering standards strictly mandate that at least 60% of the First Fresnel Zone must remain completely free of physical obstacles along the entire transmission path.</p>
-<h3>How does Automated Hitless Failover maintain 100% network availability during severe 60 GHz rain fade events?</h3>
+</div></div></div>
+<div class="faq-card"><div class="faq-question"><span class="faq-q-badge">Q</span><h3>How does Automated Hitless Failover maintain 100% network availability during severe 60 GHz rain fade events?</h3></div><div class="faq-answer"><span class="faq-a-badge">A</span><div class="faq-answer-text">
 <p>Modern carrier-grade hybrid wireless bridges integrate a high-capacity 60 GHz primary radio co-located alongside an independent, secondary 5 GHz backup radio within a single enclosure. The bridge's internal switching silicon continuously monitors frame loss and decibel SNR across the primary link. When a severe cloudburst causes massive rain fade on the 60 GHz signal, the bridge executes an automated, sub-second "Hitless Failover" (`<20ms`), shunting active data traffic instantly onto the secondary 5 GHz radio. Because 5 GHz wavelengths (`~60mm`) are significantly larger than raindrops, the backup radio cuts through the torrential storm with zero rain fade attenuation, maintaining an unbroken communications link.</p>
-<h3>Why is QoS Traffic Shedding mandatory when a hybrid wireless bridge executes a failover to the 5 GHz backup link?</h3>
+</div></div></div>
+<div class="faq-card"><div class="faq-question"><span class="faq-q-badge">Q</span><h3>Why is QoS Traffic Shedding mandatory when a hybrid wireless bridge executes a failover to the 5 GHz backup link?</h3></div><div class="faq-answer"><span class="faq-a-badge">A</span><div class="faq-answer-text">
 <p>When a hybrid wireless bridge executes a failover from the primary 10 Gbps 60 GHz link down to the secondary 500 Mbps 5 GHz backup link, an immediate 95% bandwidth collapse occurs. If the bridge attempts to push the full 10 Gbps enterprise workload across the 500 Mbps backup pipe, catastrophic buffer exhaustion and massive packet drops will instantly crash the network. Network architects configure rigid Quality of Service (QoS) Traffic Shedding governors; during failover, the bridge autonomously sheds low-priority traffic (background SAN replication, guest Wi-Fi), reserving the entire 500 Mbps capacity exclusively for mission-critical VoIP telephony, Active Directory authentication, and 4K CCTV streams.</p>
+</div></div></div>
         <section class="related-section">
             <h3>Related Forensic Intelligence</h3>
             <ul>
-                <li>&rarr; <a href="fiber-optic-upgrade-guide.html">Fiber Optic Upgrade Guide</a></li> <li>&rarr; <a href="enterprise-wi-fi-deployment.html">Enterprise Wi Fi Deployment</a></li> <li>&rarr; <a href="advanced-intruder-anti-masking.html">Advanced Intruder Anti Masking</a></li>
+                <li>&rarr; <a href="structured-cabling-installation-basics.html">Structured Cabling Installation Basics</a></li> <li>&rarr; <a href="industrial-wireless-point-to-point.html">Industrial Wireless Point To Point</a></li> <li>&rarr; <a href="data-cabling-darlington-2026-audit.html">Data Cabling Darlington 2026 Audit</a></li>
             </ul>
         </section>
 

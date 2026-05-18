@@ -151,6 +151,81 @@
             font-size: 1.125rem;
             position: relative;
         }
+        .faq-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin: 2.5rem 0;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            transition: all 0.2s ease;
+        }
+        .faq-card:hover {
+            border-color: var(--brand-blue);
+            box-shadow: 0 10px 15px -3px rgba(37,99,235,0.1);
+            transform: translateY(-2px);
+        }
+        .faq-question {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.25rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1.5rem;
+        }
+        .faq-q-badge {
+            background: var(--brand-blue);
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 1.25rem;
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            box-shadow: 0 4px 6px -1px rgba(37,99,235,0.3);
+        }
+        .faq-question h3 {
+            margin: 0;
+            font-size: 1.35rem;
+            color: var(--brand-dark);
+            line-height: 1.4;
+        }
+        .faq-answer {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.25rem;
+        }
+        .faq-a-badge {
+            background: #f1f5f9;
+            color: var(--text-muted);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 1.25rem;
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .faq-answer-text {
+            flex: 1;
+        }
+        .faq-answer-text p {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 1.125rem;
+            color: var(--text-main);
+            line-height: 1.8;
+        }
+        .faq-answer-text p:last-child {
+            margin-bottom: 0;
+        }
         table { 
             width: 100%; 
             border-collapse: collapse; 
@@ -381,20 +456,25 @@
 <p>```</p>
 <p>To ensure flawless PoE++ delivery, the Fluke DSX-8000 executes rigorous DC Loop Resistance Unbalance testing. Within a 4-pair PoE++ cable, direct current must flow perfectly evenly between the two conductors of each twisted pair. If improper termination techniques, over-tightened zip ties, or damaged keystone jacks introduce a minor resistance unbalance between the two wires, current will flow asymmetrically. This uneven electrical flow creates a differential magnetic field inside the ToR switch port isolation transformer, causing magnetic core saturation that distorts 40GBASE-T data waveforms and results in massive CRC packet loss.</p>
 <h2>5. Comprehensive Expert Frequently Asked Questions</h2>
-<h3>What is the maximum allowable channel length for Category 8 cabling and why is it restricted?</h3>
+<div class="faq-card"><div class="faq-question"><span class="faq-q-badge">Q</span><h3>What is the maximum allowable channel length for Category 8 cabling and why is it restricted?</h3></div><div class="faq-answer"><span class="faq-a-badge">A</span><div class="faq-answer-text">
 <p>Under international cabling standards (ISO/IEC 11801-1 and TIA-568.2-D), the maximum allowable channel length for Category 8 deployments is strictly restricted to exactly 30 meters (98 feet). This limitation is dictated by the extreme physical attenuation laws governing 2,000 MHz (2 GHz) high-frequency transmission. At 2 GHz, the Skin Effect forces electrical current to flow almost exclusively along the outer microscopic perimeter of the copper conductors, dramatically increasing electrical resistance. Restricting the channel to 30 meters (typically a 24m permanent link and 6m of patch cords) ensures the cabling plant maintains the necessary signal-to-noise ratio to successfully negotiate 40GBASE-T data rates in data center environments.</p>
-<h3>What is the exact mechanical difference between Cat8 Class I and Class II cabling?</h3>
+</div></div></div>
+<div class="faq-card"><div class="faq-question"><span class="faq-q-badge">Q</span><h3>What is the exact mechanical difference between Cat8 Class I and Class II cabling?</h3></div><div class="faq-answer"><span class="faq-a-badge">A</span><div class="faq-answer-text">
 <p>Category 8 is divided into two distinct performance classes under ISO/IEC 11801 standards. Class I cabling utilizes standard, backward-compatible RJ45 connectors paired with S/FTP copper cabling, supporting 2,000 MHz operating frequencies and providing seamless integration with existing enterprise networking hardware. Class II cabling utilizes specialized, non-RJ45 connectors (such as the TERA or ARJ45 interfaces) paired with elite F/FTP or S/FTP cabling. Class II provides superior high-frequency performance and extreme crosstalk isolation, operating up to 2,000 MHz but requiring dedicated, matching Class II equipment interfaces across the data center switching layer.</p>
-<h3>Why is S/FTP shielding mandatory for Category 8 deployments, and how does it eliminate ANEXT?</h3>
+</div></div></div>
+<div class="faq-card"><div class="faq-question"><span class="faq-q-badge">Q</span><h3>Why is S/FTP shielding mandatory for Category 8 deployments, and how does it eliminate ANEXT?</h3></div><div class="faq-answer"><span class="faq-a-badge">A</span><div class="faq-answer-text">
 <p>Category 8 standards completely prohibit unshielded (U/UTP) constructions, mandating a rigorous Shielded/Foiled Twisted Pair (S/FTP) mechanical architecture. Operating at 2 GHz, the electromagnetic fields radiating from copper pairs are exceptionally intense. In S/FTP cables, every individual copper pair is wrapped in aluminum Mylar foil to completely eliminate internal Near-End Crosstalk (NEXT). Furthermore, the four foil-wrapped pairs are encased within a heavy-duty tinned copper braid shield. This dense metallic outer braid acts as an impenetrable Faraday cage, completely absorbing external electromagnetic interference (EMI) and reducing Alien Crosstalk (ANEXT) between adjacent cables in a bundle to near-zero levels.</p>
-<h3>How does Fluke DSX-8000 DC Loop Resistance Unbalance testing prevent ToR switch port failure under 100W PoE++ loads?</h3>
+</div></div></div>
+<div class="faq-card"><div class="faq-question"><span class="faq-q-badge">Q</span><h3>How does Fluke DSX-8000 DC Loop Resistance Unbalance testing prevent ToR switch port failure under 100W PoE++ loads?</h3></div><div class="faq-answer"><span class="faq-a-badge">A</span><div class="faq-answer-text">
 <p>When Category 8 cabling delivers IEEE 802.3bt Type 4 Power over Ethernet (PoE++ 100W), direct current must flow perfectly evenly between the two conductors of each twisted pair. If improper termination techniques or damaged keystone jacks introduce a resistance unbalance between the two wires, current flows asymmetrically. This uneven electrical flow creates a differential magnetic field inside the Top-of-Rack (ToR) switch port isolation transformer, causing magnetic core saturation. Core saturation severely distorts 40GBASE-T data waveforms, resulting in massive CRC packet loss and potential switch port hardware failure. Fluke DSX-8000 resistance unbalance testing identifies these micro-termination flaws before active switch commissioning.</p>
-<h3>What are the mandatory grounding and bonding requirements for Cat8 S/FTP installations under BS EN 50310?</h3>
+</div></div></div>
+<div class="faq-card"><div class="faq-question"><span class="faq-q-badge">Q</span><h3>What are the mandatory grounding and bonding requirements for Cat8 S/FTP installations under BS EN 50310?</h3></div><div class="faq-answer"><span class="faq-a-badge">A</span><div class="faq-answer-text">
 <p>Deploying shielded Cat8 S/FTP cabling requires implementing an uncompromising grounding and bonding architecture in strict accordance with British Standard BS EN 50310 and TIA-607-C. When terminating Cat8 keystone jacks, technicians must ensure the cable's overall tinned copper braid makes flawless, 360-degree physical contact with the metallic housing of the shielded keystone module. The fully shielded patch panels must be bonded directly to the server cabinet's vertical grounding busbar utilizing heavy-gauge copper wire, which connects back to the main Telecommunications Grounding Busbar (TGB). If improperly grounded, the metallic foil acts as an antenna, actively absorbing ambient data center electrical noise and corrupting active 40 Gbps data streams.</p>
+</div></div></div>
         <section class="related-section">
             <h3>Related Forensic Intelligence</h3>
             <ul>
-                <li>&rarr; <a href="data-cabling-darlington-2026-audit.html">Data Cabling Darlington 2026 Audit</a></li> <li>&rarr; <a href="structured-cabling-installation-basics.html">Structured Cabling Installation Basics</a></li> <li>&rarr; <a href="commercial-access-control-biometrics.html">Commercial Access Control Biometrics</a></li>
+                <li>&rarr; <a href="network-monitoring-solutions-overview.html">Network Monitoring Solutions Overview</a></li> <li>&rarr; <a href="structured-cabling-installation-basics.html">Structured Cabling Installation Basics</a></li> <li>&rarr; <a href="business-security-hartlepool-2026-audit.html">Business Security Hartlepool 2026 Audit</a></li>
             </ul>
         </section>
 

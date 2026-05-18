@@ -151,6 +151,81 @@
             font-size: 1.125rem;
             position: relative;
         }
+        .faq-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin: 2.5rem 0;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            transition: all 0.2s ease;
+        }
+        .faq-card:hover {
+            border-color: var(--brand-blue);
+            box-shadow: 0 10px 15px -3px rgba(37,99,235,0.1);
+            transform: translateY(-2px);
+        }
+        .faq-question {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.25rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1.5rem;
+        }
+        .faq-q-badge {
+            background: var(--brand-blue);
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 1.25rem;
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            box-shadow: 0 4px 6px -1px rgba(37,99,235,0.3);
+        }
+        .faq-question h3 {
+            margin: 0;
+            font-size: 1.35rem;
+            color: var(--brand-dark);
+            line-height: 1.4;
+        }
+        .faq-answer {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.25rem;
+        }
+        .faq-a-badge {
+            background: #f1f5f9;
+            color: var(--text-muted);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 1.25rem;
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .faq-answer-text {
+            flex: 1;
+        }
+        .faq-answer-text p {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 1.125rem;
+            color: var(--text-main);
+            line-height: 1.8;
+        }
+        .faq-answer-text p:last-child {
+            margin-bottom: 0;
+        }
         table { 
             width: 100%; 
             border-collapse: collapse; 
@@ -376,20 +451,25 @@
 <p>If the loop measures exactly `1kΩ`, the panel registers a secure, normal state. If the detector trips an intrusion alarm, the alarm relay opens, adding the second resistor to the loop (`total 2kΩ`), triggering a standard burglary alarm. If an anti-masking attack occurs, the anti-mask relay opens (`total 3kΩ`), triggering a dedicated masking alert.</p>
 <p>Crucially, if a threat actor attempts to short the wires together (`0Ω`) or cut the cable (`Infinite Ω`), the panel instantly identifies the severe resistance deviation from the certified baseline, bypasses all disarm delays, and triggers an immediate, priority 24-hour tamper alarm.</p>
 <h2>5. Comprehensive Expert Frequently Asked Questions</h2>
-<h3>What is the exact difference between Grade 2 and Grade 3 motion detectors under European standard EN 50131?</h3>
+<div class="faq-card"><div class="faq-question"><span class="faq-q-badge">Q</span><h3>What is the exact difference between Grade 2 and Grade 3 motion detectors under European standard EN 50131?</h3></div><div class="faq-answer"><span class="faq-a-badge">A</span><div class="faq-answer-text">
 <p>Grade 2 motion detectors are designed for commercial properties with moderate security risks, utilizing basic Passive Infrared (PIR) sensing and standard End-of-Line (EOL) wiring supervision, making them vulnerable to sophisticated bypass techniques. Grade 3 motion detectors are engineered for high-risk commercial environments (such as jewelers, financial vaults, and armories) under European standard EN 50131. Grade 3 sensors mandate Dual-Technology (PIR + Microwave) sensing, active active-infrared (AIR) anti-masking protection, cloak detection algorithms, and Triple End-of-Line (TEOL) resistance supervision, providing absolute immunity against covert physical masking, thermal cloaking, and wire tampering sabotage.</p>
-<h3>How do active active-infrared (AIR) anti-masking sensors detect clear adhesive tape applied over the lens?</h3>
+</div></div></div>
+<div class="faq-card"><div class="faq-question"><span class="faq-q-badge">Q</span><h3>How do active active-infrared (AIR) anti-masking sensors detect clear adhesive tape applied over the lens?</h3></div><div class="faq-answer"><span class="faq-a-badge">A</span><div class="faq-answer-text">
 <p>Grade 3 commercial motion detectors feature an internal array of specialized active infrared emitter and receiver diodes positioned directly behind the detector's optical window. The emitter diodes continuously pulse invisible streams of infrared light outward through the lens. Under normal conditions, this light radiates into the room with near-zero reflection. If a threat actor applies clear adhesive tape, transparent lacquer, or cardboard over the lens, the pulsed infrared light strikes the masking material and reflects aggressively back into the detector. The internal AIR receiver diodes capture this intense reflection, verify the mask via diagnostic polling timers, and instantly latch open a dedicated 24-hour anti-mask relay.</p>
-<h3>How do Grade 3 Dual-Tec sensors utilize microwave Doppler shifts to defeat thermal cloaking suits?</h3>
+</div></div></div>
+<div class="faq-card"><div class="faq-question"><span class="faq-q-badge">Q</span><h3>How do Grade 3 Dual-Tec sensors utilize microwave Doppler shifts to defeat thermal cloaking suits?</h3></div><div class="faq-answer"><span class="faq-a-badge">A</span><div class="faq-answer-text">
 <p>Passive Infrared (PIR) sensors detect moving body heat, making them vulnerable to professional intruders wearing specialized thermal cloaking suits or holding insulated metallic foil blankets designed to trap escaping body heat. Grade 3 Dual-Tec sensors integrate a high-frequency K-Band (`24 GHz`) microwave transceiver that broadcasts an invisible electromagnetic field. When an intruder moves through this field, the waves bounce off the moving body and return at a shifted frequency (the Doppler Effect). If the sensor's internal microprocessor detects a massive, unambiguous microwave Doppler shift characteristic of human movement while the PIR element registers zero thermal delta, it identifies a cloaking attack, overrides standard "AND" logic, and fires the alarm relay.</p>
-<h3>Why is Triple End-of-Line (TEOL) resistance supervision mandatory for Grade 3 alarm installations?</h3>
+</div></div></div>
+<div class="faq-card"><div class="faq-question"><span class="faq-q-badge">Q</span><h3>Why is Triple End-of-Line (TEOL) resistance supervision mandatory for Grade 3 alarm installations?</h3></div><div class="faq-answer"><span class="faq-a-badge">A</span><div class="faq-answer-text">
 <p>In legacy alarm installations, sensors were wired using simple normally closed contacts without resistors. An intruder could detach a sensor, strip the cable, and solder a permanent jumper wire across the active loop, covertly freezing the zone in a secure state and allowing them to smash the detector without triggering an alarm. Grade 3 standards mandate Triple End-of-Line (TEOL) resistance supervision. Technicians install three precision resistors (`1kΩ / 1kΩ / 1kΩ`) inside the detector across the Alarm, Tamper, and Mask relays. The panel continuously measures exact loop resistance; any attempt to short the wires (`0Ω`) or cut the cable (`Infinite Ω`) instantly triggers an immediate 24-hour tamper alarm.</p>
-<h3>What is the operational function of diagnostic polling timers before latching an anti-masking alarm?</h3>
+</div></div></div>
+<div class="faq-card"><div class="faq-question"><span class="faq-q-badge">Q</span><h3>What is the operational function of diagnostic polling timers before latching an anti-masking alarm?</h3></div><div class="faq-answer"><span class="faq-a-badge">A</span><div class="faq-answer-text">
 <p>To prevent false anti-masking alarms triggered by passing insects, temporary airborne dust, or a facility manager momentarily leaning a box against a hallway sensor, Grade 3 motion detectors execute rigorous diagnostic polling. When an abnormal active infrared reflection or absorption is detected across the lens, the sensor's internal microprocessor initiates an internal verification timer (typically `20 to 30 seconds`). The sensor continuously polls the optical window; if the masking obstruction is removed within the timer window, the event is dismissed. An anti-masking alarm is latched open exclusively when the physical obstruction remains static across the lens for the entire duration of the polling window.</p>
+</div></div></div>
         <section class="related-section">
             <h3>Related Forensic Intelligence</h3>
             <ul>
-                <li>&rarr; <a href="data-cabling-darlington-2026-audit.html">Data Cabling Darlington 2026 Audit</a></li> <li>&rarr; <a href="cable-management-best-practices.html">Cable Management Best Practices</a></li> <li>&rarr; <a href="high-density-cat8-structured-cabling.html">High Density Cat8 Structured Cabling</a></li>
+                <li>&rarr; <a href="fiber-optic-otdr-diagnostics.html">Fiber Optic Otdr Diagnostics</a></li> <li>&rarr; <a href="cloud-managed-cctv-architectures.html">Cloud Managed Cctv Architectures</a></li> <li>&rarr; <a href="poe-power-budget-planning.html">Poe Power Budget Planning</a></li>
             </ul>
         </section>
 
