@@ -25,3 +25,4 @@ network-monitoring-solutions-overview.html
 poe-power-budget-planning.html
 poe-power-budget-planning.html
 cable-management-best-practices.html
+enterprise-wi-fi-deployment.html
