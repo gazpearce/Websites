@@ -1,10 +1,10 @@
 {
     "tier1_pending": [
-        "Cable Management Best Practices",
         "Enterprise Wi-Fi Deployment",
         "Secure IoT Device Integration"
     ],
     "tier1_completed": [
+        "Cable Management Best Practices",
         "PoE Power Budget Planning",
         "Structured Cabling Installation Basics",
         "Data Cabling Darlington 2026 Audit",

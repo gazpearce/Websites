@@ -1,8 +1,6 @@
 import datetime
-
 import json
 import os
-
 import random
 
 class ForensicEngine:
@@ -85,9 +83,9 @@ class ForensicEngine:
                     alt_text = line.split("Alt text:")[1].strip().strip(']')
                 
                 html_lines.append(f'''
-                <div style="margin: 3rem 0; background: #000; padding: 1rem; border-radius: 12px; border: 1px solid rgba(245, 158, 11, 0.3);">
-                     <img src="../Images/{img_src}" alt="{alt_text}" style="width: 100%; border-radius: 8px;">
-                     <div style="padding-top: 1rem; font-size: 0.8rem; color: #f59e0b; text-align: center;">{alt_text}</div>
+                <div class="image-card">
+                     <img src="../Images/{img_src}" alt="{alt_text}">
+                     <div class="image-caption">{alt_text}</div>
                 </div>
                 ''')
             
@@ -96,7 +94,7 @@ class ForensicEngine:
                 # Bold parsing inside list
                 import re
                 line = re.sub(r'\*\*(.*?)\*\*', r'<strong>\1</strong>', line)
-                html_lines.append(f'<li style="margin-left: 2rem; margin-bottom: 0.5rem; color: #cbd5e1;">&bull; {line[2:]}</li>')
+                html_lines.append(f'<li class="list-item">&bull; {line[2:]}</li>')
                 
             # Paragraphs
             else:
@@ -107,14 +105,16 @@ class ForensicEngine:
         content = "\n".join(html_lines)
 
         content += f'''
-        <section style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1);">
-            <h3 style="color: #f59e0b;">Related Forensic Intelligence</h3>
-            <ul style="list-style: none; padding: 0;">
-                {" ".join([f'<li style="margin-bottom: 0.5rem;">&rarr; <a href="{link["url"]}">{link["title"]}</a></li>' for link in related_links])}
+        <section class="related-section">
+            <h3>Related Forensic Intelligence</h3>
+            <ul>
+                {" ".join([f'<li>&rarr; <a href="{link["url"]}">{link["title"]}</a></li>' for link in related_links])}
             </ul>
         </section>
 
-        <p style="margin-top: 4rem;"><strong>Author:</strong> Gary Pearce - Security & Data Specialist. 20+ years engineering forensic-grade surveillance and networking solutions across the North East UK.</p>
+        <div class="author-card">
+            <strong>Author:</strong> Gary Pearce - Security & Data Specialist. 20+ years engineering forensic-grade surveillance and networking solutions across the North East UK.
+        </div>
         '''
         return content
 
@@ -142,7 +142,7 @@ class ForensicEngine:
     <title>{meta_title}</title>
     <meta name="description" content="{meta_desc}">
     <link rel="canonical" href="{canonical_url}">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Montserrat:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
     
     <script type="application/ld+json">
     {article_schema}
@@ -153,36 +153,240 @@ class ForensicEngine:
     </script>
     
     <style>
-        :root {{ --gold: #f59e0b; --dark: #0f172a; --text: #f8fafc; --muted: #94a3b8; }}
-        body {{ font-family: 'Inter', sans-serif; background: var(--dark); color: var(--text); line-height: 1.8; margin: 0; padding: 0; }}
-        .container {{ max-width: 900px; margin: 0 auto; padding: 6rem 2rem; }}
-        header {{ border-left: 4px solid var(--gold); padding-left: 2rem; margin-bottom: 4rem; }}
-        h1 {{ font-family: 'Montserrat', sans-serif; color: var(--gold); font-size: 3rem; text-transform: uppercase; line-height: 1.1; margin-bottom: 1rem; }}
-        h2 {{ color: var(--gold); font-size: 2rem; margin-top: 3rem; border-bottom: 1px solid rgba(245, 158, 11, 0.2); padding-bottom: 1rem; }}
-        h3 {{ color: #fff; font-size: 1.5rem; margin-top: 2.5rem; }}
-        p {{ margin-bottom: 1.5rem; font-size: 1.15rem; color: #cbd5e1; }}
-        a {{ color: var(--gold); text-decoration: none; font-weight: 800; border-bottom: 1px dashed var(--gold); transition: 0.3s; }}
-        a:hover {{ border-bottom-style: solid; background: rgba(245, 158, 11, 0.1); }}
-        table {{ width: 100%; border-collapse: collapse; margin: 3rem 0; background: rgba(30, 41, 59, 0.5); border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); }}
-        th, td {{ padding: 1.2rem; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.05); }}
-        th {{ background: rgba(245, 158, 11, 0.15); color: var(--gold); font-weight: 800; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }}
-        .forensic-stamp {{ display: inline-block; background: var(--gold); color: var(--dark); padding: 4px 12px; font-weight: 900; border-radius: 4px; font-size: 0.7rem; text-transform: uppercase; margin-bottom: 1rem; }}
+        :root {{ 
+            --brand-blue: #2563eb; 
+            --brand-dark: #0f172a; 
+            --text-main: #1e293b; 
+            --text-muted: #64748b; 
+            --bg-page: #f8fafc;
+            --bg-card: #ffffff;
+            --border-color: #e2e8f0;
+            --gold: #f59e0b;
+        }}
+        body {{ 
+            font-family: 'Inter', sans-serif; 
+            background: var(--bg-page); 
+            color: var(--text-main); 
+            line-height: 1.8; 
+            margin: 0; 
+            padding: 0; 
+        }}
+        .nav-bar {{
+            max-width: 960px;
+            margin: 2rem auto 0 auto;
+            padding: 0 2rem;
+        }}
+        .back-link {{
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            text-decoration: none;
+            padding: 0.6rem 1.25rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }}
+        .back-link:hover {{
+            color: var(--brand-blue);
+            border-color: var(--brand-blue);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 6px -1px rgba(37,99,235,0.1);
+        }}
+        .container {{ 
+            max-width: 960px; 
+            margin: 2rem auto 4rem auto; 
+            padding: 5rem 6rem; 
+            background: var(--bg-card);
+            border-radius: 24px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+            border: 1px solid var(--border-color);
+        }}
+        header {{ 
+            border-left: 4px solid var(--brand-blue); 
+            padding-left: 2rem; 
+            margin-bottom: 4rem; 
+        }}
+        h1 {{ 
+            font-family: 'Montserrat', sans-serif; 
+            color: var(--brand-dark); 
+            font-size: 2.75rem; 
+            font-weight: 900;
+            line-height: 1.15; 
+            margin-bottom: 1rem; 
+            letter-spacing: -0.5px;
+        }}
+        h2 {{ 
+            font-family: 'Montserrat', sans-serif;
+            color: var(--brand-dark); 
+            font-size: 1.85rem; 
+            font-weight: 800;
+            margin-top: 3.5rem; 
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--border-color); 
+            padding-bottom: 0.75rem; 
+            letter-spacing: -0.3px;
+        }}
+        h3 {{ 
+            font-family: 'Montserrat', sans-serif;
+            color: var(--brand-dark); 
+            font-size: 1.35rem; 
+            font-weight: 700;
+            margin-top: 2.5rem; 
+            margin-bottom: 1rem;
+        }}
+        p {{ 
+            margin-bottom: 1.5rem; 
+            font-size: 1.125rem; 
+            color: var(--text-main); 
+        }}
+        a {{ 
+            color: var(--brand-blue); 
+            text-decoration: none; 
+            font-weight: 600; 
+            border-bottom: 1px solid transparent; 
+            transition: all 0.2s ease; 
+        }}
+        a:hover {{ 
+            border-bottom: 1px solid var(--brand-blue); 
+        }}
+        .image-card {{
+            background: #f8fafc; 
+            padding: 1.5rem; 
+            border-radius: 16px; 
+            border: 1px solid var(--border-color); 
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); 
+            margin: 3rem 0;
+        }}
+        .image-card img {{
+            width: 100%; 
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }}
+        .image-caption {{
+            padding-top: 1rem; 
+            font-size: 0.85rem; 
+            font-weight: 600;
+            color: var(--text-muted); 
+            text-align: center;
+        }}
+        ul {{
+            list-style: none;
+            padding-left: 0;
+        }}
+        .list-item {{
+            margin-left: 1.5rem; 
+            margin-bottom: 0.75rem; 
+            color: var(--text-main);
+            font-size: 1.125rem;
+            position: relative;
+        }}
+        table {{ 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 3rem 0; 
+            background: var(--bg-card); 
+            border-radius: 12px; 
+            overflow: hidden; 
+            border: 1px solid var(--border-color); 
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+        }}
+        th, td {{ 
+            padding: 1.25rem; 
+            text-align: left; 
+            border-bottom: 1px solid var(--border-color); 
+        }}
+        th {{ 
+            background: #f8fafc; 
+            color: var(--brand-dark); 
+            font-weight: 800; 
+            text-transform: uppercase; 
+            font-size: 0.85rem; 
+            letter-spacing: 1px; 
+        }}
+        .forensic-stamp {{ 
+            display: inline-block; 
+            background: #eff6ff; 
+            color: var(--brand-blue); 
+            padding: 6px 16px; 
+            font-weight: 800; 
+            border-radius: 6px; 
+            font-size: 0.75rem; 
+            text-transform: uppercase; 
+            letter-spacing: 1px;
+            margin-bottom: 1.25rem; 
+            border: 1px solid #bfdbfe;
+        }}
+        .related-section {{
+            margin-top: 5rem; 
+            padding-top: 3rem; 
+            border-top: 2px solid var(--border-color);
+        }}
+        .related-section h3 {{
+            color: var(--brand-blue);
+            margin-bottom: 1.5rem;
+        }}
+        .related-section ul li {{
+            margin-bottom: 0.85rem;
+            font-size: 1.1rem;
+        }}
+        .author-card {{
+            margin-top: 4rem; 
+            padding: 2rem; 
+            background: #f8fafc;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }}
+        .author-card strong {{
+            color: var(--brand-dark);
+        }}
+        footer {{ 
+            margin-top: 6rem; 
+            padding-top: 3rem; 
+            border-top: 1px solid var(--border-color); 
+            text-align: center; 
+        }}
+        footer p {{
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }}
+        @media (max-width: 768px) {{
+            .container {{
+                padding: 2.5rem 1.5rem;
+                margin: 1rem auto 2rem auto;
+                border-radius: 16px;
+            }}
+            h1 {{ font-size: 2rem; }}
+            h2 {{ font-size: 1.5rem; }}
+        }}
     </style>
 </head>
 <body>
+    <div class="nav-bar">
+        <a href="../index.html" class="back-link">&larr; Back to Main Domain</a>
+    </div>
     <div class="container">
-        <a href="../index.html" style="border:none; color: var(--muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px;">&larr; Back to Main Domain</a>
-        <header style="margin-top: 2rem;">
+        <header>
             <div class="forensic-stamp">Verified Forensic Intelligence 2026</div>
             <h1>{title}</h1>
         </header>
         <article>
             {content}
         </article>
-        <footer style="margin-top: 8rem; padding-top: 4rem; border-top: 1px solid rgba(255,255,255,0.1); text-align: center;">
-            <p style="color: var(--muted);">Gary Pearce Home Services | Engineering Excellence Since 2004</p>
+        <footer>
+            <p>Gary Pearce Home Services | Engineering Excellence Since 2004</p>
         </footer>
     </div>
 </body>
 </html>
 '''
+

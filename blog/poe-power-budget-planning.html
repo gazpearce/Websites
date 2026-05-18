@@ -6,7 +6,7 @@
     <title>PoE Power Budget Planning: 2026 Enterprise Guide</title>
     <meta name="description" content="Explore the 2026 enterprise guide to PoE power budget planning. Covers IEEE 802.3bt PoE++, 23 AWG Cat6A thermal management, LLDP-MED, and Fluke DSX unbalance testing.">
     <link rel="canonical" href="https://gary-pearce-home-services.pages.dev/blog/poe-power-budget-planning.html">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Montserrat:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
     
     <script type="application/ld+json">
     {"@context": "https://schema.org", "@type": "Article", "headline": "PoE Power Budget Planning: 2026 Enterprise Architecture & Thermal Management Guide", "description": "Explore the 2026 enterprise guide to PoE power budget planning. Covers IEEE 802.3bt PoE++, 23 AWG Cat6A thermal management, LLDP-MED, and Fluke DSX unbalance testing.", "author": [{"@type": "Organization", "name": "Gary Pearce Home Services"}], "publisher": {"@type": "Organization", "name": "Gary Pearce Home Services", "logo": {"@type": "ImageObject", "url": "https://gary-pearce-home-services.pages.dev/images/logo.png"}}, "datePublished": "2026-05-18", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://gary-pearce-home-services.pages.dev/blog/poe-power-budget-planning.html"}}
@@ -17,35 +17,238 @@
     </script>
     
     <style>
-        :root { --gold: #f59e0b; --dark: #0f172a; --text: #f8fafc; --muted: #94a3b8; }
-        body { font-family: 'Inter', sans-serif; background: var(--dark); color: var(--text); line-height: 1.8; margin: 0; padding: 0; }
-        .container { max-width: 900px; margin: 0 auto; padding: 6rem 2rem; }
-        header { border-left: 4px solid var(--gold); padding-left: 2rem; margin-bottom: 4rem; }
-        h1 { font-family: 'Montserrat', sans-serif; color: var(--gold); font-size: 3rem; text-transform: uppercase; line-height: 1.1; margin-bottom: 1rem; }
-        h2 { color: var(--gold); font-size: 2rem; margin-top: 3rem; border-bottom: 1px solid rgba(245, 158, 11, 0.2); padding-bottom: 1rem; }
-        h3 { color: #fff; font-size: 1.5rem; margin-top: 2.5rem; }
-        p { margin-bottom: 1.5rem; font-size: 1.15rem; color: #cbd5e1; }
-        a { color: var(--gold); text-decoration: none; font-weight: 800; border-bottom: 1px dashed var(--gold); transition: 0.3s; }
-        a:hover { border-bottom-style: solid; background: rgba(245, 158, 11, 0.1); }
-        table { width: 100%; border-collapse: collapse; margin: 3rem 0; background: rgba(30, 41, 59, 0.5); border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); }
-        th, td { padding: 1.2rem; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.05); }
-        th { background: rgba(245, 158, 11, 0.15); color: var(--gold); font-weight: 800; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
-        .forensic-stamp { display: inline-block; background: var(--gold); color: var(--dark); padding: 4px 12px; font-weight: 900; border-radius: 4px; font-size: 0.7rem; text-transform: uppercase; margin-bottom: 1rem; }
+        :root { 
+            --brand-blue: #2563eb; 
+            --brand-dark: #0f172a; 
+            --text-main: #1e293b; 
+            --text-muted: #64748b; 
+            --bg-page: #f8fafc;
+            --bg-card: #ffffff;
+            --border-color: #e2e8f0;
+            --gold: #f59e0b;
+        }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background: var(--bg-page); 
+            color: var(--text-main); 
+            line-height: 1.8; 
+            margin: 0; 
+            padding: 0; 
+        }
+        .nav-bar {
+            max-width: 960px;
+            margin: 2rem auto 0 auto;
+            padding: 0 2rem;
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            text-decoration: none;
+            padding: 0.6rem 1.25rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .back-link:hover {
+            color: var(--brand-blue);
+            border-color: var(--brand-blue);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 6px -1px rgba(37,99,235,0.1);
+        }
+        .container { 
+            max-width: 960px; 
+            margin: 2rem auto 4rem auto; 
+            padding: 5rem 6rem; 
+            background: var(--bg-card);
+            border-radius: 24px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+            border: 1px solid var(--border-color);
+        }
+        header { 
+            border-left: 4px solid var(--brand-blue); 
+            padding-left: 2rem; 
+            margin-bottom: 4rem; 
+        }
+        h1 { 
+            font-family: 'Montserrat', sans-serif; 
+            color: var(--brand-dark); 
+            font-size: 2.75rem; 
+            font-weight: 900;
+            line-height: 1.15; 
+            margin-bottom: 1rem; 
+            letter-spacing: -0.5px;
+        }
+        h2 { 
+            font-family: 'Montserrat', sans-serif;
+            color: var(--brand-dark); 
+            font-size: 1.85rem; 
+            font-weight: 800;
+            margin-top: 3.5rem; 
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--border-color); 
+            padding-bottom: 0.75rem; 
+            letter-spacing: -0.3px;
+        }
+        h3 { 
+            font-family: 'Montserrat', sans-serif;
+            color: var(--brand-dark); 
+            font-size: 1.35rem; 
+            font-weight: 700;
+            margin-top: 2.5rem; 
+            margin-bottom: 1rem;
+        }
+        p { 
+            margin-bottom: 1.5rem; 
+            font-size: 1.125rem; 
+            color: var(--text-main); 
+        }
+        a { 
+            color: var(--brand-blue); 
+            text-decoration: none; 
+            font-weight: 600; 
+            border-bottom: 1px solid transparent; 
+            transition: all 0.2s ease; 
+        }
+        a:hover { 
+            border-bottom: 1px solid var(--brand-blue); 
+        }
+        .image-card {
+            background: #f8fafc; 
+            padding: 1.5rem; 
+            border-radius: 16px; 
+            border: 1px solid var(--border-color); 
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); 
+            margin: 3rem 0;
+        }
+        .image-card img {
+            width: 100%; 
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .image-caption {
+            padding-top: 1rem; 
+            font-size: 0.85rem; 
+            font-weight: 600;
+            color: var(--text-muted); 
+            text-align: center;
+        }
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .list-item {
+            margin-left: 1.5rem; 
+            margin-bottom: 0.75rem; 
+            color: var(--text-main);
+            font-size: 1.125rem;
+            position: relative;
+        }
+        table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 3rem 0; 
+            background: var(--bg-card); 
+            border-radius: 12px; 
+            overflow: hidden; 
+            border: 1px solid var(--border-color); 
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+        }
+        th, td { 
+            padding: 1.25rem; 
+            text-align: left; 
+            border-bottom: 1px solid var(--border-color); 
+        }
+        th { 
+            background: #f8fafc; 
+            color: var(--brand-dark); 
+            font-weight: 800; 
+            text-transform: uppercase; 
+            font-size: 0.85rem; 
+            letter-spacing: 1px; 
+        }
+        .forensic-stamp { 
+            display: inline-block; 
+            background: #eff6ff; 
+            color: var(--brand-blue); 
+            padding: 6px 16px; 
+            font-weight: 800; 
+            border-radius: 6px; 
+            font-size: 0.75rem; 
+            text-transform: uppercase; 
+            letter-spacing: 1px;
+            margin-bottom: 1.25rem; 
+            border: 1px solid #bfdbfe;
+        }
+        .related-section {
+            margin-top: 5rem; 
+            padding-top: 3rem; 
+            border-top: 2px solid var(--border-color);
+        }
+        .related-section h3 {
+            color: var(--brand-blue);
+            margin-bottom: 1.5rem;
+        }
+        .related-section ul li {
+            margin-bottom: 0.85rem;
+            font-size: 1.1rem;
+        }
+        .author-card {
+            margin-top: 4rem; 
+            padding: 2rem; 
+            background: #f8fafc;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+        .author-card strong {
+            color: var(--brand-dark);
+        }
+        footer { 
+            margin-top: 6rem; 
+            padding-top: 3rem; 
+            border-top: 1px solid var(--border-color); 
+            text-align: center; 
+        }
+        footer p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 2.5rem 1.5rem;
+                margin: 1rem auto 2rem auto;
+                border-radius: 16px;
+            }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.5rem; }
+        }
     </style>
 </head>
 <body>
+    <div class="nav-bar">
+        <a href="../index.html" class="back-link">&larr; Back to Main Domain</a>
+    </div>
     <div class="container">
-        <a href="../index.html" style="border:none; color: var(--muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px;">&larr; Back to Main Domain</a>
-        <header style="margin-top: 2rem;">
+        <header>
             <div class="forensic-stamp">Verified Forensic Intelligence 2026</div>
             <h1>PoE Power Budget Planning</h1>
         </header>
         <article>
             <h1>PoE Power Budget Planning: 2026 Enterprise Architecture & Thermal Management Guide</h1>
 
-                <div style="margin: 3rem 0; background: #000; padding: 1rem; border-radius: 12px; border: 1px solid rgba(245, 158, 11, 0.3);">
-                     <img src="../Images/cabling_standards_comparison.png" alt="Technical Implementation" style="width: 100%; border-radius: 8px;">
-                     <div style="padding-top: 1rem; font-size: 0.8rem; color: #f59e0b; text-align: center;">Technical Implementation</div>
+                <div class="image-card">
+                     <img src="../Images/six_subsystems_cabling.png" alt="Technical Implementation">
+                     <div class="image-caption">Technical Implementation</div>
                 </div>
                 
 <h2>1. Executive Summary: The 100W PoE++ Imperative</h2>
@@ -71,9 +274,9 @@
 <p>The ratification of IEEE 802.3bt fundamentally altered enterprise network architecture by introducing Type 3 (60W) and Type 4 (90W/100W) power delivery capabilities. Unlike legacy standards that energized only two pairs of copper wire, 802.3bt utilizes all four pairs simultaneously (4PPoE) to distribute electrical current across the entire cable cross-section.</p>
 <p>By dividing the direct current across all eight copper conductors, Type 4 PoE++ significantly reduces overall loop resistance while doubling active power delivery capabilities. This enables network switches to directly power high-output commercial LED smart lighting grids, digital signage displays, 4K multi-sensor PTZ tracking cameras, and high-performance Wi-Fi 7 enterprise access points.</p>
 
-                <div style="margin: 3rem 0; background: #000; padding: 1rem; border-radius: 12px; border: 1px solid rgba(245, 158, 11, 0.3);">
-                     <img src="../Images/structured_cabling_overview.png" alt="Technical Implementation" style="width: 100%; border-radius: 8px;">
-                     <div style="padding-top: 1rem; font-size: 0.8rem; color: #f59e0b; text-align: center;">Technical Implementation</div>
+                <div class="image-card">
+                     <img src="../Images/cabling_standards_comparison.png" alt="Technical Implementation">
+                     <div class="image-caption">Technical Implementation</div>
                 </div>
                 
 <h2>3. Calculating the Enterprise Power Budget</h2>
@@ -109,9 +312,9 @@
 <p>```</p>
 <p>To comply with British Standard BS EN 50174 and prevent dangerous thermal accumulation, network installers must enforce strict cable bundle size limitations and containment discipline. High-power PoE bundles should be limited to a maximum of 24 cables per group, loosely secured utilizing wide hook-and-loop Velcro straps, and deployed in open-mesh wire basket trays to maximize ambient convective cooling.</p>
 
-                <div style="margin: 3rem 0; background: #000; padding: 1rem; border-radius: 12px; border: 1px solid rgba(245, 158, 11, 0.3);">
-                     <img src="../Images/telecom_room_setup.png" alt="Technical Implementation" style="width: 100%; border-radius: 8px;">
-                     <div style="padding-top: 1rem; font-size: 0.8rem; color: #f59e0b; text-align: center;">Technical Implementation</div>
+                <div class="image-card">
+                     <img src="../Images/structured_cabling_overview.png" alt="Technical Implementation">
+                     <div class="image-caption">Technical Implementation</div>
                 </div>
                 
 <h2>5. Physical Layer Testing & Verification Protocols</h2>
@@ -134,9 +337,9 @@
 <p>During an extended municipal power outage where diesel generator backup is unavailable, enterprise switches must be configured to execute automated, intelligent power shedding to preserve remaining UPS battery reserves. Network administrators achieve this by assigning explicit power priority classifications (High, Medium, Low) to every active switch port within the management dashboard.</p>
 <p>When the centralized UPS management card signals that battery capacity has dropped below 50%, the core switches automatically terminate power delivery to Low-priority ports—such as employee desktop VoIP phones and decorative architectural PoE lighting grids. This aggressive load shedding immediately reduces overall battery draw, extending the remaining runtime reserve for High-priority life-safety systems, perimeter access control doors, and critical surveillance cameras.</p>
 
-                <div style="margin: 3rem 0; background: #000; padding: 1rem; border-radius: 12px; border: 1px solid rgba(245, 158, 11, 0.3);">
-                     <img src="../Images/six_subsystems_cabling.png" alt="Technical Implementation" style="width: 100%; border-radius: 8px;">
-                     <div style="padding-top: 1rem; font-size: 0.8rem; color: #f59e0b; text-align: center;">Technical Implementation</div>
+                <div class="image-card">
+                     <img src="../Images/telecom_room_setup.png" alt="Technical Implementation">
+                     <div class="image-caption">Technical Implementation</div>
                 </div>
                 
 <h2>7. Comprehensive Expert Frequently Asked Questions</h2>
@@ -150,18 +353,20 @@
 <p>LLDP-MED is an advanced data link layer protocol that allows powered devices to dynamically negotiate their precise operational power requirements with the switch management plane. Instead of reserving static, worst-case wattage blocks (e.g., reserving 30W for a device that only uses 18W), the switch dynamically allocates exact wattage, allowing administrators to safely connect more devices to a single switch power supply.</p>
 <h3>What are the maximum recommended cable bundle sizes for 90W PoE++ installations under BS EN 50174?</h3>
 <p>To prevent dangerous heat accumulation in the center of cable bundles, British Standard BS EN 50174 recommends limiting 90W PoE++ Category 6A cable bundles to a maximum of 24 cables per group. These bundles must be loosely secured using wide Velcro straps rather than tight plastic nylon zip ties, and should be deployed in open-mesh wire containment trays to ensure adequate convective airflow.</p>
-        <section style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1);">
-            <h3 style="color: #f59e0b;">Related Forensic Intelligence</h3>
-            <ul style="list-style: none; padding: 0;">
-                <li style="margin-bottom: 0.5rem;">&rarr; <a href="enterprise-wi-fi-deployment.html">Enterprise Wi Fi Deployment</a></li> <li style="margin-bottom: 0.5rem;">&rarr; <a href="fiber-optic-upgrade-guide.html">Fiber Optic Upgrade Guide</a></li> <li style="margin-bottom: 0.5rem;">&rarr; <a href="structured-cabling-installation-basics.html">Structured Cabling Installation Basics</a></li>
+        <section class="related-section">
+            <h3>Related Forensic Intelligence</h3>
+            <ul>
+                <li>&rarr; <a href="secure-iot-device-integration.html">Secure Iot Device Integration</a></li> <li>&rarr; <a href="poe-power-budget-planning.html">Poe Power Budget Planning</a></li> <li>&rarr; <a href="fiber-optic-upgrade-guide.html">Fiber Optic Upgrade Guide</a></li>
             </ul>
         </section>
 
-        <p style="margin-top: 4rem;"><strong>Author:</strong> Gary Pearce - Security & Data Specialist. 20+ years engineering forensic-grade surveillance and networking solutions across the North East UK.</p>
+        <div class="author-card">
+            <strong>Author:</strong> Gary Pearce - Security & Data Specialist. 20+ years engineering forensic-grade surveillance and networking solutions across the North East UK.
+        </div>
         
         </article>
-        <footer style="margin-top: 8rem; padding-top: 4rem; border-top: 1px solid rgba(255,255,255,0.1); text-align: center;">
-            <p style="color: var(--muted);">Gary Pearce Home Services | Engineering Excellence Since 2004</p>
+        <footer>
+            <p>Gary Pearce Home Services | Engineering Excellence Since 2004</p>
         </footer>
     </div>
 </body>
