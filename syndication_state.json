@@ -1,6 +1,5 @@
 {
   "tier1_pending": [
-    "Network Monitoring Solutions Overview",
     "Fiber Optic Upgrade Guide",
     "PoE Power Budget Planning",
     "Cable Management Best Practices",
@@ -11,27 +10,10 @@
     "Structured Cabling Installation Basics",
     "Data Cabling Darlington 2026 Audit",
     "Business Security Hartlepool 2026 Audit",
-    "Intruder Alarms Bolton 2026 Audit"
+    "Intruder Alarms Bolton 2026 Audit",
+    "Network Monitoring Solutions Overview"
   ],
   "tier2_faqs_pool": [
-    {
-      "q": "What is the exact difference between BS EN 50131 Grade 2 and Grade 3 intruder alarms?",
-      "a": "Grade 2 alarm systems are designed to resist opportunistic intruders with basic tools. Grade 3 systems are engineered to combat sophisticated intruders equipped with advanced electronic bypass equipment, utilizing comprehensive anti-masking sensors and high-frequency diagnostic polling mandatory for high-risk industrial facilities and commercial jewelers.",
-      "category": "Intruder Alarms",
-      "canonical": "https://gary-pearce-home-services.pages.dev/blog/intruder-alarms-bolton-2026-audit.html"
-    },
-    {
-      "q": "How does a Fluke DSX cable analyzer detect hidden physical layer damage in commercial networks?",
-      "a": "A professional audit utilizes advanced Time-Domain Reflectometry (TDR) via calibrated Fluke cable analyzers to send electrical pulses down the wire. By measuring the exact time and profile of signal reflections, the analyzer pinpoints the precise physical location of hidden cable kinks, water damage, severe pinching, or improper untwisting at termination points inside closed wall cavities.",
-      "category": "Data Cabling",
-      "canonical": "https://gary-pearce-home-services.pages.dev/blog/data-cabling-darlington-2026-audit.html"
-    },
-    {
-      "q": "Why are return loss measurements critical for multi-gigabit commercial networks?",
-      "a": "Return loss measures the amount of signal energy that reflects back toward the transmitting switch port due to minor impedance mismatches along the cable run. High return loss reflections collide with outgoing data packets, causing severe jitter, CRC errors on switch interfaces, and forced packet retransmissions that dramatically slow down overall network performance during heavy usage.",
-      "category": "Data Cabling",
-      "canonical": "https://gary-pearce-home-services.pages.dev/blog/data-cabling-darlington-2026-audit.html"
-    },
     {
       "q": "What are the legal storage retention requirements for commercial Video Management Systems (VMS) under ICO GDPR?",
       "a": "The rapid adoption of ultra-high-definition 4K surveillance cameras generates massive volumes of digital video data that must be securely archived. Commercial enterprises must ensure active recording servers utilize enterprise-grade, RAID-configured surveillance drives to maintain the mandatory 31-day video archive required by commercial insurers while strictly adhering to ICO public privacy guidelines.",
@@ -40,7 +22,7 @@
     },
     {
       "q": "Why is dual-path signaling necessary for commercial intruder alarm compliance?",
-      "a": "Dual-path signaling utilizes two independent communication channels\u2014typically a primary wired IP connection backed up by a dual-SIM cellular transmission path. If an experienced intruder physically cuts your building's external telephone or internet lines, the cellular backup immediately transmits a confirmed line-fault alert to the Alarm Receiving Centre (ARC), guaranteeing that police dispatch is never compromised.",
+      "a": "Dual-path signaling utilizes two independent communication channels—typically a primary wired IP connection backed up by a dual-SIM cellular transmission path. If an experienced intruder physically cuts your building's external telephone or internet lines, the cellular backup immediately transmits a confirmed line-fault alert to the Alarm Receiving Centre (ARC), guaranteeing that police dispatch is never compromised.",
       "category": "Intruder Alarms",
       "canonical": "https://gary-pearce-home-services.pages.dev/blog/business-security-hartlepool-2026-audit.html"
     },
@@ -75,5 +57,24 @@
       "canonical": "https://gary-pearce-home-services.pages.dev/blog/cable-management-best-practices.html"
     }
   ],
-  "tier2_faqs_broadcasted": []
+  "tier2_faqs_broadcasted": [
+    {
+      "q": "What is the exact difference between BS EN 50131 Grade 2 and Grade 3 intruder alarms?",
+      "a": "Grade 2 alarm systems are designed to resist opportunistic intruders with basic tools. Grade 3 systems are engineered to combat sophisticated intruders equipped with advanced electronic bypass equipment, utilizing comprehensive anti-masking sensors and high-frequency diagnostic polling mandatory for high-risk industrial facilities and commercial jewelers.",
+      "category": "Intruder Alarms",
+      "canonical": "https://gary-pearce-home-services.pages.dev/blog/intruder-alarms-bolton-2026-audit.html"
+    },
+    {
+      "q": "How does a Fluke DSX cable analyzer detect hidden physical layer damage in commercial networks?",
+      "a": "A professional audit utilizes advanced Time-Domain Reflectometry (TDR) via calibrated Fluke cable analyzers to send electrical pulses down the wire. By measuring the exact time and profile of signal reflections, the analyzer pinpoints the precise physical location of hidden cable kinks, water damage, severe pinching, or improper untwisting at termination points inside closed wall cavities.",
+      "category": "Data Cabling",
+      "canonical": "https://gary-pearce-home-services.pages.dev/blog/data-cabling-darlington-2026-audit.html"
+    },
+    {
+      "q": "Why are return loss measurements critical for multi-gigabit commercial networks?",
+      "a": "Return loss measures the amount of signal energy that reflects back toward the transmitting switch port due to minor impedance mismatches along the cable run. High return loss reflections collide with outgoing data packets, causing severe jitter, CRC errors on switch interfaces, and forced packet retransmissions that dramatically slow down overall network performance during heavy usage.",
+      "category": "Data Cabling",
+      "canonical": "https://gary-pearce-home-services.pages.dev/blog/data-cabling-darlington-2026-audit.html"
+    }
+  ]
 }
