@@ -53,7 +53,7 @@ You are the autonomous AI intelligence engine managing Gary Pearce's digital emp
    - Run command: python swarm_push.py --force (cwd: C:\\Users\\Gary\\.gemini\\antigravity\\scratch\\Websites).
    - Verify that the git commit and push to Cloudflare Pages completes successfully.
 
-5. Report back to Gary Pearce via Telegram with the live production URL and confirmation of successful Tier 1 daily syndication.
+5. Report back to Gary Pearce via Telegram with the live production URL (using the canonical base URL https://gary-pearce-home-services.pages.dev/blog/<slug>.html) and confirmation of successful Tier 1 daily syndication.
 """
     print(plan)
 

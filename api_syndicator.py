@@ -25,7 +25,7 @@ DAILY_LIMITS = {
 # API Credentials (from Master Goal)
 CREDS = {
     "mataroa": "eb72347019f65e17ee3c097d7ffb2fb6",
-    "pika": "f308692c76317edd747ef4b728be70ac",
+    "pika": "23fbd8684eeabb2f838c2ad5b6c4bfac",
     "beehiiv_pub": "pub_67428cbf-b1c3-496d-b5bc-5ad9379c7235",
     "wordpress": "pI3o nFy6 ivCV 4fWr iGqp hNg2" # cctvwebsites@gmail.com
 }
