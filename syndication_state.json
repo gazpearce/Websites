@@ -1,7 +1,5 @@
 {
-  "tier1_pending": [
-    "Secure IoT Device Integration"
-  ],
+  "tier1_pending": [],
   "tier1_completed": [
     "Enterprise Wi-Fi Deployment",
     "Cable Management Best Practices",
@@ -11,7 +9,18 @@
     "Business Security Hartlepool 2026 Audit",
     "Intruder Alarms Bolton 2026 Audit",
     "Network Monitoring Solutions Overview",
-    "Fiber Optic Upgrade Guide"
+    "Fiber Optic Upgrade Guide",
+    "Secure IoT Device Integration",
+    "Zero-Trust IoT Micro-Segmentation",
+    "AI-Powered Perimeter Surveillance",
+    "Fiber Optic OTDR Diagnostics",
+    "Commercial Access Control Biometrics",
+    "High-Density Cat8 Structured Cabling",
+    "Enterprise ANPR & Vehicle Access",
+    "Cloud-Managed CCTV Architectures",
+    "Advanced Intruder Anti-Masking",
+    "Industrial Wireless Point-to-Point",
+    "Data Center Thermal & Airflow Containment"
   ],
   "tier2_faqs_pool": [
     {
