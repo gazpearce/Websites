@@ -68,19 +68,34 @@ class ForensicEngine:
             
             # Images
             elif '[Image:' in line:
-                if "cctv" in service.lower() or "hikvision" in service.lower():
-                    img_src = cctv_pool[cctv_idx % len(cctv_pool)]
-                    cctv_idx += 1
-                elif "alarm" in service.lower() or "security" in service.lower():
-                    img_src = alarm_pool[alarm_idx % len(alarm_pool)]
-                    alarm_idx += 1
-                else:
-                    img_src = data_pool[data_idx % len(data_pool)]
-                    data_idx += 1
-                    
                 alt_text = "Technical Implementation"
-                if "Alt text:" in line:
-                    alt_text = line.split("Alt text:")[1].strip().strip(']')
+                img_src = ""
+                
+                # Check if a custom filename is specified before "- Alt text:" or inside the tag
+                clean_tag = line.replace('[Image:', '').strip().rstrip(']')
+                if "- Alt text:" in clean_tag:
+                    parts = clean_tag.split("- Alt text:")
+                    img_part = parts[0].strip()
+                    alt_text = parts[1].strip()
+                    if img_part and any(img_part.endswith(ext) for ext in ['.png', '.webp', '.jpg']):
+                        img_src = img_part
+                else:
+                    # Maybe just a filename or just alt text
+                    if any(clean_tag.endswith(ext) for ext in ['.png', '.webp', '.jpg']):
+                        img_src = clean_tag
+                    elif clean_tag and clean_tag != "placeholder":
+                        alt_text = clean_tag
+
+                if not img_src:
+                    if "cctv" in service.lower() or "hikvision" in service.lower() or "surveillance" in service.lower():
+                        img_src = cctv_pool[cctv_idx % len(cctv_pool)]
+                        cctv_idx += 1
+                    elif "alarm" in service.lower() or "security" in service.lower() or "access control" in service.lower():
+                        img_src = alarm_pool[alarm_idx % len(alarm_pool)]
+                        alarm_idx += 1
+                    else:
+                        img_src = data_pool[data_idx % len(data_pool)]
+                        data_idx += 1
                 
                 html_lines.append(f'''
                 <div class="image-card">
