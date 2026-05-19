@@ -24,18 +24,6 @@
   ],
   "tier2_faqs_pool": [
     {
-      "q": "How do Ekahau Wi-Fi heatmapping surveys eliminate co-channel interference in enterprise deployments?",
-      "a": "Professional Ekahau site surveys utilize calibrated Sidekick diagnostic spectrum analyzers to measure active RF propagation across commercial floorplates. This empirical analysis allows network engineers to optimize access point placement, adjust channel widths, and eliminate co-channel interference (CCI) before deploying high-density Wi-Fi 6E or Wi-Fi 7 access points.",
-      "category": "Enterprise Wi-Fi",
-      "canonical": "https://gary-pearce-home-services.pages.dev/blog/enterprise-wi-fi-deployment.html"
-    },
-    {
-      "q": "What are the primary fire safety compliance regulations governing commercial network cabling?",
-      "a": "Fire safety regulations dictate the specific types of cable jacketing permitted within commercial ceiling plenums and vertical riser shafts. Commercial installations must verify the presence of Low Smoke Zero Halogen (LSZH) sheathing, which prevents the emission of toxic, corrosive gases during a building fire event, ensuring full compliance with municipal fire safety codes.",
-      "category": "Data Cabling",
-      "canonical": "https://gary-pearce-home-services.pages.dev/blog/structured-cabling-installation-basics.html"
-    },
-    {
       "q": "How does automated failover work in enterprise SD-WAN network monitoring architectures?",
       "a": "Enterprise SD-WAN monitors continuously poll active WAN links for latency, jitter, and packet loss. Upon detecting degraded threshold metrics on a primary fiber circuit, the edge routing hardware automatically executes a sub-second failover to a secondary cellular or broadband connection, ensuring zero operational downtime for mission-critical cloud applications.",
       "category": "Network Monitoring",
@@ -84,6 +72,18 @@
       "a": "Pushing 100W of continuous direct current (DC) power through tightly bundled copper cables generates significant resistance heat that can accumulate rapidly within enclosed ceiling spaces. High-power PoE runs must utilize certified 23 AWG solid copper conductors deployed in open-mesh containment trays to facilitate ambient heat dissipation and prevent premature signal attenuation.",
       "category": "Data Cabling",
       "canonical": "https://gary-pearce-home-services.pages.dev/blog/poe-power-budget-planning.html"
+    },
+    {
+      "q": "How do Ekahau Wi-Fi heatmapping surveys eliminate co-channel interference in enterprise deployments?",
+      "a": "Professional Ekahau site surveys utilize calibrated Sidekick diagnostic spectrum analyzers to measure active RF propagation across commercial floorplates. This empirical analysis allows network engineers to optimize access point placement, adjust channel widths, and eliminate co-channel interference (CCI) before deploying high-density Wi-Fi 6E or Wi-Fi 7 access points.",
+      "category": "Enterprise Wi-Fi",
+      "canonical": "https://gary-pearce-home-services.pages.dev/blog/enterprise-wi-fi-deployment.html"
+    },
+    {
+      "q": "What are the primary fire safety compliance regulations governing commercial network cabling?",
+      "a": "Fire safety regulations dictate the specific types of cable jacketing permitted within commercial ceiling plenums and vertical riser shafts. Commercial installations must verify the presence of Low Smoke Zero Halogen (LSZH) sheathing, which prevents the emission of toxic, corrosive gases during a building fire event, ensuring full compliance with municipal fire safety codes.",
+      "category": "Data Cabling",
+      "canonical": "https://gary-pearce-home-services.pages.dev/blog/structured-cabling-installation-basics.html"
     }
   ],
   "published_slugs": [

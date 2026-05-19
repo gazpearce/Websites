@@ -131,6 +131,9 @@ class ForensicEngine:
                 line = re.sub(r'\*\*(.*?)\*\*', r'<strong>\1</strong>', line)
                 html_lines.append(f'<li class="list-item">&bull; {line[2:]}</li>')
                 
+            elif line.startswith('<'):
+                html_lines.append(line)
+                
             # Paragraphs
             else:
                 import re
@@ -324,6 +327,73 @@ class ForensicEngine:
             color: var(--text-main);
             font-size: 1.125rem;
             position: relative;
+        }}
+        .core-question-box {{
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            color: #ffffff;
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 3rem 0 4rem 0;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+            border: 1px solid #334155;
+            position: relative;
+            overflow: hidden;
+        }}
+        .core-question-box::before {{
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 6px; height: 100%;
+            background: var(--gold);
+        }}
+        .core-q {{
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #334155;
+            padding-bottom: 2rem;
+        }}
+        .core-badge-q {{
+            display: inline-block;
+            background: var(--gold);
+            color: #0f172a;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 0.85rem;
+            padding: 6px 16px;
+            border-radius: 6px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 1rem;
+        }}
+        .core-q h2 {{
+            color: #ffffff;
+            font-size: 1.85rem;
+            margin: 0;
+            border: none;
+            padding: 0;
+            line-height: 1.3;
+        }}
+        .core-a {{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }}
+        .core-badge-a {{
+            display: inline-block;
+            background: #2563eb;
+            color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 0.85rem;
+            padding: 6px 16px;
+            border-radius: 6px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            align-self: flex-start;
+        }}
+        .core-a p {{
+            color: #e2e8f0;
+            font-size: 1.2rem;
+            margin: 0;
+            line-height: 1.8;
         }}
         .faq-card {{
             background: var(--bg-card);
