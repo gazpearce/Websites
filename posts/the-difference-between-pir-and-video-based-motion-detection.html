@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Difference Between PIR and Video-Based Motion Detection</title>
+<meta name="description" content="Confused by motion detection? Discover the technical differences between PIR and video-based sensors to choose the right security setup for your home.">
+<meta name="author" content="Gary Pearce">
+<meta property="og:title" content="The Difference Between PIR and Video-Based Motion Detection">
+<meta property="og:description" content="Confused by motion detection? Discover the technical differences between PIR and video-based sensors to choose the right security setup for your home.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="CCTV UK Guide">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<link rel="canonical" href="https://gazpearce.codeberg.page/posts/the-difference-between-pir-and-video-based-motion-detection.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "The Difference Between PIR and Video-Based Motion Detection", "datePublished": "2026-05-25", "dateModified": "2026-05-25", "author": {"@type": "Person", "name": "Gary Pearce", "url": "https://gazpearce.codeberg.page/about.html"}, "publisher": {"@type": "Organization", "name": "CCTV UK Guide"}, "description": "Confused by motion detection? Discover the technical differences between PIR and video-based sensors to choose the right security setup for your home."}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How can I prevent hackers from accessing my motion-triggered camera feeds?", "acceptedAnswer": {"@type": "Answer", "text": "Security starts with your login credentials, so please refer to our guide on Why You Should Never Use Default Passwords on Your NVR to ensure your NVR is fully protected against external intrusion."}}, {"@type": "Question", "name": "Are PIR sensors suitable for entry gates in older properties?", "acceptedAnswer": {"@type": "Answer", "text": "They are highly effective, but for listed buildings, I suggest reviewing our guide on Why You Should Consider Hard-Wired Intercoms for Historic Properties to understand how to integrate these systems aesthetically."}}, {"@type": "Question", "name": "Will installing extra PIR sensors interfere with my TV reception?", "acceptedAnswer": {"@type": "Answer", "text": "Generally, no, but if you are experiencing signal issues, our TV Aerial Installation UK: Everything You Need to Know provides insights into managing electromagnetic interference around your home."}}, {"@type": "Question", "name": "How often should I review my motion detection settings?", "acceptedAnswer": {"@type": "Answer", "text": "I recommend a biannual assessment; check out The Importance of Regular Security Audits for Small Businesses to learn how to keep your security systems performing at their peak."}}, {"@type": "Question", "name": "What happens if a motion sensor triggers an false alert leading to a police call?", "acceptedAnswer": {"@type": "Answer", "text": "False alerts can be costly, so you should ensure you understand the legalities covered in CCTV Evidence: How to Export and Store Clips for Legal Use regarding handling and storing security footage."}}]}]}</script>
+</head>
+<body>
+<nav>
+  <a href="../index.html" class="nav-brand">🔒 CCTV UK Guide</a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../contact.html">Contact</a></li>
+  </ul>
+</nav>
+<div class="article-header">
+    <div class="article-label">📷 CCTV Security</div>
+    <h1>The Difference Between PIR and Video-Based Motion Detection</h1>
+    <div class="article-meta">
+      <span>📅 Published: May 2026</span>
+      <span class="last-updated">✅ Last updated: 23 May 2026</span>
+      <span>⏱ 9 min read</span>
+      <span>🇬🇧 UK Home Guide</span>
+    </div>
+  </div>
+  <div class="article-wrap">
+    <a href="../index.html" class="back-link">← All Guides</a>
+<div class="article-body"><div class="llm-answer-block" style="background:var(--bg2);border-left:4px solid var(--accent);padding:1.5rem;margin:2rem 0;border-radius:0 0.5rem 0.5rem 0;font-size:0.95rem;line-height:1.6;">
+      <strong>Direct Answer:</strong> PIR (Passive Infrared) sensors detect heat signature changes, offering high accuracy for outdoor environments. Video-based motion detection uses software analysis of pixel changes across frames, which is flexible but prone to false alarms from weather or shadows. Professional installations often use a hybrid approach for maximum reliability.
+    </div>
+<div id="tech-specs-visual" class="visual-block">
+    <h3>⚙️ Technical Standards &amp; Reference Guide</h3>
+    <div class="visual-grid"><div class="visual-card">
+      <div class="visual-label">Detection Range</div>
+      <div style="font-size: 0.95rem; font-weight: 700; color: var(--text);">12m - 30m</div>
+    </div><div class="visual-card">
+      <div class="visual-label">Thermal Sensitivity</div>
+      <div style="font-size: 0.95rem; font-weight: 700; color: var(--text);">PIR specific</div>
+    </div><div class="visual-card">
+      <div class="visual-label">Pixel Analysis</div>
+      <div style="font-size: 0.95rem; font-weight: 700; color: var(--text);">Video specific</div>
+    </div><div class="visual-card">
+      <div class="visual-label">Response Time</div>
+      <div style="font-size: 0.95rem; font-weight: 700; color: var(--text);"><0.5 seconds</div>
+    </div></div></div>
+
+<h2 id="section-0">Why this topic matters & Core context</h2><p><strong>PIR motion sensors</strong> are the backbone of reliable outdoor security, operating by detecting the rapid change in infrared heat signatures within a specific field of view. Understanding how these differ from standard camera-based algorithms is critical to preventing the frustration of constant false notifications.</p>
+
+<svg viewBox="0 0 800 360" width="100%" height="auto" class="svg-infographic" style="border-radius:12px; border:1px solid #1a2640; background:#0d1120; font-family:'Inter', system-ui, -apple-system, sans-serif; margin: 2rem 0; box-shadow: 0 10px 30px rgba(0,0,0,0.25);">
+  <defs>
+    <linearGradient id="svgGrad-24" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0.12" />
+    </linearGradient>
+    <linearGradient id="borderGrad-24" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00d4ff" />
+      <stop offset="100%" stop-color="#7c3aed" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#svgGrad-24)" rx="12" />
+  <rect x="1" y="1" width="798" height="358" fill="none" stroke="url(#borderGrad-24)" stroke-width="1" rx="11" opacity="0.25" />
+  
+  <g transform="translate(40, 45)">
+    <circle cx="20" cy="20" r="20" fill="#111827" stroke="url(#borderGrad-24)" stroke-width="1.5" />
+    <text x="20" y="25" font-size="14" text-anchor="middle" fill="#00d4ff">📊</text>
+    <text x="50" y="15" font-size="11" font-weight="700" fill="#00d4ff" letter-spacing="1.5">TECHNICAL SPECIFICATION DIAGRAM</text>
+    <text x="50" y="32" font-size="15" font-weight="800" fill="#ffffff" letter-spacing="-0.3">The Difference Between PIR and Video-Based Motion Detection</text>
+  </g>
+  
+  <g transform="translate(40, 115)">
+    <g transform="translate(0, 0)">
+      <rect width="220" height="190" fill="#111827" stroke="#1a2640" stroke-width="1" rx="8" />
+      <rect width="220" height="3" fill="#00d4ff" rx="1.5" />
+      <text x="20" y="35" font-size="10" font-weight="700" fill="#64748b" letter-spacing="1">METRIC / SPEC</text>
+      <text x="20" y="65" font-size="13" font-weight="800" fill="#ffffff">Detection Range</text>
+      <text x="20" y="100" font-size="15" font-weight="900" fill="#00d4ff">12m - 30m</text>
+      <text x="20" y="135" font-size="11" fill="#94a3b8">
+        <tspan x="20" dy="0">Standard installer spec</tspan>
+        <tspan x="20" dy="16">for premium security.</tspan>
+      </text>
+    </g>
+    <g transform="translate(250, 0)">
+      <rect width="220" height="190" fill="#111827" stroke="#1a2640" stroke-width="1" rx="8" />
+      <rect width="220" height="3" fill="#7c3aed" rx="1.5" />
+      <text x="20" y="35" font-size="10" font-weight="700" fill="#64748b" letter-spacing="1">SYSTEM REQUIREMENT</text>
+      <text x="20" y="65" font-size="13" font-weight="800" fill="#ffffff">Thermal Sensitivity</text>
+      <text x="20" y="100" font-size="15" font-weight="900" fill="#7c3aed">PIR specific</text>
+      <text x="20" y="135" font-size="11" fill="#94a3b8">
+        <tspan x="20" dy="0">Complies with British</tspan>
+        <tspan x="20" dy="16">regulatory standards.</tspan>
+      </text>
+    </g>
+    <g transform="translate(500, 0)">
+      <rect width="220" height="190" fill="#111827" stroke="#1a2640" stroke-width="1" rx="8" />
+      <rect width="220" height="3" fill="#10b981" rx="1.5" />
+      <text x="20" y="35" font-size="10" font-weight="700" fill="#64748b" letter-spacing="1">VERDICT</text>
+      <text x="20" y="65" font-size="13" font-weight="800" fill="#ffffff">Pixel Analysis</text>
+      <text x="20" y="100" font-size="15" font-weight="900" fill="#10b981">Video specific</text>
+      <text x="20" y="135" font-size="11" fill="#94a3b8">
+        <tspan x="20" dy="0">Recommended setup</tspan>
+        <tspan x="20" dy="16">by Gary Pearce.</tspan>
+      </text>
+    </g>
+  </g>
+</svg>
+
+<p>When planning your layout, PIR sensors provide hardware-level precision that is rarely affected by swaying trees or changing light levels. Conversely, video-based analytics depend on the camera's processing power to register pixel shifts, making them better suited for indoor monitoring where environmental conditions remain stable.</p><div class="callout tip">Always mount PIR sensors at the manufacturer's recommended height to ensure the detection zone is optimized for human movement rather than pets.</div>
+<h2 id="section-1">Technical operation and deployment</h2><p><strong>Video-based motion detection</strong> functions by monitoring contrast and movement between sequential frames in a recorded stream. This method allows for 'motion masking,' where you can draw specific zones on your screen to trigger alerts only when activity occurs in high-risk areas.</p><p>Installing these systems requires careful consideration of ambient lighting and frame rates to avoid motion blur, which can lead to missed events. In complex exterior environments, I always recommend supplementing standard video detection with external hardware sensors to verify the threat level before an alert is sent.</p><h2 id="section-2">Best practice and system integration</h2><p><strong>Hybrid security architectures</strong> represent the pinnacle of modern residential protection, combining the physical sensitivity of PIR with the investigative power of high-resolution video. By linking a physical PIR alarm to a camera event, you ensure that recording only begins when a genuine heat-source intrusion is confirmed.</p><p>Compliance with UK privacy standards, such as the DPA 2018, necessitates that your detection zones are strictly limited to your own property boundaries. Proper calibration of sensitivity settings not only improves system reliability but also keeps you in line with 'good neighbour' policies regarding CCTV coverage.</p>
+<h2>Video Walkthrough</h2>
+    <div class="video-wrap">
+      <iframe src="https://www.youtube.com/embed/UBroO_6L7YA" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+<h2 id="comparison-table">The Difference Between PIR and Video-Based Motion Detection Comparison</h2><table class="comparison-table"><thead><tr><th>Method/Standard</th><th>Cost Range</th><th>Difficulty</th><th>Recommendation</th></tr></thead><tbody><tr><td>Video Detection</td><td>£0 (Software)</td><td>Low</td><td>Indoor/Controlled light</td></tr><tr><td>PIR Sensor</td><td>£50-£150</td><td>Medium</td><td>External perimeter</td></tr><tr><td>AI Analytics</td><td>£200+</td><td>High</td><td>Premium total security</td></tr></tbody></table>
+<div class="faq-section"><h2 id="faq-section">Frequently Asked Questions</h2><div class="faq-item">
+        <div class="faq-q">How can I prevent hackers from accessing my motion-triggered camera feeds?</div>
+        <div class="faq-a">Security starts with your login credentials, so please refer to our guide on <a href="why-you-should-never-use-default-passwords-on-your-nvr.html">Why You Should Never Use Default Passwords on Your NVR</a> to ensure your NVR is fully protected against external intrusion.</div>
+      </div><div class="faq-item">
+        <div class="faq-q">Are PIR sensors suitable for entry gates in older properties?</div>
+        <div class="faq-a">They are highly effective, but for listed buildings, I suggest reviewing our guide on <a href="why-you-should-consider-hard-wired-intercoms-for-historic-properties.html">Why You Should Consider Hard-Wired Intercoms for Historic Properties</a> to understand how to integrate these systems aesthetically.</div>
+      </div><div class="faq-item">
+        <div class="faq-q">Will installing extra PIR sensors interfere with my TV reception?</div>
+        <div class="faq-a">Generally, no, but if you are experiencing signal issues, our <a href="tv-aerial-installation-uk.html">TV Aerial Installation UK: Everything You Need to Know</a> provides insights into managing electromagnetic interference around your home.</div>
+      </div><div class="faq-item">
+        <div class="faq-q">How often should I review my motion detection settings?</div>
+        <div class="faq-a">I recommend a biannual assessment; check out <a href="the-importance-of-regular-security-audits-for-small-businesses.html">The Importance of Regular Security Audits for Small Businesses</a> to learn how to keep your security systems performing at their peak.</div>
+      </div><div class="faq-item">
+        <div class="faq-q">What happens if a motion sensor triggers an false alert leading to a police call?</div>
+        <div class="faq-a">False alerts can be costly, so you should ensure you understand the legalities covered in <a href="cctv-evidence-how-to-export-and-store-clips-for-legal-use.html">CCTV Evidence: How to Export and Store Clips for Legal Use</a> regarding handling and storing security footage.</div>
+      </div></div><div id="cta-block" style="margin-top:3rem;padding:2rem;background:linear-gradient(135deg,rgba(0,212,255,0.08),rgba(124,58,237,0.08));border:1px solid rgba(0,212,255,0.3);border-radius:1rem;text-align:center">
+    <div style="font-size:0.72rem;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:0.12em;margin-bottom:0.75rem">🇬🇧 Professional UK Installation</div>
+    <h3 style="font-size:1.3rem;font-weight:800;margin-bottom:0.75rem;letter-spacing:-0.02em">Need a Professional Quote?</h3>
+    <p style="color:var(--light);max-width:480px;margin:0 auto 1.5rem;font-size:0.92rem;line-height:1.7">Our certified UK engineers are ready to help. Get a free, no-obligation quote for professional installation tailored to your property.</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+      <a href="../about.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;text-decoration:none;padding:0.75rem 1.75rem;border-radius:0.5rem;font-weight:700;font-size:0.9rem;transition:opacity 0.2s">📞 Get a Free Quote</a>
+      <a href="../index.html" style="display:inline-flex;align-items:center;gap:0.5rem;border:1px solid var(--border);color:var(--light);text-decoration:none;padding:0.75rem 1.75rem;border-radius:0.5rem;font-weight:600;font-size:0.9rem;transition:border-color 0.2s">← Browse All Guides</a>
+    </div>
+  </div></div><div class="toc" style="margin-top: 3rem;">
+    <div class="toc-title">📋 Table of Contents</div>
+    <ol><li><a href="#section-0">Why this topic matters & Core context</a></li><li><a href="#section-1">Technical operation and deployment</a></li><li><a href="#section-2">Best practice and system integration</a></li><li><a href="#tech-specs-visual">Technical Standards &amp; Reference Guide</a></li><li><a href="#comparison-table">Comparison &amp; Technical Specs</a></li><li><a href="#faq-section">Frequently Asked Questions</a></li></ol></div>
+<div class="author-box">
+  <div class="author-avatar">👷</div>
+  <div>
+    <div class="author-name">Gary Pearce</div>
+    <div class="author-title">UK Home Security & AV Installation Specialist</div>
+    <div class="author-bio">Gary Pearce is a certified AV and home security specialist with over 15 years of experience installing satellite systems, CCTV cameras, and smart home networks across the UK. He shares practical, compliance-focused advice to help UK homeowners get the best possible signal and security.</div>
+  </div>
+</div>
+<div class="related">
+  <div class="related-title">📖 Read Next</div>
+  <div class="related-grid"><a href="comparing-2k-and-4k-cctv-does-higher-resolution-actually-help.html" class="related-link">Comparing 2k And 4k Cctv: Does Higher Resolution Actually Help?<span>📖 Read Guide</span></a><a href="the-science-of-motion-detection-eliminating-false-alarms.html" class="related-link">The Science Of Motion Detection: Eliminating False Alarms<span>📖 Read Guide</span></a><a href="ai-vs-human-monitoring-finding-the-perfect-balance.html" class="related-link">Ai Vs. Human Monitoring: Finding The Perfect Balance<span>📖 Read Guide</span></a></div>
+</div>
+</div>
+<footer>
+  <p>© 2026 CCTV UK Guide &nbsp;•&nbsp; Independent UK security camera advice</p>
+  <p>Visit our <a href="https://cctvblog.mataroa.blog" target="_blank" rel="noopener">main CCTV blog</a> &nbsp;•&nbsp; For professional advice, consult a qualified security installer</p>
+</footer>
+</body>
+</html>

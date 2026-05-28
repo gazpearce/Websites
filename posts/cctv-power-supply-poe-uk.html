@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CCTV Power Supply: PoE vs 12V DC Security Camera Wiring</title>
+<meta name="description" content="How should you power your security cameras? Installer Gary Pearce explains Power over Ethernet (PoE) vs traditional 12V DC power supplies.">
+<meta name="author" content="Gary Pearce">
+<meta property="og:title" content="CCTV Power Supply: PoE vs 12V DC Security Camera Wiring">
+<meta property="og:description" content="How should you power your security cameras? Installer Gary Pearce explains Power over Ethernet (PoE) vs traditional 12V DC power supplies.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="CCTV UK Guide">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<link rel="canonical" href="https://gazpearce.codeberg.page/posts/cctv-power-supply-poe-uk.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "CCTV Power Supply: PoE vs 12V DC Security Camera Wiring", "datePublished": "2026-05-24", "dateModified": "2026-05-24", "author": {"@type": "Person", "name": "Gary Pearce", "url": "https://gazpearce.codeberg.page/about.html"}, "publisher": {"@type": "Organization", "name": "CCTV UK Guide"}, "description": "How should you power your security cameras? Installer Gary Pearce explains Power over Ethernet (PoE) vs traditional 12V DC power supplies."}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can I run a PoE camera cable next to mains electrical wires?", "acceptedAnswer": {"@type": "Answer", "text": "No. Running ethernet cables parallel to 230V mains cables can introduce electromagnetic interference, slowing down your data speed. Keep a minimum gap of 50mm. Learn about cable management in our Cat6 data cabling guide."}}, {"@type": "Question", "name": "Do I need a special switch to power PoE cameras?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, you need a PoE switch that complies with IEEE 802.3af (PoE) or 802.3at (PoE+) standards. Standard network switches do not output power. Check our home network setup guide for hardware recommendations."}}, {"@type": "Question", "name": "Is wired PoE better than wireless CCTV?", "acceptedAnswer": {"@type": "Answer", "text": "Wired PoE is significantly more reliable as it has no Wi-Fi dropouts and provides continuous power. Check our wired vs wireless CCTV guide for weather performance data."}}, {"@type": "Question", "name": "What happens if a PoE cable gets wet?", "acceptedAnswer": {"@type": "Answer", "text": "Water ingress in RJ45 connectors will cause a short circuit, shutting down the port to prevent damage. Always terminate connections in waterproof junction boxes. Learn more in our CCTV maintenance guide."}}, {"@type": "Question", "name": "How much power does a typical CCTV camera consume?", "acceptedAnswer": {"@type": "Answer", "text": "A standard dome camera uses 5–8 watts during the day and up to 15 watts at night when infrared or warm LEDs are active. Read about camera specifications in our best home security cameras guide."}}]}]}</script>
+</head>
+<body>
+<nav>
+  <a href="../index.html" class="nav-brand">🔒 CCTV UK Guide</a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../contact.html">Contact</a></li>
+  </ul>
+</nav>
+<div class="article-header">
+    <div class="article-label">⚡ Installation</div>
+    <h1>CCTV Power Supply: PoE vs 12V DC Security Camera Wiring</h1>
+    <div class="article-meta">
+      <span>📅 Published: May 2026</span>
+      <span class="last-updated">✅ Last updated: 23 May 2026</span>
+      <span>⏱ 8 min read</span>
+      <span>🇬🇧 UK Home Guide</span>
+    </div>
+  </div>
+  <div class="article-wrap">
+    <a href="../index.html" class="back-link">← All Guides</a>
+<div class="llm-answer-block" style="background:var(--bg2);border-left:4px solid var(--accent);padding:1.5rem;margin:2rem 0;border-radius:0 0.5rem 0.5rem 0;font-size:0.95rem;line-height:1.6;">
+      <strong>Direct Answer:</strong> To keep your UK CCTV system running perfectly, perform a physical check every three months to clean lenses and inspect cables, while executing digital health checks—such as verifying hard drive storage and updating firmware—at least once a year to maintain optimal home security and compliance.
+    </div>
+    <div class="article-body"><p>PoE technology allows network cables (like CAT6) to carry electrical power along with data. In a PoE CCTV setup, your cameras plug directly into a PoE NVR or a network switch. This eliminates the need to run separate electrical mains cables or power adapters to each camera location.</p>
+
+<div id="tech-specs-visual" class="visual-block">
+    <h3>⚙️ Technical Standards &amp; Reference Guide</h3>
+    <div class="visual-grid"><div class="visual-card">
+      <div class="visual-label">Cabling Required</div>
+      <div style="font-size: 0.95rem; font-weight: 700; color: var(--text);">Single CAT5e/CAT6 cable</div>
+    </div><div class="visual-card">
+      <div class="visual-label">Max Distance</div>
+      <div style="font-size: 0.95rem; font-weight: 700; color: var(--text);">100 metres (328 feet)</div>
+    </div><div class="visual-card">
+      <div class="visual-label">Voltage Type</div>
+      <div style="font-size: 0.95rem; font-weight: 700; color: var(--text);">48V DC (regulated)</div>
+    </div><div class="visual-card">
+      <div class="visual-label">Part P Compliance</div>
+      <div style="font-size: 0.95rem; font-weight: 700; color: var(--text);">Exempt (safe low-voltage)</div>
+    </div></div></div>
+
+<h2 id="section-0">The Basics of Power over Ethernet (PoE) for CCTV</h2><p><strong>PoE operates on safe low-voltage DC (usually 48V under IEEE 802.3af/at standards) and automatically negotiates power delivery.</strong> This means you cannot damage a non-PoE device by plugging it into a PoE port, making it highly user-friendly for DIY installers.</p>
+
+<svg viewBox="0 0 800 360" width="100%" height="auto" class="svg-infographic" style="border-radius:12px; border:1px solid #1a2640; background:#0d1120; font-family:'Inter', system-ui, -apple-system, sans-serif; margin: 2rem 0; box-shadow: 0 10px 30px rgba(0,0,0,0.25);">
+  <defs>
+    <linearGradient id="svgGrad-014" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0.12" />
+    </linearGradient>
+    <linearGradient id="borderGrad-014" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00d4ff" />
+      <stop offset="100%" stop-color="#7c3aed" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#svgGrad-014)" rx="12" />
+  <rect x="1" y="1" width="798" height="358" fill="none" stroke="url(#borderGrad-014)" stroke-width="1" rx="11" opacity="0.25" />
+  
+  <g transform="translate(40, 45)">
+    <circle cx="20" cy="20" r="20" fill="#111827" stroke="url(#borderGrad-014)" stroke-width="1.5" />
+    <text x="20" y="25" font-size="14" text-anchor="middle" fill="#00d4ff">📊</text>
+    <text x="50" y="15" font-size="11" font-weight="700" fill="#00d4ff" letter-spacing="1.5">TECHNICAL SPECIFICATION DIAGRAM</text>
+    <text x="50" y="32" font-size="15" font-weight="800" fill="#ffffff" letter-spacing="-0.3">CCTV Power Supply: PoE vs 12V DC Security Camera Wiring</text>
+  </g>
+  
+  <g transform="translate(40, 115)">
+    <!-- Column 1 -->
+    <g transform="translate(0, 0)">
+      <rect width="220" height="190" fill="#111827" stroke="#1a2640" stroke-width="1" rx="8" />
+      <rect width="220" height="3" fill="#00d4ff" rx="1.5" />
+      <text x="20" y="35" font-size="10" font-weight="700" fill="#64748b" letter-spacing="1">METRIC / SPEC</text>
+      <text x="20" y="65" font-size="13" font-weight="800" fill="#ffffff">Cabling Required</text>
+      <text x="20" y="100" font-size="15" font-weight="900" fill="#00d4ff">Single CAT5e/CAT6 cable</text>
+      <text x="20" y="135" font-size="11" fill="#94a3b8">
+        <tspan x="20" dy="0">Standard installer spec</tspan>
+        <tspan x="20" dy="16">for premium security.</tspan>
+      </text>
+    </g>
+    
+    <!-- Column 2 -->
+    <g transform="translate(250, 0)">
+      <rect width="220" height="190" fill="#111827" stroke="#1a2640" stroke-width="1" rx="8" />
+      <rect width="220" height="3" fill="#7c3aed" rx="1.5" />
+      <text x="20" y="35" font-size="10" font-weight="700" fill="#64748b" letter-spacing="1">SYSTEM REQUIREMENT</text>
+      <text x="20" y="65" font-size="13" font-weight="800" fill="#ffffff">Max Distance</text>
+      <text x="20" y="100" font-size="15" font-weight="900" fill="#7c3aed">100 metres (328 feet)</text>
+      <text x="20" y="135" font-size="11" fill="#94a3b8">
+        <tspan x="20" dy="0">Complies with British</tspan>
+        <tspan x="20" dy="16">regulatory standards.</tspan>
+      </text>
+    </g>
+    
+    <!-- Column 3 -->
+    <g transform="translate(500, 0)">
+      <rect width="220" height="190" fill="#111827" stroke="#1a2640" stroke-width="1" rx="8" />
+      <rect width="220" height="3" fill="#10b981" rx="1.5" />
+      <text x="20" y="35" font-size="10" font-weight="700" fill="#64748b" letter-spacing="1">VERDICT</text>
+      <text x="20" y="65" font-size="13" font-weight="800" fill="#ffffff">Voltage Type</text>
+      <text x="20" y="100" font-size="15" font-weight="900" fill="#10b981">48V DC (regulated)</text>
+      <text x="20" y="135" font-size="11" fill="#94a3b8">
+        <tspan x="20" dy="0">Recommended setup</tspan>
+        <tspan x="20" dy="16">by Gary Pearce.</tspan>
+      </text>
+    </g>
+  </g>
+</svg>
+
+<h2 id="section-1">Traditional 12V DC Power Supplies: When Are They Used?</h2><p><strong>Older analogue CCTV systems and some budget wireless cameras rely on separate 12V DC power cables.</strong> These systems use a central power supply box (with individual fuses for each camera channel) or separate plug-in wall adapters.</p><p><strong>12V DC wiring suffers from voltage drop over long cable runs.</strong> If you run a thin power cable more than 20 metres, the voltage at the camera may drop below 11V, causing the camera to reboot constantly or fail to turn on its night-vision LEDs. This is a common issue on DIY setups.</p><div class="callout tip">Always choose PoE for new CCTV installations. Only use 12V DC power if you are retrofitting older analogue cabling.</div>
+
+<h2 id="section-2">PoE Switches vs PoE NVRs: Designing Your Layout</h2><p><strong>There are two ways to build a PoE camera network.</strong> The simplest is a PoE NVR, where the recorder has built-in PoE ports on the back. You plug each camera directly into the NVR, creating a plug-and-play, isolated network.</p><p><strong>The second, more flexible method is using an external PoE switch.</strong> The cameras plug into the switch, and a single link cable runs from the switch back to your router or NVR. This layout is ideal if you have multiple cameras on a garage or garden office, as it saves running multiple long cables back to the main house.</p><h2 id="section-3">Installation Safety & UK Electrical Regulations</h2><p><strong>Because PoE and 12V DC are low-voltage systems, they do not fall under the strict Part P registration requirements of UK Building Regulations.</strong> Homeowners can safely run these data cables themselves without hiring a certified electrician.</p><p><strong>However, the central NVR and any PoE switches must be plugged into standard 230V mains sockets.</strong> Ensure these devices are installed in ventilated areas, and never overload extension leads or daisy-chain power strips in your loft or utility cupboard.</p>
+<h2>Video Walkthrough</h2>
+    <div class="video-wrap">
+      <iframe src="https://www.youtube.com/embed/UBroO_6L7YA" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+<h2 id="comparison-table">CCTV Power Supply Comparison</h2><table class="comparison-table"><thead><tr><th>Feature</th><th>PoE (Power over Ethernet)</th><th>12V DC Power Supply</th></tr></thead><tbody><tr><td>Cabling Required</td><td>Single CAT5e/CAT6 cable</td><td>Dual coaxial + power cable</td></tr><tr><td>Max Distance</td><td>100 metres (328 feet)</td><td>20–30 metres (due to voltage drop)</td></tr><tr><td>Voltage Type</td><td>48V DC (regulated)</td><td>12V DC (subject to loss)</td></tr><tr><td>Part P Compliance</td><td>Exempt (safe low-voltage)</td><td>Exempt (safe low-voltage)</td></tr></tbody></table><div class="faq-section"><h2 id="faq-section">Frequently Asked Questions</h2><div class="faq-item">
+        <div class="faq-q">Can I run a PoE camera cable next to mains electrical wires?</div>
+        <div class="faq-a">No. Running ethernet cables parallel to 230V mains cables can introduce electromagnetic interference, slowing down your data speed. Keep a minimum gap of 50mm. Learn about cable management in our <a href="data-cabling-cat6-uk.html">Cat6 data cabling guide</a>.</div>
+      </div><div class="faq-item">
+        <div class="faq-q">Do I need a special switch to power PoE cameras?</div>
+        <div class="faq-a">Yes, you need a PoE switch that complies with IEEE 802.3af (PoE) or 802.3at (PoE+) standards. Standard network switches do not output power. Check our <a href="home-network-setup-uk.html">home network setup guide</a> for hardware recommendations.</div>
+      </div><div class="faq-item">
+        <div class="faq-q">Is wired PoE better than wireless CCTV?</div>
+        <div class="faq-a">Wired PoE is significantly more reliable as it has no Wi-Fi dropouts and provides continuous power. Check our <a href="wired-vs-wireless.html">wired vs wireless CCTV guide</a> for weather performance data.</div>
+      </div><div class="faq-item">
+        <div class="faq-q">What happens if a PoE cable gets wet?</div>
+        <div class="faq-a">Water ingress in RJ45 connectors will cause a short circuit, shutting down the port to prevent damage. Always terminate connections in waterproof junction boxes. Learn more in our <a href="cctv-maintenance-uk.html">CCTV maintenance guide</a>.</div>
+      </div><div class="faq-item">
+        <div class="faq-q">How much power does a typical CCTV camera consume?</div>
+        <div class="faq-a">A standard dome camera uses 5–8 watts during the day and up to 15 watts at night when infrared or warm LEDs are active. Read about camera specifications in our <a href="best-home-security-cameras-uk.html">best home security cameras guide</a>.</div>
+      </div></div><div id="cta-block" style="margin-top:3rem;padding:2rem;background:linear-gradient(135deg,rgba(0,212,255,0.08),rgba(124,58,237,0.08));border:1px solid rgba(0,212,255,0.3);border-radius:1rem;text-align:center">
+    <div style="font-size:0.72rem;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:0.12em;margin-bottom:0.75rem">🇬🇧 Professional UK Installation</div>
+    <h3 style="font-size:1.3rem;font-weight:800;margin-bottom:0.75rem;letter-spacing:-0.02em">Need a Professional Quote?</h3>
+    <p style="color:var(--light);max-width:480px;margin:0 auto 1.5rem;font-size:0.92rem;line-height:1.7">Our certified UK engineers are ready to help. Get a free, no-obligation quote for professional installation tailored to your property.</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+      <a href="../about.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;text-decoration:none;padding:0.75rem 1.75rem;border-radius:0.5rem;font-weight:700;font-size:0.9rem;transition:opacity 0.2s">📞 Get a Free Quote</a>
+      <a href="../index.html" style="display:inline-flex;align-items:center;gap:0.5rem;border:1px solid var(--border);color:var(--light);text-decoration:none;padding:0.75rem 1.75rem;border-radius:0.5rem;font-weight:600;font-size:0.9rem;transition:border-color 0.2s">← Browse All Guides</a>
+    </div>
+  </div></div><div class="toc" style="margin-top: 3rem;">
+    <div class="toc-title">📋 Table of Contents</div>
+    <ol><li><a href="#section-0">The Basics of Power over Ethernet (PoE) for CCTV</a></li><li><a href="#section-1">Traditional 12V DC Power Supplies: When Are They Used?</a></li><li><a href="#section-2">PoE Switches vs PoE NVRs: Designing Your Layout</a></li><li><a href="#section-3">Installation Safety & UK Electrical Regulations</a></li><li><a href="#tech-specs-visual">Technical Standards &amp; Reference Guide</a></li><li><a href="#comparison-table">Comparison &amp; Technical Specs</a></li><li><a href="#faq-section">Frequently Asked Questions</a></li></ol></div>
+<div class="author-box">
+  <div class="author-avatar">👷</div>
+  <div>
+    <div class="author-name">Gary Pearce</div>
+    <div class="author-title">UK Home Security & AV Installation Specialist</div>
+    <div class="author-bio">Gary Pearce is a certified AV and home security specialist with over 15 years of experience installing satellite systems, CCTV cameras, and smart home networks across the UK. He shares practical, compliance-focused advice to help UK homeowners get the best possible signal and security.</div>
+  </div>
+</div>
+<div class="related">
+  <div class="related-title">📖 Read Next</div>
+  <div class="related-grid">
+    <a href="wired-vs-wireless.html" class="related-link">Wired vs Wireless CCTV: Which is Better for UK Weather?<span>📖 ⚡ Installation</span></a><a href="4k-tv-aerial-freeview-uk.html" class="related-link">4K Freeview UK: Do You Need a New Aerial for 4K TV?<span>📖 📺 TV, Aerials & Satellites</span></a><a href="best-home-security-cameras-uk.html" class="related-link">Best Home Security Cameras UK 2026: Features, Brands &amp; Buying Guide<span>📖 📷 CCTV Security</span></a>
+  </div>
+</div>
+</div>
+<footer>
+  <p>© 2026 CCTV UK Guide &nbsp;•&nbsp; Independent UK security camera advice</p>
+  <p>Visit our <a href="https://cctvblog.mataroa.blog" target="_blank" rel="noopener">main CCTV blog</a> &nbsp;•&nbsp; For professional advice, consult a qualified security installer</p>
+</footer>
+</body>
+</html>

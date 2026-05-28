@@ -17,13 +17,17 @@ def get_completed_slugs():
         return set(line.strip() for line in f if line.strip())
 
 def mark_slug_completed(slug):
-    with open(TRACKER_FILE, "a", encoding="utf-8") as f:
-        f.write(f"{slug}\n")
+    completed = get_completed_slugs()
+    if slug not in completed:
+        with open(TRACKER_FILE, "a", encoding="utf-8") as f:
+            f.write(f"{slug}\n")
 
-def get_related_links():
+def get_related_links(exclude_slug=None):
     # Return 3 random links from previously completed slugs
     related = []
     slugs = list(get_completed_slugs())
+    if exclude_slug:
+        slugs = [s for s in slugs if s != exclude_slug]
     import random
     if len(slugs) > 0:
         sample_size = min(3, len(slugs))
@@ -59,7 +63,7 @@ def generate_high_quality_posts(force=False):
     title = data.get("title", "Forensic Intelligence Report")
     print(f"Generating Premium Article: {title}")
     
-    related_links = get_related_links()
+    related_links = get_related_links(exclude_slug=slug)
     
     # We pass generic 'city' and 'service' as we are no longer constrained by the permutations loop
     # The actual body content is fully controlled by aggregated_data.json now.

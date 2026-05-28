@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CCTV Storage Calculator UK: How Many Days Do You Need?</title>
+<meta name="description" content="How much hard drive space does your CCTV system need? Gary Pearce explains H.265+ compression, frame rates, and storage calculations.">
+<meta name="author" content="Gary Pearce">
+<meta property="og:title" content="CCTV Storage Calculator UK: How Many Days Do You Need?">
+<meta property="og:description" content="How much hard drive space does your CCTV system need? Gary Pearce explains H.265+ compression, frame rates, and storage calculations.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="CCTV UK Guide">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<link rel="canonical" href="https://gazpearce.codeberg.page/posts/cctv-data-storage-calculator-uk.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "CCTV Storage Calculator UK: How Many Days Do You Need?", "datePublished": "2026-05-24", "dateModified": "2026-05-24", "author": {"@type": "Person", "name": "Gary Pearce", "url": "https://gazpearce.codeberg.page/about.html"}, "publisher": {"@type": "Organization", "name": "CCTV UK Guide"}, "description": "How much hard drive space does your CCTV system need? Gary Pearce explains H.265+ compression, frame rates, and storage calculations."}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What happens when my NVR hard drive gets full?", "acceptedAnswer": {"@type": "Answer", "text": "By default, all modern CCTV recorders are configured to overwrite the oldest footage automatically. When the drive fills up, the newest day of recording overwrites the oldest day. Make sure to audit this setting as detailed in our CCTV maintenance guide."}}, {"@type": "Question", "name": "Is 1080p resolution good enough to save storage?", "acceptedAnswer": {"@type": "Answer", "text": "1080p saves storage but lacks the detail required to zoom in on faces or number plates beyond 3 metres. We recommend 4MP as a minimum. Compare image standards in our best home security cameras guide."}}, {"@type": "Question", "name": "Can I record my home CCTV directly to the cloud?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, but high-resolution cameras will consume vast amounts of internet upload bandwidth, slowing down your home network. Local storage is preferred. Read about network speeds in our home network setup guide."}}, {"@type": "Question", "name": "How many frames per second should my cameras record?", "acceptedAnswer": {"@type": "Answer", "text": "For residential use, 12 to 15 frames per second (fps) is the sweet spot. Anything higher consumes space unnecessarily, while anything lower can miss quick movements. Learn more in our wired vs wireless CCTV guide."}}, {"@type": "Question", "name": "Are there legal limits on how long I can store CCTV footage in the UK?", "acceptedAnswer": {"@type": "Answer", "text": "For domestic properties, there is no strict legal limit, but storing footage longer than 31 days without a clear security reason is generally discouraged. Check the rules in our CCTV legal guide."}}]}]}</script>
+</head>
+<body>
+<nav>
+  <a href="../index.html" class="nav-brand">🔒 CCTV UK Guide</a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../contact.html">Contact</a></li>
+  </ul>
+</nav>
+<div class="article-header">
+    <div class="article-label">📷 CCTV Security</div>
+    <h1>CCTV Storage Calculator UK: How Many Days Do You Need?</h1>
+    <div class="article-meta">
+      <span>📅 Published: May 2026</span>
+      <span class="last-updated">✅ Last updated: 23 May 2026</span>
+      <span>⏱ 9 min read</span>
+      <span>🇬🇧 UK Home Guide</span>
+    </div>
+  </div>
+  <div class="article-wrap">
+    <a href="../index.html" class="back-link">← All Guides</a>
+<div class="llm-answer-block" style="background:var(--bg2);border-left:4px solid var(--accent);padding:1.5rem;margin:2rem 0;border-radius:0 0.5rem 0.5rem 0;font-size:0.95rem;line-height:1.6;">
+      <strong>Direct Answer:</strong> To keep your UK CCTV system running perfectly, perform a physical check every three months to clean lenses and inspect cables, while executing digital health checks—such as verifying hard drive storage and updating firmware—at least once a year to maintain optimal home security and compliance.
+    </div>
+    <div class="article-body"><p>Calculating CCTV storage requirements is essential to ensure you don't run out of space before an incident is discovered. The total storage needed depends on four primary factors: resolution (4MP vs 4K), frame rate (frames per second, or fps), compression codec (H.264 vs H.265+), and recording schedule (continuous vs motion-detection).</p>
+
+<div id="tech-specs-visual" class="visual-block">
+    <h3>⚙️ Technical Standards &amp; Reference Guide</h3>
+    <div class="visual-grid"><div class="visual-card">
+      <div class="visual-label">4 Cameras</div>
+      <div style="font-size: 0.95rem; font-weight: 700; color: var(--text);">2TB</div>
+    </div><div class="visual-card">
+      <div class="visual-label">4 Cameras</div>
+      <div style="font-size: 0.95rem; font-weight: 700; color: var(--text);">4TB</div>
+    </div><div class="visual-card">
+      <div class="visual-label">8 Cameras</div>
+      <div style="font-size: 0.95rem; font-weight: 700; color: var(--text);">8TB</div>
+    </div><div class="visual-card">
+      <div class="visual-label">4 Cameras</div>
+      <div style="font-size: 0.95rem; font-weight: 700; color: var(--text);">4TB</div>
+    </div></div></div>
+
+<h2 id="section-0">Understanding the Variables of CCTV Storage</h2><p><strong>A higher resolution captures more detail but generates larger file sizes.</strong> For home security, recording at 15fps provides smooth, fluid video while saving substantial hard drive space compared to television-standard 25fps or 30fps.</p>
+
+<svg viewBox="0 0 800 360" width="100%" height="auto" class="svg-infographic" style="border-radius:12px; border:1px solid #1a2640; background:#0d1120; font-family:'Inter', system-ui, -apple-system, sans-serif; margin: 2rem 0; box-shadow: 0 10px 30px rgba(0,0,0,0.25);">
+  <defs>
+    <linearGradient id="svgGrad-008" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0.12" />
+    </linearGradient>
+    <linearGradient id="borderGrad-008" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00d4ff" />
+      <stop offset="100%" stop-color="#7c3aed" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#svgGrad-008)" rx="12" />
+  <rect x="1" y="1" width="798" height="358" fill="none" stroke="url(#borderGrad-008)" stroke-width="1" rx="11" opacity="0.25" />
+  
+  <g transform="translate(40, 45)">
+    <circle cx="20" cy="20" r="20" fill="#111827" stroke="url(#borderGrad-008)" stroke-width="1.5" />
+    <text x="20" y="25" font-size="14" text-anchor="middle" fill="#00d4ff">📊</text>
+    <text x="50" y="15" font-size="11" font-weight="700" fill="#00d4ff" letter-spacing="1.5">TECHNICAL SPECIFICATION DIAGRAM</text>
+    <text x="50" y="32" font-size="15" font-weight="800" fill="#ffffff" letter-spacing="-0.3">CCTV Storage Calculator UK: How Many Days Do You Need?</text>
+  </g>
+  
+  <g transform="translate(40, 115)">
+    <!-- Column 1 -->
+    <g transform="translate(0, 0)">
+      <rect width="220" height="190" fill="#111827" stroke="#1a2640" stroke-width="1" rx="8" />
+      <rect width="220" height="3" fill="#00d4ff" rx="1.5" />
+      <text x="20" y="35" font-size="10" font-weight="700" fill="#64748b" letter-spacing="1">METRIC / SPEC</text>
+      <text x="20" y="65" font-size="13" font-weight="800" fill="#ffffff">4 Cameras</text>
+      <text x="20" y="100" font-size="15" font-weight="900" fill="#00d4ff">2TB</text>
+      <text x="20" y="135" font-size="11" fill="#94a3b8">
+        <tspan x="20" dy="0">Standard installer spec</tspan>
+        <tspan x="20" dy="16">for premium security.</tspan>
+      </text>
+    </g>
+    
+    <!-- Column 2 -->
+    <g transform="translate(250, 0)">
+      <rect width="220" height="190" fill="#111827" stroke="#1a2640" stroke-width="1" rx="8" />
+      <rect width="220" height="3" fill="#7c3aed" rx="1.5" />
+      <text x="20" y="35" font-size="10" font-weight="700" fill="#64748b" letter-spacing="1">SYSTEM REQUIREMENT</text>
+      <text x="20" y="65" font-size="13" font-weight="800" fill="#ffffff">4 Cameras</text>
+      <text x="20" y="100" font-size="15" font-weight="900" fill="#7c3aed">4TB</text>
+      <text x="20" y="135" font-size="11" fill="#94a3b8">
+        <tspan x="20" dy="0">Complies with British</tspan>
+        <tspan x="20" dy="16">regulatory standards.</tspan>
+      </text>
+    </g>
+    
+    <!-- Column 3 -->
+    <g transform="translate(500, 0)">
+      <rect width="220" height="190" fill="#111827" stroke="#1a2640" stroke-width="1" rx="8" />
+      <rect width="220" height="3" fill="#10b981" rx="1.5" />
+      <text x="20" y="35" font-size="10" font-weight="700" fill="#64748b" letter-spacing="1">VERDICT</text>
+      <text x="20" y="65" font-size="13" font-weight="800" fill="#ffffff">8 Cameras</text>
+      <text x="20" y="100" font-size="15" font-weight="900" fill="#10b981">8TB</text>
+      <text x="20" y="135" font-size="11" fill="#94a3b8">
+        <tspan x="20" dy="0">Recommended setup</tspan>
+        <tspan x="20" dy="16">by Gary Pearce.</tspan>
+      </text>
+    </g>
+  </g>
+</svg>
+
+<h2 id="section-1">H.265+ Compression: The Ultimate Storage Saver</h2><p><strong>Video compression is the most critical factor in storage management.</strong> The older H.264 standard is highly inefficient for high-resolution video. The newer H.265 (HEVC) standard halves the bandwidth and storage required.</p><p><strong>Commercial brands like Hikvision have developed H.265+, an advanced smart codec that analyses static backgrounds and only records pixels that are actively moving.</strong> H.265+ reduces storage consumption by up to 70% compared to standard H.265, allowing you to store weeks of 4K footage on modest hard drives.</p><div class="callout tip">Always enable H.265+ or smart compression in your NVR encoding settings to maximise your storage space.</div>
+
+<h2 id="section-2">Choosing between 24/7 Continuous and Motion Recording</h2><p><strong>Continuous recording guarantees you never miss a thing, but it consumes space rapidly.</strong> Motion-only recording saves space by only writing to the hard drive when the camera detects movement. However, older motion detection is easily fooled by trees and rain, creating useless empty files.</p><p><strong>In 2026, NVRs use AI-powered detection (like Hikvision AcuSense) to ignore environmental motion and only record when humans or vehicles are present.</strong> This 'smart motion' recording is highly reliable and can increase storage retention by 300%.</p><h2 id="section-3">Selecting a Surveillance-Grade Hard Drive</h2><p><strong>Never use standard desktop computer hard drives in a CCTV NVR.</strong> NVRs write data continuously 24 hours a day, generating high heat and mechanical stress. Standard drives will fail within a few months.</p><p><strong>Instead, use dedicated surveillance-grade drives, such as Western Digital Purple or Seagate SkyHawk.</strong> These drives are designed specifically for write-intensive workloads, support multi-drive RAID setups, and include firmware optimized to prevent frame loss.</p>
+<h2>Video Walkthrough</h2>
+    <div class="video-wrap">
+      <iframe src="https://www.youtube.com/embed/UBroO_6L7YA" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+<h2 id="comparison-table">CCTV Storage Calculator UK Comparison</h2><table class="comparison-table"><thead><tr><th>Camera Count</th><th>Resolution</th><th>Codec</th><th>Drive Size</th><th>Retention (24/7)</th></tr></thead><tbody><tr><td>4 Cameras</td><td>4MP (2K)</td><td>H.265+</td><td>2TB</td><td>Approx. 14 Days</td></tr><tr><td>4 Cameras</td><td>8MP (4K)</td><td>H.265+</td><td>4TB</td><td>Approx. 14 Days</td></tr><tr><td>8 Cameras</td><td>8MP (4K)</td><td>H.265+</td><td>8TB</td><td>Approx. 14 Days</td></tr><tr><td>4 Cameras</td><td>8MP (4K)</td><td>H.264</td><td>4TB</td><td>Approx. 4 Days</td></tr></tbody></table><div class="faq-section"><h2 id="faq-section">Frequently Asked Questions</h2><div class="faq-item">
+        <div class="faq-q">What happens when my NVR hard drive gets full?</div>
+        <div class="faq-a">By default, all modern CCTV recorders are configured to overwrite the oldest footage automatically. When the drive fills up, the newest day of recording overwrites the oldest day. Make sure to audit this setting as detailed in our <a href="cctv-maintenance-uk.html">CCTV maintenance guide</a>.</div>
+      </div><div class="faq-item">
+        <div class="faq-q">Is 1080p resolution good enough to save storage?</div>
+        <div class="faq-a">1080p saves storage but lacks the detail required to zoom in on faces or number plates beyond 3 metres. We recommend 4MP as a minimum. Compare image standards in our <a href="best-home-security-cameras-uk.html">best home security cameras guide</a>.</div>
+      </div><div class="faq-item">
+        <div class="faq-q">Can I record my home CCTV directly to the cloud?</div>
+        <div class="faq-a">Yes, but high-resolution cameras will consume vast amounts of internet upload bandwidth, slowing down your home network. Local storage is preferred. Read about network speeds in our <a href="home-network-setup-uk.html">home network setup guide</a>.</div>
+      </div><div class="faq-item">
+        <div class="faq-q">How many frames per second should my cameras record?</div>
+        <div class="faq-a">For residential use, 12 to 15 frames per second (fps) is the sweet spot. Anything higher consumes space unnecessarily, while anything lower can miss quick movements. Learn more in our <a href="wired-vs-wireless.html">wired vs wireless CCTV guide</a>.</div>
+      </div><div class="faq-item">
+        <div class="faq-q">Are there legal limits on how long I can store CCTV footage in the UK?</div>
+        <div class="faq-a">For domestic properties, there is no strict legal limit, but storing footage longer than 31 days without a clear security reason is generally discouraged. Check the rules in our <a href="legal-requirements-uk.html">CCTV legal guide</a>.</div>
+      </div></div><div id="cta-block" style="margin-top:3rem;padding:2rem;background:linear-gradient(135deg,rgba(0,212,255,0.08),rgba(124,58,237,0.08));border:1px solid rgba(0,212,255,0.3);border-radius:1rem;text-align:center">
+    <div style="font-size:0.72rem;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:0.12em;margin-bottom:0.75rem">🇬🇧 Professional UK Installation</div>
+    <h3 style="font-size:1.3rem;font-weight:800;margin-bottom:0.75rem;letter-spacing:-0.02em">Need a Professional Quote?</h3>
+    <p style="color:var(--light);max-width:480px;margin:0 auto 1.5rem;font-size:0.92rem;line-height:1.7">Our certified UK engineers are ready to help. Get a free, no-obligation quote for professional installation tailored to your property.</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+      <a href="../about.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;text-decoration:none;padding:0.75rem 1.75rem;border-radius:0.5rem;font-weight:700;font-size:0.9rem;transition:opacity 0.2s">📞 Get a Free Quote</a>
+      <a href="../index.html" style="display:inline-flex;align-items:center;gap:0.5rem;border:1px solid var(--border);color:var(--light);text-decoration:none;padding:0.75rem 1.75rem;border-radius:0.5rem;font-weight:600;font-size:0.9rem;transition:border-color 0.2s">← Browse All Guides</a>
+    </div>
+  </div></div><div class="toc" style="margin-top: 3rem;">
+    <div class="toc-title">📋 Table of Contents</div>
+    <ol><li><a href="#section-0">Understanding the Variables of CCTV Storage</a></li><li><a href="#section-1">H.265+ Compression: The Ultimate Storage Saver</a></li><li><a href="#section-2">Choosing between 24/7 Continuous and Motion Recording</a></li><li><a href="#section-3">Selecting a Surveillance-Grade Hard Drive</a></li><li><a href="#tech-specs-visual">Technical Standards &amp; Reference Guide</a></li><li><a href="#comparison-table">Comparison &amp; Technical Specs</a></li><li><a href="#faq-section">Frequently Asked Questions</a></li></ol></div>
+<div class="author-box">
+  <div class="author-avatar">👷</div>
+  <div>
+    <div class="author-name">Gary Pearce</div>
+    <div class="author-title">UK Home Security & AV Installation Specialist</div>
+    <div class="author-bio">Gary Pearce is a certified AV and home security specialist with over 15 years of experience installing satellite systems, CCTV cameras, and smart home networks across the UK. He shares practical, compliance-focused advice to help UK homeowners get the best possible signal and security.</div>
+  </div>
+</div>
+<div class="related">
+  <div class="related-title">📖 Read Next</div>
+  <div class="related-grid">
+    <a href="best-home-security-cameras-uk.html" class="related-link">Best Home Security Cameras UK 2026: Features, Brands &amp; Buying Guide<span>📖 📷 CCTV Security</span></a><a href="cctv-installation-cost-uk.html" class="related-link">CCTV Installation Cost UK: How Much Should You Pay in 2026?<span>📖 📷 CCTV Security</span></a><a href="cctv-maintenance-uk.html" class="related-link">CCTV Maintenance UK: How to Keep Your System Running Perfectly<span>📖 📷 CCTV Security</span></a>
+  </div>
+</div>
+</div>
+<footer>
+  <p>© 2026 CCTV UK Guide &nbsp;•&nbsp; Independent UK security camera advice</p>
+  <p>Visit our <a href="https://cctvblog.mataroa.blog" target="_blank" rel="noopener">main CCTV blog</a> &nbsp;•&nbsp; For professional advice, consult a qualified security installer</p>
+</footer>
+</body>
+</html>

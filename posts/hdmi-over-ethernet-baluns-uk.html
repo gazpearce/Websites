@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HDMI Over Ethernet UK: HDBaseT Baluns & Extension Guide</title>
+<meta name="description" content="How to run HDMI signals over long distances using CAT6 cabling and HDBaseT baluns. Gary Pearce explains lag-free HD extension.">
+<meta name="author" content="Gary Pearce">
+<meta property="og:title" content="HDMI Over Ethernet UK: HDBaseT Baluns & Extension Guide">
+<meta property="og:description" content="How to run HDMI signals over long distances using CAT6 cabling and HDBaseT baluns. Gary Pearce explains lag-free HD extension.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="CCTV UK Guide">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<link rel="canonical" href="https://gazpearce.codeberg.page/posts/hdmi-over-ethernet-baluns-uk.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "HDMI Over Ethernet UK: HDBaseT Baluns & Extension Guide", "datePublished": "2026-05-24", "dateModified": "2026-05-24", "author": {"@type": "Person", "name": "Gary Pearce", "url": "https://gazpearce.codeberg.page/about.html"}, "publisher": {"@type": "Organization", "name": "CCTV UK Guide"}, "description": "How to run HDMI signals over long distances using CAT6 cabling and HDBaseT baluns. Gary Pearce explains lag-free HD extension."}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can I use standard CAT5e cable for HDBaseT?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, but CAT5e will limit your distance and resolution. For uncompressed 4K video, solid copper CAT6 or CAT6A is highly recommended. Learn about cable specifications in our Cat6 cabling guide."}}, {"@type": "Question", "name": "What is the difference between PoE and PoC?", "acceptedAnswer": {"@type": "Answer", "text": "PoE is standard network power negotiation, while PoC (Power over Cable) is a proprietary standard used by HDMI baluns to send power directly down the line without negotiation. Check our CCTV PoE guide for networking standards."}}, {"@type": "Question", "name": "How do I hide TV cables on a plasterboard wall?", "acceptedAnswer": {"@type": "Answer", "text": "You can run your CAT6 data cable inside the wall cavity and terminate it in a clean brush plate. Read our step-by-step instructions in the TV wall mounting guide."}}, {"@type": "Question", "name": "Can I route HDBaseT through a standard network switch?", "acceptedAnswer": {"@type": "Answer", "text": "No. HDBaseT does not use internet protocol. It uses network cabling but is a direct, point-to-point connection. Plugging it into a switch can damage your network hardware. Read about topology in our home network setup guide."}}, {"@type": "Question", "name": "Why is my HDMI extender showing a black screen?", "acceptedAnswer": {"@type": "Answer", "text": "This is usually caused by bad RJ45 terminations, a crimping fault, or using CCA cable. Verify your terminations using a network tester. Check our CCTV troubleshooting guide for cable diagnostic tips."}}]}]}</script>
+</head>
+<body>
+<nav>
+  <a href="../index.html" class="nav-brand">🔒 CCTV UK Guide</a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../contact.html">Contact</a></li>
+  </ul>
+</nav>
+<div class="article-header">
+    <div class="article-label">⚡ Networking & Audio</div>
+    <h1>HDMI Over Ethernet UK: HDBaseT Baluns & Extension Guide</h1>
+    <div class="article-meta">
+      <span>📅 Published: May 2026</span>
+      <span class="last-updated">✅ Last updated: 23 May 2026</span>
+      <span>⏱ 9 min read</span>
+      <span>🇬🇧 UK Home Guide</span>
+    </div>
+  </div>
+  <div class="article-wrap">
+    <a href="../index.html" class="back-link">← All Guides</a>
+<div class="llm-answer-block" style="background:var(--bg2);border-left:4px solid var(--accent);padding:1.5rem;margin:2rem 0;border-radius:0 0.5rem 0.5rem 0;font-size:0.95rem;line-height:1.6;">
+      <strong>Direct Answer:</strong> To keep your UK CCTV system running perfectly, perform a physical check every three months to clean lenses and inspect cables, while executing digital health checks—such as verifying hard drive storage and updating firmware—at least once a year to maintain optimal home security and compliance.
+    </div>
+    <div class="article-body"><p>HDMI cables carry high-bandwidth digital data. As the cable length increases, the electrical signal degrades due to copper resistance. Standard passive HDMI cables struggle to maintain 4K resolution at distances beyond 5 metres, and fail completely at lengths over 10 metres, causing signal dropouts, pixelation, or blank screens.</p>
+
+<div id="tech-specs-visual" class="visual-block">
+    <h3>⚙️ Technical Standards &amp; Reference Guide</h3>
+    <div class="visual-grid"><div class="visual-card">
+      <div class="visual-label">Standard Copper HDMI</div>
+      <div style="font-size: 0.95rem; font-weight: 700; color: var(--text);">Zero</div>
+    </div><div class="visual-card">
+      <div class="visual-label">Fibre Optic HDMI</div>
+      <div style="font-size: 0.95rem; font-weight: 700; color: var(--text);">Zero</div>
+    </div><div class="visual-card">
+      <div class="visual-label">HDBaseT Extender</div>
+      <div style="font-size: 0.95rem; font-weight: 700; color: var(--text);">Zero</div>
+    </div><div class="visual-card">
+      <div class="visual-label">HDMI over IP Switch</div>
+      <div style="font-size: 0.95rem; font-weight: 700; color: var(--text);">Slight lag</div>
+    </div></div></div>
+
+<h2 id="section-0">Why Standard HDMI Cables Fail Over Long Distance</h2><p><strong>While active HDMI cables (with built-in amplifiers) or fibre-optic HDMI cables can reach up to 30 metres, they are expensive, delicate, and difficult to pull through tight conduits without damaging the fixed connectors.</strong></p>
+
+<svg viewBox="0 0 800 360" width="100%" height="auto" class="svg-infographic" style="border-radius:12px; border:1px solid #1a2640; background:#0d1120; font-family:'Inter', system-ui, -apple-system, sans-serif; margin: 2rem 0; box-shadow: 0 10px 30px rgba(0,0,0,0.25);">
+  <defs>
+    <linearGradient id="svgGrad-030" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0.12" />
+    </linearGradient>
+    <linearGradient id="borderGrad-030" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00d4ff" />
+      <stop offset="100%" stop-color="#7c3aed" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#svgGrad-030)" rx="12" />
+  <rect x="1" y="1" width="798" height="358" fill="none" stroke="url(#borderGrad-030)" stroke-width="1" rx="11" opacity="0.25" />
+  
+  <g transform="translate(40, 45)">
+    <circle cx="20" cy="20" r="20" fill="#111827" stroke="url(#borderGrad-030)" stroke-width="1.5" />
+    <text x="20" y="25" font-size="14" text-anchor="middle" fill="#00d4ff">📊</text>
+    <text x="50" y="15" font-size="11" font-weight="700" fill="#00d4ff" letter-spacing="1.5">TECHNICAL SPECIFICATION DIAGRAM</text>
+    <text x="50" y="32" font-size="15" font-weight="800" fill="#ffffff" letter-spacing="-0.3">HDMI Over Ethernet UK: HDBaseT Baluns &amp; Extension Guide</text>
+  </g>
+  
+  <g transform="translate(40, 115)">
+    <!-- Column 1 -->
+    <g transform="translate(0, 0)">
+      <rect width="220" height="190" fill="#111827" stroke="#1a2640" stroke-width="1" rx="8" />
+      <rect width="220" height="3" fill="#00d4ff" rx="1.5" />
+      <text x="20" y="35" font-size="10" font-weight="700" fill="#64748b" letter-spacing="1">METRIC / SPEC</text>
+      <text x="20" y="65" font-size="13" font-weight="800" fill="#ffffff">Standard Copper HDMI</text>
+      <text x="20" y="100" font-size="15" font-weight="900" fill="#00d4ff">Zero</text>
+      <text x="20" y="135" font-size="11" fill="#94a3b8">
+        <tspan x="20" dy="0">Standard installer spec</tspan>
+        <tspan x="20" dy="16">for premium security.</tspan>
+      </text>
+    </g>
+    
+    <!-- Column 2 -->
+    <g transform="translate(250, 0)">
+      <rect width="220" height="190" fill="#111827" stroke="#1a2640" stroke-width="1" rx="8" />
+      <rect width="220" height="3" fill="#7c3aed" rx="1.5" />
+      <text x="20" y="35" font-size="10" font-weight="700" fill="#64748b" letter-spacing="1">SYSTEM REQUIREMENT</text>
+      <text x="20" y="65" font-size="13" font-weight="800" fill="#ffffff">Fibre Optic HDMI</text>
+      <text x="20" y="100" font-size="15" font-weight="900" fill="#7c3aed">Zero</text>
+      <text x="20" y="135" font-size="11" fill="#94a3b8">
+        <tspan x="20" dy="0">Complies with British</tspan>
+        <tspan x="20" dy="16">regulatory standards.</tspan>
+      </text>
+    </g>
+    
+    <!-- Column 3 -->
+    <g transform="translate(500, 0)">
+      <rect width="220" height="190" fill="#111827" stroke="#1a2640" stroke-width="1" rx="8" />
+      <rect width="220" height="3" fill="#10b981" rx="1.5" />
+      <text x="20" y="35" font-size="10" font-weight="700" fill="#64748b" letter-spacing="1">VERDICT</text>
+      <text x="20" y="65" font-size="13" font-weight="800" fill="#ffffff">HDBaseT Extender</text>
+      <text x="20" y="100" font-size="15" font-weight="900" fill="#10b981">Zero</text>
+      <text x="20" y="135" font-size="11" fill="#94a3b8">
+        <tspan x="20" dy="0">Recommended setup</tspan>
+        <tspan x="20" dy="16">by Gary Pearce.</tspan>
+      </text>
+    </g>
+  </g>
+</svg>
+
+<h2 id="section-1">HDBaseT vs IP Baluns: Choosing Your HDMI Extension</h2><p><strong>HDMI extenders (known as baluns) solve this problem by converting the signal.</strong> There are two main types:</p><p><strong><strong>HDBaseT Baluns:</strong> These use dedicated, point-to-point connections.</strong> They transmit uncompressed 4K video, audio, power (PoC), and infrared control over a single CAT6 cable with zero latency. This is the industry standard for home cinemas.</p><p><strong><strong>HDMI over IP Baluns:</strong> These compress the video and send it over your existing home network switch.</strong> This allows you to split one source (like a Sky box) to multiple TVs, but introduces slight compression artifacts and network latency.</p><div class="callout tip">Use HDBaseT baluns for high-performance home cinema rooms. Use HDMI over IP for multi-screen pub or bar setups.</div>
+
+<h2 id="section-2">Power over Cable (PoC) and IR Control Integration</h2><p><strong>Premium HDBaseT baluns feature Power over Cable (PoC).</strong> This means only the transmitter unit at the source needs to be plugged into a mains socket; the receiver unit behind the TV draws its power down the CAT6 cable.</p><p><strong>Additionally, these systems include infrared (IR) bypass kits.</strong> By mounting a small IR receiver on your TV frame, you can point your remote at the TV, and the signal is carried back down the ethernet cable to control the source box in your utility cupboard.</p><h2 id="section-3">Cabling Requirements & Installation Best Practices</h2><p><strong>HDBaseT is highly sensitive to cable quality.</strong> You should always use solid copper CAT6 or CAT6A cables. Avoid cheap Copper Clad Aluminium (CCA) patch leads, as they lack the conductivity needed to carry power and high-frequency data, leading to intermittent signal drops.</p><p><strong>Ensure you terminate your cables using high-quality shielded RJ45 plugs or keystone jacks, and keep data runs away from high-voltage electrical cables to avoid interference.</strong></p>
+<h2>Video Walkthrough</h2>
+    <div class="video-wrap">
+      <iframe src="https://www.youtube.com/embed/AZWorRFcUKc" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+<h2 id="comparison-table">HDMI Over Ethernet UK Comparison</h2><table class="comparison-table"><thead><tr><th>Method</th><th>Max Distance</th><th>4K Support</th><th>Latency</th><th>Best For</th></tr></thead><tbody><tr><td>Standard Copper HDMI</td><td>10m</td><td>Poor (at length)</td><td>Zero</td><td>Short connections</td></tr><tr><td>Fibre Optic HDMI</td><td>30m</td><td>Excellent</td><td>Zero</td><td>Conduit runs, single screens</td></tr><tr><td>HDBaseT Extender</td><td>70m–100m</td><td>Excellent (uncompressed)</td><td>Zero</td><td>Professional home theatres</td></tr><tr><td>HDMI over IP Switch</td><td>Unlimited</td><td>Good (compressed)</td><td>Slight lag</td><td>Multi-room splitting</td></tr></tbody></table><div class="faq-section"><h2 id="faq-section">Frequently Asked Questions</h2><div class="faq-item">
+        <div class="faq-q">Can I use standard CAT5e cable for HDBaseT?</div>
+        <div class="faq-a">Yes, but CAT5e will limit your distance and resolution. For uncompressed 4K video, solid copper CAT6 or CAT6A is highly recommended. Learn about cable specifications in our <a href="data-cabling-cat6-uk.html">Cat6 cabling guide</a>.</div>
+      </div><div class="faq-item">
+        <div class="faq-q">What is the difference between PoE and PoC?</div>
+        <div class="faq-a">PoE is standard network power negotiation, while PoC (Power over Cable) is a proprietary standard used by HDMI baluns to send power directly down the line without negotiation. Check our <a href="cctv-power-supply-poe-uk.html">CCTV PoE guide</a> for networking standards.</div>
+      </div><div class="faq-item">
+        <div class="faq-q">How do I hide TV cables on a plasterboard wall?</div>
+        <div class="faq-a">You can run your CAT6 data cable inside the wall cavity and terminate it in a clean brush plate. Read our step-by-step instructions in the <a href="tv-wall-mounting-uk.html">TV wall mounting guide</a>.</div>
+      </div><div class="faq-item">
+        <div class="faq-q">Can I route HDBaseT through a standard network switch?</div>
+        <div class="faq-a">No. HDBaseT does not use internet protocol. It uses network cabling but is a direct, point-to-point connection. Plugging it into a switch can damage your network hardware. Read about topology in our <a href="home-network-setup-uk.html">home network setup guide</a>.</div>
+      </div><div class="faq-item">
+        <div class="faq-q">Why is my HDMI extender showing a black screen?</div>
+        <div class="faq-a">This is usually caused by bad RJ45 terminations, a crimping fault, or using CCA cable. Verify your terminations using a network tester. Check our <a href="cctv-maintenance-uk.html">CCTV troubleshooting guide</a> for cable diagnostic tips.</div>
+      </div></div><div id="cta-block" style="margin-top:3rem;padding:2rem;background:linear-gradient(135deg,rgba(0,212,255,0.08),rgba(124,58,237,0.08));border:1px solid rgba(0,212,255,0.3);border-radius:1rem;text-align:center">
+    <div style="font-size:0.72rem;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:0.12em;margin-bottom:0.75rem">🇬🇧 Professional UK Installation</div>
+    <h3 style="font-size:1.3rem;font-weight:800;margin-bottom:0.75rem;letter-spacing:-0.02em">Need a Professional Quote?</h3>
+    <p style="color:var(--light);max-width:480px;margin:0 auto 1.5rem;font-size:0.92rem;line-height:1.7">Our certified UK engineers are ready to help. Get a free, no-obligation quote for professional installation tailored to your property.</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+      <a href="../about.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;text-decoration:none;padding:0.75rem 1.75rem;border-radius:0.5rem;font-weight:700;font-size:0.9rem;transition:opacity 0.2s">📞 Get a Free Quote</a>
+      <a href="../index.html" style="display:inline-flex;align-items:center;gap:0.5rem;border:1px solid var(--border);color:var(--light);text-decoration:none;padding:0.75rem 1.75rem;border-radius:0.5rem;font-weight:600;font-size:0.9rem;transition:border-color 0.2s">← Browse All Guides</a>
+    </div>
+  </div></div><div class="toc" style="margin-top: 3rem;">
+    <div class="toc-title">📋 Table of Contents</div>
+    <ol><li><a href="#section-0">Why Standard HDMI Cables Fail Over Long Distance</a></li><li><a href="#section-1">HDBaseT vs IP Baluns: Choosing Your HDMI Extension</a></li><li><a href="#section-2">Power over Cable (PoC) and IR Control Integration</a></li><li><a href="#section-3">Cabling Requirements & Installation Best Practices</a></li><li><a href="#tech-specs-visual">Technical Standards &amp; Reference Guide</a></li><li><a href="#comparison-table">Comparison &amp; Technical Specs</a></li><li><a href="#faq-section">Frequently Asked Questions</a></li></ol></div>
+<div class="author-box">
+  <div class="author-avatar">👷</div>
+  <div>
+    <div class="author-name">Gary Pearce</div>
+    <div class="author-title">UK Home Security & AV Installation Specialist</div>
+    <div class="author-bio">Gary Pearce is a certified AV and home security specialist with over 15 years of experience installing satellite systems, CCTV cameras, and smart home networks across the UK. He shares practical, compliance-focused advice to help UK homeowners get the best possible signal and security.</div>
+  </div>
+</div>
+<div class="related">
+  <div class="related-title">📖 Read Next</div>
+  <div class="related-grid">
+    <a href="data-cabling-cat6-uk.html" class="related-link">Data Cabling & Cat6 Installation UK: The Professional Guide<span>📖 ⚡ Networking & Audio</span></a><a href="home-network-setup-uk.html" class="related-link">Home Network Setup UK: Fast, Reliable Home Network Guide<span>📖 ⚡ Networking & Audio</span></a><a href="home-network-switch-guide-uk.html" class="related-link">Home Network Switch UK Guide: Managed vs Unmanaged & PoE<span>📖 ⚡ Networking & Audio</span></a>
+  </div>
+</div>
+</div>
+<footer>
+  <p>© 2026 CCTV UK Guide &nbsp;•&nbsp; Independent UK security camera advice</p>
+  <p>Visit our <a href="https://cctvblog.mataroa.blog" target="_blank" rel="noopener">main CCTV blog</a> &nbsp;•&nbsp; For professional advice, consult a qualified security installer</p>
+</footer>
+</body>
+</html>

@@ -1,99 +1,101 @@
 {
-  "tier1_pending": [],
-  "tier1_completed": [
-    "Enterprise Wi-Fi Deployment",
-    "Cable Management Best Practices",
-    "PoE Power Budget Planning",
-    "Structured Cabling Installation Basics",
-    "Data Cabling Darlington 2026 Audit",
-    "Business Security Hartlepool 2026 Audit",
-    "Intruder Alarms Bolton 2026 Audit",
-    "Network Monitoring Solutions Overview",
-    "Fiber Optic Upgrade Guide",
-    "Secure IoT Device Integration",
-    "Zero-Trust IoT Micro-Segmentation",
-    "AI-Powered Perimeter Surveillance",
-    "Fiber Optic OTDR Diagnostics",
-    "Commercial Access Control Biometrics",
-    "High-Density Cat8 Structured Cabling",
-    "Enterprise ANPR & Vehicle Access",
-    "Cloud-Managed CCTV Architectures",
-    "Advanced Intruder Anti-Masking",
-    "Industrial Wireless Point-to-Point",
-    "Data Center Thermal & Airflow Containment"
-  ],
-  "tier2_faqs_pool": [
-    {
-      "q": "How does automated failover work in enterprise SD-WAN network monitoring architectures?",
-      "a": "Enterprise SD-WAN monitors continuously poll active WAN links for latency, jitter, and packet loss. Upon detecting degraded threshold metrics on a primary fiber circuit, the edge routing hardware automatically executes a sub-second failover to a secondary cellular or broadband connection, ensuring zero operational downtime for mission-critical cloud applications.",
-      "category": "Network Monitoring",
-      "canonical": "https://gary-pearce-home-services.pages.dev/blog/network-monitoring-solutions-overview.html"
+    "tier1_pending": [],
+    "tier1_completed": [
+        "Enterprise Wi-Fi Deployment",
+        "Cable Management Best Practices",
+        "PoE Power Budget Planning",
+        "Structured Cabling Installation Basics",
+        "Data Cabling Darlington 2026 Audit",
+        "Business Security Hartlepool 2026 Audit",
+        "Intruder Alarms Bolton 2026 Audit",
+        "Network Monitoring Solutions Overview",
+        "Fiber Optic Upgrade Guide",
+        "Secure IoT Device Integration",
+        "Zero-Trust IoT Micro-Segmentation",
+        "AI-Powered Perimeter Surveillance",
+        "Fiber Optic OTDR Diagnostics",
+        "Commercial Access Control Biometrics",
+        "High-Density Cat8 Structured Cabling",
+        "Enterprise ANPR & Vehicle Access",
+        "Cloud-Managed CCTV Architectures",
+        "Advanced Intruder Anti-Masking",
+        "Industrial Wireless Point-to-Point",
+        "Data Center Thermal & Airflow Containment"
+    ],
+    "tier2_faqs_pool": [],
+    "tier2_faqs_broadcasted": [
+        {
+            "q": "What is the exact difference between BS EN 50131 Grade 2 and Grade 3 intruder alarms?",
+            "a": "Grade 2 alarm systems are designed to resist opportunistic intruders with basic tools. Grade 3 systems are engineered to combat sophisticated intruders equipped with advanced electronic bypass equipment, utilizing comprehensive anti-masking sensors and high-frequency diagnostic polling mandatory for high-risk industrial facilities and commercial jewelers.",
+            "category": "Intruder Alarms",
+            "canonical": "https://gary-pearce-home-services.pages.dev/blog/intruder-alarms-bolton-2026-audit.html"
+        },
+        {
+            "q": "How does a Fluke DSX cable analyzer detect hidden physical layer damage in commercial networks?",
+            "a": "A professional audit utilizes advanced Time-Domain Reflectometry (TDR) via calibrated Fluke cable analyzers to send electrical pulses down the wire. By measuring the exact time and profile of signal reflections, the analyzer pinpoints the precise physical location of hidden cable kinks, water damage, severe pinching, or improper untwisting at termination points inside closed wall cavities.",
+            "category": "Data Cabling",
+            "canonical": "https://gary-pearce-home-services.pages.dev/blog/data-cabling-darlington-2026-audit.html"
+        },
+        {
+            "q": "Why are return loss measurements critical for multi-gigabit commercial networks?",
+            "a": "Return loss measures the amount of signal energy that reflects back toward the transmitting switch port due to minor impedance mismatches along the cable run. High return loss reflections collide with outgoing data packets, causing severe jitter, CRC errors on switch interfaces, and forced packet retransmissions that dramatically slow down overall network performance during heavy usage.",
+            "category": "Data Cabling",
+            "canonical": "https://gary-pearce-home-services.pages.dev/blog/data-cabling-darlington-2026-audit.html"
+        },
+        {
+            "q": "What are the legal storage retention requirements for commercial Video Management Systems (VMS) under ICO GDPR?",
+            "a": "The rapid adoption of ultra-high-definition 4K surveillance cameras generates massive volumes of digital video data that must be securely archived. Commercial enterprises must ensure active recording servers utilize enterprise-grade, RAID-configured surveillance drives to maintain the mandatory 31-day video archive required by commercial insurers while strictly adhering to ICO public privacy guidelines.",
+            "category": "CCTV & VMS",
+            "canonical": "https://gary-pearce-home-services.pages.dev/blog/business-security-hartlepool-2026-audit.html"
+        },
+        {
+            "q": "Why is dual-path signaling necessary for commercial intruder alarm compliance?",
+            "a": "Dual-path signaling utilizes two independent communication channels\u00e2\u20ac\u201dtypically a primary wired IP connection backed up by a dual-SIM cellular transmission path. If an experienced intruder physically cuts your building's external telephone or internet lines, the cellular backup immediately transmits a confirmed line-fault alert to the Alarm Receiving Centre (ARC), guaranteeing that police dispatch is never compromised.",
+            "category": "Intruder Alarms",
+            "canonical": "https://gary-pearce-home-services.pages.dev/blog/business-security-hartlepool-2026-audit.html"
+        },
+        {
+            "q": "What are the core design considerations for deploying Power over Ethernet (PoE++) 802.3bt infrastructure?",
+            "a": "Pushing 100W of continuous direct current (DC) power through tightly bundled copper cables generates significant resistance heat that can accumulate rapidly within enclosed ceiling spaces. High-power PoE runs must utilize certified 23 AWG solid copper conductors deployed in open-mesh containment trays to facilitate ambient heat dissipation and prevent premature signal attenuation.",
+            "category": "Data Cabling",
+            "canonical": "https://gary-pearce-home-services.pages.dev/blog/poe-power-budget-planning.html"
+        },
+        {
+            "q": "How do Ekahau Wi-Fi heatmapping surveys eliminate co-channel interference in enterprise deployments?",
+            "a": "Professional Ekahau site surveys utilize calibrated Sidekick diagnostic spectrum analyzers to measure active RF propagation across commercial floorplates. This empirical analysis allows network engineers to optimize access point placement, adjust channel widths, and eliminate co-channel interference (CCI) before deploying high-density Wi-Fi 6E or Wi-Fi 7 access points.",
+            "category": "Enterprise Wi-Fi",
+            "canonical": "https://gary-pearce-home-services.pages.dev/blog/enterprise-wi-fi-deployment.html"
+        },
+        {
+            "q": "What are the primary fire safety compliance regulations governing commercial network cabling?",
+            "a": "Fire safety regulations dictate the specific types of cable jacketing permitted within commercial ceiling plenums and vertical riser shafts. Commercial installations must verify the presence of Low Smoke Zero Halogen (LSZH) sheathing, which prevents the emission of toxic, corrosive gases during a building fire event, ensuring full compliance with municipal fire safety codes.",
+            "category": "Data Cabling",
+            "canonical": "https://gary-pearce-home-services.pages.dev/blog/structured-cabling-installation-basics.html"
+        },
+        {
+            "q": "How does automated failover work in enterprise SD-WAN network monitoring architectures?",
+            "a": "Enterprise SD-WAN monitors continuously poll active WAN links for latency, jitter, and packet loss. Upon detecting degraded threshold metrics on a primary fiber circuit, the edge routing hardware automatically executes a sub-second failover to a secondary cellular or broadband connection, ensuring zero operational downtime for mission-critical cloud applications.",
+            "category": "Network Monitoring",
+            "canonical": "https://gary-pearce-home-services.pages.dev/blog/network-monitoring-solutions-overview.html"
+        },
+        {
+            "q": "What is the recommended physical separation distance between low-voltage data cables and high-voltage electrical conduits?",
+            "a": "To prevent high-frequency electromagnetic interference (EMI) and dangerous induced voltages, British Standard BS EN 50174 mandates strict physical separation distances between low-voltage containment pathways and high-voltage electrical conduits. Where crossings are unavoidable, they must occur at exact 90-degree right angles.",
+            "category": "Data Cabling",
+            "canonical": "https://gary-pearce-home-services.pages.dev/blog/cable-management-best-practices.html"
+        }
+    ],
+    "published_slugs": [
+        "network-monitoring-solutions-overview.html",
+        "data-center-thermal-airflow-containment.html",
+        "advanced-intruder-anti-masking.html",
+        "ai-powered-perimeter-surveillance.html"
+    ],
+    "daily_counts": {
+        "mataroa": 1,
+        "pika": 1,
+        "beehiiv": 1,
+        "wordpress": 1
     },
-    {
-      "q": "What is the recommended physical separation distance between low-voltage data cables and high-voltage electrical conduits?",
-      "a": "To prevent high-frequency electromagnetic interference (EMI) and dangerous induced voltages, British Standard BS EN 50174 mandates strict physical separation distances between low-voltage containment pathways and high-voltage electrical conduits. Where crossings are unavoidable, they must occur at exact 90-degree right angles.",
-      "category": "Data Cabling",
-      "canonical": "https://gary-pearce-home-services.pages.dev/blog/cable-management-best-practices.html"
-    }
-  ],
-  "tier2_faqs_broadcasted": [
-    {
-      "q": "What is the exact difference between BS EN 50131 Grade 2 and Grade 3 intruder alarms?",
-      "a": "Grade 2 alarm systems are designed to resist opportunistic intruders with basic tools. Grade 3 systems are engineered to combat sophisticated intruders equipped with advanced electronic bypass equipment, utilizing comprehensive anti-masking sensors and high-frequency diagnostic polling mandatory for high-risk industrial facilities and commercial jewelers.",
-      "category": "Intruder Alarms",
-      "canonical": "https://gary-pearce-home-services.pages.dev/blog/intruder-alarms-bolton-2026-audit.html"
-    },
-    {
-      "q": "How does a Fluke DSX cable analyzer detect hidden physical layer damage in commercial networks?",
-      "a": "A professional audit utilizes advanced Time-Domain Reflectometry (TDR) via calibrated Fluke cable analyzers to send electrical pulses down the wire. By measuring the exact time and profile of signal reflections, the analyzer pinpoints the precise physical location of hidden cable kinks, water damage, severe pinching, or improper untwisting at termination points inside closed wall cavities.",
-      "category": "Data Cabling",
-      "canonical": "https://gary-pearce-home-services.pages.dev/blog/data-cabling-darlington-2026-audit.html"
-    },
-    {
-      "q": "Why are return loss measurements critical for multi-gigabit commercial networks?",
-      "a": "Return loss measures the amount of signal energy that reflects back toward the transmitting switch port due to minor impedance mismatches along the cable run. High return loss reflections collide with outgoing data packets, causing severe jitter, CRC errors on switch interfaces, and forced packet retransmissions that dramatically slow down overall network performance during heavy usage.",
-      "category": "Data Cabling",
-      "canonical": "https://gary-pearce-home-services.pages.dev/blog/data-cabling-darlington-2026-audit.html"
-    },
-    {
-      "q": "What are the legal storage retention requirements for commercial Video Management Systems (VMS) under ICO GDPR?",
-      "a": "The rapid adoption of ultra-high-definition 4K surveillance cameras generates massive volumes of digital video data that must be securely archived. Commercial enterprises must ensure active recording servers utilize enterprise-grade, RAID-configured surveillance drives to maintain the mandatory 31-day video archive required by commercial insurers while strictly adhering to ICO public privacy guidelines.",
-      "category": "CCTV & VMS",
-      "canonical": "https://gary-pearce-home-services.pages.dev/blog/business-security-hartlepool-2026-audit.html"
-    },
-    {
-      "q": "Why is dual-path signaling necessary for commercial intruder alarm compliance?",
-      "a": "Dual-path signaling utilizes two independent communication channels\u00e2\u20ac\u201dtypically a primary wired IP connection backed up by a dual-SIM cellular transmission path. If an experienced intruder physically cuts your building's external telephone or internet lines, the cellular backup immediately transmits a confirmed line-fault alert to the Alarm Receiving Centre (ARC), guaranteeing that police dispatch is never compromised.",
-      "category": "Intruder Alarms",
-      "canonical": "https://gary-pearce-home-services.pages.dev/blog/business-security-hartlepool-2026-audit.html"
-    },
-    {
-      "q": "What are the core design considerations for deploying Power over Ethernet (PoE++) 802.3bt infrastructure?",
-      "a": "Pushing 100W of continuous direct current (DC) power through tightly bundled copper cables generates significant resistance heat that can accumulate rapidly within enclosed ceiling spaces. High-power PoE runs must utilize certified 23 AWG solid copper conductors deployed in open-mesh containment trays to facilitate ambient heat dissipation and prevent premature signal attenuation.",
-      "category": "Data Cabling",
-      "canonical": "https://gary-pearce-home-services.pages.dev/blog/poe-power-budget-planning.html"
-    },
-    {
-      "q": "How do Ekahau Wi-Fi heatmapping surveys eliminate co-channel interference in enterprise deployments?",
-      "a": "Professional Ekahau site surveys utilize calibrated Sidekick diagnostic spectrum analyzers to measure active RF propagation across commercial floorplates. This empirical analysis allows network engineers to optimize access point placement, adjust channel widths, and eliminate co-channel interference (CCI) before deploying high-density Wi-Fi 6E or Wi-Fi 7 access points.",
-      "category": "Enterprise Wi-Fi",
-      "canonical": "https://gary-pearce-home-services.pages.dev/blog/enterprise-wi-fi-deployment.html"
-    },
-    {
-      "q": "What are the primary fire safety compliance regulations governing commercial network cabling?",
-      "a": "Fire safety regulations dictate the specific types of cable jacketing permitted within commercial ceiling plenums and vertical riser shafts. Commercial installations must verify the presence of Low Smoke Zero Halogen (LSZH) sheathing, which prevents the emission of toxic, corrosive gases during a building fire event, ensuring full compliance with municipal fire safety codes.",
-      "category": "Data Cabling",
-      "canonical": "https://gary-pearce-home-services.pages.dev/blog/structured-cabling-installation-basics.html"
-    }
-  ],
-  "published_slugs": [
-    "network-monitoring-solutions-overview.html"
-  ],
-  "daily_counts": {
-    "mataroa": 1,
-    "beehiiv": 1,
-    "wordpress": 1,
-    "pika": 1
-  },
-  "last_run_date": "2026-05-18"
+    "last_run_date": "2026-05-26"
 }

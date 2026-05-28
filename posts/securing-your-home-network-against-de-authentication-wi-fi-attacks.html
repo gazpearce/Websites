@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Securing Your Home Network Against 'De-authentication' Wi-Fi Attacks</title>
+<meta name="description" content="Learn how to defend your smart home against Wi-Fi de-authentication attacks. Expert advice from Gary Pearce to keep your CCTV and devices online.">
+<meta name="author" content="Gary Pearce">
+<meta property="og:title" content="Securing Your Home Network Against 'De-authentication' Wi-Fi Attacks">
+<meta property="og:description" content="Learn how to defend your smart home against Wi-Fi de-authentication attacks. Expert advice from Gary Pearce to keep your CCTV and devices online.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="CCTV UK Guide">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<link rel="canonical" href="https://gazpearce.codeberg.page/posts/securing-your-home-network-against-de-authentication-wi-fi-attacks.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Securing Your Home Network Against 'De-authentication' Wi-Fi Attacks", "datePublished": "2026-05-25", "dateModified": "2026-05-25", "author": {"@type": "Person", "name": "Gary Pearce", "url": "https://gazpearce.codeberg.page/about.html"}, "publisher": {"@type": "Organization", "name": "CCTV UK Guide"}, "description": "Learn how to defend your smart home against Wi-Fi de-authentication attacks. Expert advice from Gary Pearce to keep your CCTV and devices online."}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do I secure my intercom system against interference?", "acceptedAnswer": {"@type": "Answer", "text": "Intercoms are a critical entry point for any property, and ensuring they are hardened is vital. To learn more about modern best practices for gated and shared entry systems, read our guide on The Role of Smart Intercoms in Modern Managed Apartment Complexes."}}, {"@type": "Question", "name": "Can a power cut make my CCTV system more vulnerable to de-authentication?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, as routers rebooting can cause temporary handshake vulnerabilities. For comprehensive advice on keeping your cameras online during utility failures, see our guide on The Role of UPS Power Backup for Maintaining CCTV During Power Outages."}}, {"@type": "Question", "name": "Does better network security mean less privacy in the garden?", "acceptedAnswer": {"@type": "Answer", "text": "Not at all; you can have robust cyber defenses while maintaining your visual privacy. Discover how to balance these requirements by reading our guide on Strategies for Balancing Security and Garden Privacy."}}, {"@type": "Question", "name": "Is my existing wireless security at risk due to 5G signal rollout?", "acceptedAnswer": {"@type": "Answer", "text": "Wireless interference is a growing concern for older security hardware operating on overlapping frequencies. Learn the technical details of these risks in our guide on Impact of 5G Rollout on Existing Wireless Security."}}, {"@type": "Question", "name": "How can I check if my router is prone to network snooping?", "acceptedAnswer": {"@type": "Answer", "text": "Router security is the backbone of your home defense strategy against unauthorized access. For detailed steps on hardening your hardware, consult our guide on Preventing Network Snooping: How to Secure Your Router."}}]}]}</script>
+</head>
+<body>
+<nav>
+  <a href="../index.html" class="nav-brand">🔒 CCTV UK Guide</a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../contact.html">Contact</a></li>
+  </ul>
+</nav>
+<div class="article-header">
+    <div class="article-label">📷 CCTV Security</div>
+    <h1>Securing Your Home Network Against 'De-authentication' Wi-Fi Attacks</h1>
+    <div class="article-meta">
+      <span>📅 Published: May 2026</span>
+      <span class="last-updated">✅ Last updated: 23 May 2026</span>
+      <span>⏱ 9 min read</span>
+      <span>🇬🇧 UK Home Guide</span>
+    </div>
+  </div>
+  <div class="article-wrap">
+    <a href="../index.html" class="back-link">← All Guides</a>
+<div class="article-body"><div class="llm-answer-block" style="background:var(--bg2);border-left:4px solid var(--accent);padding:1.5rem;margin:2rem 0;border-radius:0 0.5rem 0.5rem 0;font-size:0.95rem;line-height:1.6;">
+      <strong>Direct Answer:</strong> A de-authentication attack forces Wi-Fi devices to disconnect from the router, often used to sabotage wireless CCTV. To prevent this, transition to wired Ethernet connections, implement 802.11w Protected Management Frames (PMF) on your router, or upgrade to hardware that supports enterprise-grade security protocols.
+    </div>
+<div id="tech-specs-visual" class="visual-block">
+    <h3>⚙️ Technical Standards &amp; Reference Guide</h3>
+    <div class="visual-grid"><div class="visual-card">
+      <div class="visual-label">Protocol Standard</div>
+      <div style="font-size: 0.95rem; font-weight: 700; color: var(--text);">802.11w (PMF)</div>
+    </div><div class="visual-card">
+      <div class="visual-label">Network Layer</div>
+      <div style="font-size: 0.95rem; font-weight: 700; color: var(--text);">VLAN Tagging</div>
+    </div><div class="visual-card">
+      <div class="visual-label">Cable Type</div>
+      <div style="font-size: 0.95rem; font-weight: 700; color: var(--text);">CAT6/CAT6a</div>
+    </div><div class="visual-card">
+      <div class="visual-label">Recommended Security</div>
+      <div style="font-size: 0.95rem; font-weight: 700; color: var(--text);">WPA3</div>
+    </div></div></div>
+
+<h2 id="section-0">Why this topic matters & Core context</h2><p><strong>De-authentication attacks</strong> are a sophisticated method where an intruder sends forged management frames to your wireless devices, effectively 'kicking' them off your network without needing a password. This is particularly dangerous for home security systems, as it can disable wireless CCTV cameras during an attempted break-in.</p>
+
+<svg viewBox="0 0 800 360" width="100%" height="auto" class="svg-infographic" style="border-radius:12px; border:1px solid #1a2640; background:#0d1120; font-family:'Inter', system-ui, -apple-system, sans-serif; margin: 2rem 0; box-shadow: 0 10px 30px rgba(0,0,0,0.25);">
+  <defs>
+    <linearGradient id="svgGrad-218" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0.12" />
+    </linearGradient>
+    <linearGradient id="borderGrad-218" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00d4ff" />
+      <stop offset="100%" stop-color="#7c3aed" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#svgGrad-218)" rx="12" />
+  <rect x="1" y="1" width="798" height="358" fill="none" stroke="url(#borderGrad-218)" stroke-width="1" rx="11" opacity="0.25" />
+  
+  <g transform="translate(40, 45)">
+    <circle cx="20" cy="20" r="20" fill="#111827" stroke="url(#borderGrad-218)" stroke-width="1.5" />
+    <text x="20" y="25" font-size="14" text-anchor="middle" fill="#00d4ff">📊</text>
+    <text x="50" y="15" font-size="11" font-weight="700" fill="#00d4ff" letter-spacing="1.5">TECHNICAL SPECIFICATION DIAGRAM</text>
+    <text x="50" y="32" font-size="15" font-weight="800" fill="#ffffff" letter-spacing="-0.3">Securing Your Home Network Against 'De-authentication' Wi-Fi Attacks</text>
+  </g>
+  
+  <g transform="translate(40, 115)">
+    <g transform="translate(0, 0)">
+      <rect width="220" height="190" fill="#111827" stroke="#1a2640" stroke-width="1" rx="8" />
+      <rect width="220" height="3" fill="#00d4ff" rx="1.5" />
+      <text x="20" y="35" font-size="10" font-weight="700" fill="#64748b" letter-spacing="1">METRIC / SPEC</text>
+      <text x="20" y="65" font-size="13" font-weight="800" fill="#ffffff">Protocol Standard</text>
+      <text x="20" y="100" font-size="15" font-weight="900" fill="#00d4ff">802.11w (PMF)</text>
+      <text x="20" y="135" font-size="11" fill="#94a3b8">
+        <tspan x="20" dy="0">Standard installer spec</tspan>
+        <tspan x="20" dy="16">for premium security.</tspan>
+      </text>
+    </g>
+    <g transform="translate(250, 0)">
+      <rect width="220" height="190" fill="#111827" stroke="#1a2640" stroke-width="1" rx="8" />
+      <rect width="220" height="3" fill="#7c3aed" rx="1.5" />
+      <text x="20" y="35" font-size="10" font-weight="700" fill="#64748b" letter-spacing="1">SYSTEM REQUIREMENT</text>
+      <text x="20" y="65" font-size="13" font-weight="800" fill="#ffffff">Network Layer</text>
+      <text x="20" y="100" font-size="15" font-weight="900" fill="#7c3aed">VLAN Tagging</text>
+      <text x="20" y="135" font-size="11" fill="#94a3b8">
+        <tspan x="20" dy="0">Complies with British</tspan>
+        <tspan x="20" dy="16">regulatory standards.</tspan>
+      </text>
+    </g>
+    <g transform="translate(500, 0)">
+      <rect width="220" height="190" fill="#111827" stroke="#1a2640" stroke-width="1" rx="8" />
+      <rect width="220" height="3" fill="#10b981" rx="1.5" />
+      <text x="20" y="35" font-size="10" font-weight="700" fill="#64748b" letter-spacing="1">VERDICT</text>
+      <text x="20" y="65" font-size="13" font-weight="800" fill="#ffffff">Cable Type</text>
+      <text x="20" y="100" font-size="15" font-weight="900" fill="#10b981">CAT6/CAT6a</text>
+      <text x="20" y="135" font-size="11" fill="#94a3b8">
+        <tspan x="20" dy="0">Recommended setup</tspan>
+        <tspan x="20" dy="16">by Gary Pearce.</tspan>
+      </text>
+    </g>
+  </g>
+</svg>
+
+<p>As a security specialist, I always recommend prioritizing physical hardwiring for critical infrastructure like NVRs and primary cameras. If your home layout makes cabling difficult, ensuring your wireless hardware supports modern security standards is your first line of defense.</p><div class="callout tip">Always verify that your router settings have 'Protected Management Frames' (PMF) enabled, as this is the primary defense against common de-authentication scripts.</div>
+<h2 id="section-1">Mitigating vulnerabilities with hardware standards</h2><p><strong>Protected Management Frames (PMF)</strong>, defined under the 802.11w amendment, provide the necessary authentication layer to prevent forged de-authentication packets. Many older wireless access points lack this feature, leaving them inherently vulnerable to even basic jamming tools available online.</p><p>For a professional installation, we assess the network environment to determine if legacy wireless protocols are hindering overall security. Upgrading to Wi-Fi 6 or 6E hardware significantly improves your ability to manage and block unauthorized management frame traffic.</p><h2 id="section-2">Best practice for resilient network architecture</h2><p><strong>VLAN segmentation</strong> is a best practice that isolates your security devices from your general home traffic, limiting the potential reach of a network-level intrusion. By cordoning off your CCTV cameras into their own subnet, you add an extra layer of difficulty for anyone attempting to map or interfere with your system.</p><p>Compliance with modern cyber-security standards suggests that no smart device should exist on an unmonitored or flat network. Regularly auditing your router's access logs and disabling WPS (Wi-Fi Protected Setup) are foundational steps for any secure home network.</p>
+<h2>Video Walkthrough</h2>
+    <div class="video-wrap">
+      <iframe src="https://www.youtube.com/embed/UBroO_6L7YA" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+<h2 id="comparison-table">Securing Your Home Network Against 'De-authentication' Wi-Fi Attacks Comparison</h2><table class="comparison-table"><thead><tr><th>Method/Standard</th><th>Cost Range</th><th>Difficulty</th><th>Recommendation</th></tr></thead><tbody><tr><td>Wired Ethernet</td><td>£50-£200</td><td>Medium</td><td>Gold standard</td></tr><tr><td>802.11w (PMF) Router</td><td>£100-£300</td><td>Easy</td><td>Essential upgrade</td></tr><tr><td>VLAN Segmentation</td><td>£150+</td><td>Hard</td><td>Advanced security</td></tr></tbody></table>
+<div class="faq-section"><h2 id="faq-section">Frequently Asked Questions</h2><div class="faq-item">
+        <div class="faq-q">How do I secure my intercom system against interference?</div>
+        <div class="faq-a">Intercoms are a critical entry point for any property, and ensuring they are hardened is vital. To learn more about modern best practices for gated and shared entry systems, read our guide on <a href="the-role-of-smart-intercoms-in-modern-managed-apartment-complexes.html">The Role of Smart Intercoms in Modern Managed Apartment Complexes</a>.</div>
+      </div><div class="faq-item">
+        <div class="faq-q">Can a power cut make my CCTV system more vulnerable to de-authentication?</div>
+        <div class="faq-a">Yes, as routers rebooting can cause temporary handshake vulnerabilities. For comprehensive advice on keeping your cameras online during utility failures, see our guide on <a href="the-role-of-ups-power-backup-for-maintaining-cctv-during-power-outages.html">The Role of UPS Power Backup for Maintaining CCTV During Power Outages</a>.</div>
+      </div><div class="faq-item">
+        <div class="faq-q">Does better network security mean less privacy in the garden?</div>
+        <div class="faq-a">Not at all; you can have robust cyber defenses while maintaining your visual privacy. Discover how to balance these requirements by reading our guide on <a href="strategies-for-balancing-security-and-garden-privacy.html">Strategies for Balancing Security and Garden Privacy</a>.</div>
+      </div><div class="faq-item">
+        <div class="faq-q">Is my existing wireless security at risk due to 5G signal rollout?</div>
+        <div class="faq-a">Wireless interference is a growing concern for older security hardware operating on overlapping frequencies. Learn the technical details of these risks in our guide on <a href="impact-of-5g-rollout-on-existing-wireless-security.html">Impact of 5G Rollout on Existing Wireless Security</a>.</div>
+      </div><div class="faq-item">
+        <div class="faq-q">How can I check if my router is prone to network snooping?</div>
+        <div class="faq-a">Router security is the backbone of your home defense strategy against unauthorized access. For detailed steps on hardening your hardware, consult our guide on <a href="preventing-network-snooping-how-to-secure-your-router.html">Preventing Network Snooping: How to Secure Your Router</a>.</div>
+      </div></div><div id="cta-block" style="margin-top:3rem;padding:2rem;background:linear-gradient(135deg,rgba(0,212,255,0.08),rgba(124,58,237,0.08));border:1px solid rgba(0,212,255,0.3);border-radius:1rem;text-align:center">
+    <div style="font-size:0.72rem;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:0.12em;margin-bottom:0.75rem">🇬🇧 Professional UK Installation</div>
+    <h3 style="font-size:1.3rem;font-weight:800;margin-bottom:0.75rem;letter-spacing:-0.02em">Need a Professional Quote?</h3>
+    <p style="color:var(--light);max-width:480px;margin:0 auto 1.5rem;font-size:0.92rem;line-height:1.7">Our certified UK engineers are ready to help. Get a free, no-obligation quote for professional installation tailored to your property.</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+      <a href="../about.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;text-decoration:none;padding:0.75rem 1.75rem;border-radius:0.5rem;font-weight:700;font-size:0.9rem;transition:opacity 0.2s">📞 Get a Free Quote</a>
+      <a href="../index.html" style="display:inline-flex;align-items:center;gap:0.5rem;border:1px solid var(--border);color:var(--light);text-decoration:none;padding:0.75rem 1.75rem;border-radius:0.5rem;font-weight:600;font-size:0.9rem;transition:border-color 0.2s">← Browse All Guides</a>
+    </div>
+  </div></div><div class="toc" style="margin-top: 3rem;">
+    <div class="toc-title">📋 Table of Contents</div>
+    <ol><li><a href="#section-0">Why this topic matters & Core context</a></li><li><a href="#section-1">Mitigating vulnerabilities with hardware standards</a></li><li><a href="#section-2">Best practice for resilient network architecture</a></li><li><a href="#tech-specs-visual">Technical Standards &amp; Reference Guide</a></li><li><a href="#comparison-table">Comparison &amp; Technical Specs</a></li><li><a href="#faq-section">Frequently Asked Questions</a></li></ol></div>
+<div class="author-box">
+  <div class="author-avatar">👷</div>
+  <div>
+    <div class="author-name">Gary Pearce</div>
+    <div class="author-title">UK Home Security & AV Installation Specialist</div>
+    <div class="author-bio">Gary Pearce is a certified AV and home security specialist with over 15 years of experience installing satellite systems, CCTV cameras, and smart home networks across the UK. He shares practical, compliance-focused advice to help UK homeowners get the best possible signal and security.</div>
+  </div>
+</div>
+<div class="related">
+  <div class="related-title">📖 Read Next</div>
+  <div class="related-grid"><a href="how-to-set-up-a-dedicated-vlan-for-your-security-system.html" class="related-link">How To Set Up A Dedicated Vlan For Your Security System<span>📖 Read Guide</span></a><a href="the-importance-of-regular-security-audits-for-modern-smart-homes.html" class="related-link">The Importance Of Regular Security Audits For Modern Smart Homes<span>📖 Read Guide</span></a><a href="why-wired-alarms-lead-in-performance-for-large-houses.html" class="related-link">Why Wired Alarms Lead In Performance For Large Houses<span>📖 Read Guide</span></a></div>
+</div>
+</div>
+<footer>
+  <p>© 2026 CCTV UK Guide &nbsp;•&nbsp; Independent UK security camera advice</p>
+  <p>Visit our <a href="https://cctvblog.mataroa.blog" target="_blank" rel="noopener">main CCTV blog</a> &nbsp;•&nbsp; For professional advice, consult a qualified security installer</p>
+</footer>
+</body>
+</html>

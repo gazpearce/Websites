@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Home Network Switch UK Guide: Managed vs Unmanaged & PoE</title>
+<meta name="description" content="How to choose the best network switch for your home LAN. Gary Pearce compares unmanaged plug-and-play, managed switches, and PoE budgets.">
+<meta name="author" content="Gary Pearce">
+<meta property="og:title" content="Home Network Switch UK Guide: Managed vs Unmanaged & PoE">
+<meta property="og:description" content="How to choose the best network switch for your home LAN. Gary Pearce compares unmanaged plug-and-play, managed switches, and PoE budgets.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="CCTV UK Guide">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<link rel="canonical" href="https://gazpearce.codeberg.page/posts/home-network-switch-guide-uk.html">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Home Network Switch UK Guide: Managed vs Unmanaged & PoE", "datePublished": "2026-05-24", "dateModified": "2026-05-24", "author": {"@type": "Person", "name": "Gary Pearce", "url": "https://gazpearce.codeberg.page/about.html"}, "publisher": {"@type": "Organization", "name": "CCTV UK Guide"}, "description": "How to choose the best network switch for your home LAN. Gary Pearce compares unmanaged plug-and-play, managed switches, and PoE budgets."}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can I daisy-chain network switches in my house?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. You can plug one switch into another to extend your cabling network. However, try to avoid chaining more than three switches, as this can introduce latency and create bandwidth bottlenecks. See our home network setup guide for topology diagrams."}}, {"@type": "Question", "name": "What happens if I plug a non-PoE device into a PoE switch port?", "acceptedAnswer": {"@type": "Answer", "text": "Nothing bad. Standard PoE switches (IEEE 802.3af/at) negotiate power delivery. If they do not detect a compatible PoE signature, they only send data, keeping your non-PoE device safe. Read about PoE safety in our CCTV PoE guide."}}, {"@type": "Question", "name": "What type of ethernet cable should I run between switches?", "acceptedAnswer": {"@type": "Answer", "text": "Use solid copper CAT6 or CAT6A cable. CAT6 supports 10Gbps over short distances, making it ideal for the main link (backhaul) between switches. Check our Cat6 cabling guide for speed ratings."}}, {"@type": "Question", "name": "Does a network switch slow down internet speeds?", "acceptedAnswer": {"@type": "Answer", "text": "No. A high-quality Gigabit switch has a total switching capacity that exceeds all ports running at full speed simultaneously, meaning it will not introduce latency or slow down your connection. Check our home Wi-Fi installation guide for comparison tips."}}, {"@type": "Question", "name": "Where should I locate my central network switch?", "acceptedAnswer": {"@type": "Answer", "text": "Locate it in a central, ventilated area like a utility room cupboard or under-stairs closet. Avoid tight lofts that get excessively hot in summer. Learn about hardware maintenance in our CCTV maintenance guide."}}]}]}</script>
+</head>
+<body>
+<nav>
+  <a href="../index.html" class="nav-brand">🔒 CCTV UK Guide</a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../contact.html">Contact</a></li>
+  </ul>
+</nav>
+<div class="article-header">
+    <div class="article-label">⚡ Networking & Audio</div>
+    <h1>Home Network Switch UK Guide: Managed vs Unmanaged & PoE</h1>
+    <div class="article-meta">
+      <span>📅 Published: May 2026</span>
+      <span class="last-updated">✅ Last updated: 23 May 2026</span>
+      <span>⏱ 8 min read</span>
+      <span>🇬🇧 UK Home Guide</span>
+    </div>
+  </div>
+  <div class="article-wrap">
+    <a href="../index.html" class="back-link">← All Guides</a>
+<div class="llm-answer-block" style="background:var(--bg2);border-left:4px solid var(--accent);padding:1.5rem;margin:2rem 0;border-radius:0 0.5rem 0.5rem 0;font-size:0.95rem;line-height:1.6;">
+      <strong>Direct Answer:</strong> To keep your UK CCTV system running perfectly, perform a physical check every three months to clean lenses and inspect cables, while executing digital health checks—such as verifying hard drive storage and updating firmware—at least once a year to maintain optimal home security and compliance.
+    </div>
+    <div class="article-body"><p>Most UK ISP routers (like those from BT, Sky, or Virgin Media) only feature four ethernet ports on the back. As you connect smart TVs, game consoles, security systems, and mesh nodes, you quickly run out of physical ports.</p>
+
+<div id="tech-specs-visual" class="visual-block">
+    <h3>⚙️ Technical Standards &amp; Reference Guide</h3>
+    <div class="visual-grid"><div class="visual-card">
+      <div class="visual-label">Unmanaged Gigabit Switch</div>
+      <div style="font-size: 0.95rem; font-weight: 700; color: var(--text);">Yes (on PoE models)</div>
+    </div><div class="visual-card">
+      <div class="visual-label">Smart Managed Switch</div>
+      <div style="font-size: 0.95rem; font-weight: 700; color: var(--text);">Yes</div>
+    </div><div class="visual-card">
+      <div class="visual-label">Fully Managed Switch</div>
+      <div style="font-size: 0.95rem; font-weight: 700; color: var(--text);">Yes</div>
+    </div></div></div>
+
+<h2 id="section-0">What is a Network Switch & Why Do You Need One?</h2><p><strong>A network switch acts like an electrical extension lead for your network.</strong> You connect one port on the switch to your router, and the other ports on the switch become available to expand your wired network. A switch directs data traffic specifically between devices, maintaining high speeds.</p>
+
+<svg viewBox="0 0 800 360" width="100%" height="auto" class="svg-infographic" style="border-radius:12px; border:1px solid #1a2640; background:#0d1120; font-family:'Inter', system-ui, -apple-system, sans-serif; margin: 2rem 0; box-shadow: 0 10px 30px rgba(0,0,0,0.25);">
+  <defs>
+    <linearGradient id="svgGrad-034" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0.12" />
+    </linearGradient>
+    <linearGradient id="borderGrad-034" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00d4ff" />
+      <stop offset="100%" stop-color="#7c3aed" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#svgGrad-034)" rx="12" />
+  <rect x="1" y="1" width="798" height="358" fill="none" stroke="url(#borderGrad-034)" stroke-width="1" rx="11" opacity="0.25" />
+  
+  <g transform="translate(40, 45)">
+    <circle cx="20" cy="20" r="20" fill="#111827" stroke="url(#borderGrad-034)" stroke-width="1.5" />
+    <text x="20" y="25" font-size="14" text-anchor="middle" fill="#00d4ff">📊</text>
+    <text x="50" y="15" font-size="11" font-weight="700" fill="#00d4ff" letter-spacing="1.5">TECHNICAL SPECIFICATION DIAGRAM</text>
+    <text x="50" y="32" font-size="15" font-weight="800" fill="#ffffff" letter-spacing="-0.3">Home Network Switch UK Guide: Managed vs Unmanaged &amp; PoE</text>
+  </g>
+  
+  <g transform="translate(40, 115)">
+    <!-- Column 1 -->
+    <g transform="translate(0, 0)">
+      <rect width="220" height="190" fill="#111827" stroke="#1a2640" stroke-width="1" rx="8" />
+      <rect width="220" height="3" fill="#00d4ff" rx="1.5" />
+      <text x="20" y="35" font-size="10" font-weight="700" fill="#64748b" letter-spacing="1">METRIC / SPEC</text>
+      <text x="20" y="65" font-size="13" font-weight="800" fill="#ffffff">Unmanaged Gigabit Switch</text>
+      <text x="20" y="100" font-size="15" font-weight="900" fill="#00d4ff">Yes (on PoE models)</text>
+      <text x="20" y="135" font-size="11" fill="#94a3b8">
+        <tspan x="20" dy="0">Standard installer spec</tspan>
+        <tspan x="20" dy="16">for premium security.</tspan>
+      </text>
+    </g>
+    
+    <!-- Column 2 -->
+    <g transform="translate(250, 0)">
+      <rect width="220" height="190" fill="#111827" stroke="#1a2640" stroke-width="1" rx="8" />
+      <rect width="220" height="3" fill="#7c3aed" rx="1.5" />
+      <text x="20" y="35" font-size="10" font-weight="700" fill="#64748b" letter-spacing="1">SYSTEM REQUIREMENT</text>
+      <text x="20" y="65" font-size="13" font-weight="800" fill="#ffffff">Smart Managed Switch</text>
+      <text x="20" y="100" font-size="15" font-weight="900" fill="#7c3aed">Yes</text>
+      <text x="20" y="135" font-size="11" fill="#94a3b8">
+        <tspan x="20" dy="0">Complies with British</tspan>
+        <tspan x="20" dy="16">regulatory standards.</tspan>
+      </text>
+    </g>
+    
+    <!-- Column 3 -->
+    <g transform="translate(500, 0)">
+      <rect width="220" height="190" fill="#111827" stroke="#1a2640" stroke-width="1" rx="8" />
+      <rect width="220" height="3" fill="#10b981" rx="1.5" />
+      <text x="20" y="35" font-size="10" font-weight="700" fill="#64748b" letter-spacing="1">VERDICT</text>
+      <text x="20" y="65" font-size="13" font-weight="800" fill="#ffffff">Fully Managed Switch</text>
+      <text x="20" y="100" font-size="15" font-weight="900" fill="#10b981">Yes</text>
+      <text x="20" y="135" font-size="11" fill="#94a3b8">
+        <tspan x="20" dy="0">Recommended setup</tspan>
+        <tspan x="20" dy="16">by Gary Pearce.</tspan>
+      </text>
+    </g>
+  </g>
+</svg>
+
+<h2 id="section-1">Managed vs Unmanaged Switches: Simple Comparisons</h2><p><strong><strong>Unmanaged Switches:</strong> These are completely plug-and-play.</strong> They have no software interface, require no setup, and automatically negotiate connection speeds. They are cheap, reliable, and ideal for standard home entertainment systems.</p><p><strong><strong>Managed Switches:</strong> These offer advanced control over your network traffic.</strong> They allow you to configure VLANs (Virtual Local Area Networks) to isolate smart home devices or IP cameras from your main computers, improving security. They also support QoS (Quality of Service) to prioritise gaming or video call traffic.</p><div class="callout tip">Use unmanaged switches for standard home devices. Use managed switches if you want to partition your smart home network for security.</div>
+
+<h2 id="section-2">PoE Switches: Calculating Your Power Budget</h2><p><strong>A PoE (Power over Ethernet) switch sends power down the network cable to devices like security cameras, wireless access points, and VoIP phones.</strong> When buying a PoE switch, check its 'PoE Power Budget'.</p><p><strong>If a switch has 8 ports but a total power budget of only 60 watts, you cannot connect 8 cameras that consume 10 watts each.</strong> Exceeding the power budget will cause the switch to shut down ports, taking your devices offline.</p><h2 id="section-3">Switch Speeds: Gigabit, 2.5Gbps, and Future-Proofing</h2><p><strong>While Gigabit (1000Mbps) switches are the standard in 2026, 2.5Gbps and 10Gbps switches are becoming popular as UK broadband speeds exceed 1Gbps.</strong> If you have a fast fibre connection, using a 2.5Gbps switch for your main PC and network storage (NAS) ensures you don't bottleneck your local transfer speeds.</p><p><strong>Always choose switches with metal casings.</strong> Metal casings dissipate heat much better than plastic, extending the lifespan of the internal capacitors and preventing lockups under heavy network loads.</p>
+<h2>Video Walkthrough</h2>
+    <div class="video-wrap">
+      <iframe src="https://www.youtube.com/embed/AZWorRFcUKc" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+<h2 id="comparison-table">Home Network Switch UK Guide Comparison</h2><table class="comparison-table"><thead><tr><th>Type</th><th>Setup Required</th><th>VLAN Support</th><th>PoE Option</th><th>Average Cost</th></tr></thead><tbody><tr><td>Unmanaged Gigabit Switch</td><td>None (Plug-and-Play)</td><td>No</td><td>Yes (on PoE models)</td><td>£15–£40</td></tr><tr><td>Smart Managed Switch</td><td>Web Interface (Simple)</td><td>Yes</td><td>Yes</td><td>£40–£90</td></tr><tr><td>Fully Managed Switch</td><td>CLI / Web (Complex)</td><td>Yes</td><td>Yes</td><td>£90–£200+</td></tr></tbody></table><div class="faq-section"><h2 id="faq-section">Frequently Asked Questions</h2><div class="faq-item">
+        <div class="faq-q">Can I daisy-chain network switches in my house?</div>
+        <div class="faq-a">Yes. You can plug one switch into another to extend your cabling network. However, try to avoid chaining more than three switches, as this can introduce latency and create bandwidth bottlenecks. See our <a href="home-network-setup-uk.html">home network setup guide</a> for topology diagrams.</div>
+      </div><div class="faq-item">
+        <div class="faq-q">What happens if I plug a non-PoE device into a PoE switch port?</div>
+        <div class="faq-a">Nothing bad. Standard PoE switches (IEEE 802.3af/at) negotiate power delivery. If they do not detect a compatible PoE signature, they only send data, keeping your non-PoE device safe. Read about PoE safety in our <a href="cctv-power-supply-poe-uk.html">CCTV PoE guide</a>.</div>
+      </div><div class="faq-item">
+        <div class="faq-q">What type of ethernet cable should I run between switches?</div>
+        <div class="faq-a">Use solid copper CAT6 or CAT6A cable. CAT6 supports 10Gbps over short distances, making it ideal for the main link (backhaul) between switches. Check our <a href="data-cabling-cat6-uk.html">Cat6 cabling guide</a> for speed ratings.</div>
+      </div><div class="faq-item">
+        <div class="faq-q">Does a network switch slow down internet speeds?</div>
+        <div class="faq-a">No. A high-quality Gigabit switch has a total switching capacity that exceeds all ports running at full speed simultaneously, meaning it will not introduce latency or slow down your connection. Check our <a href="wifi-installation-uk.html">home Wi-Fi installation guide</a> for comparison tips.</div>
+      </div><div class="faq-item">
+        <div class="faq-q">Where should I locate my central network switch?</div>
+        <div class="faq-a">Locate it in a central, ventilated area like a utility room cupboard or under-stairs closet. Avoid tight lofts that get excessively hot in summer. Learn about hardware maintenance in our <a href="cctv-maintenance-uk.html">CCTV maintenance guide</a>.</div>
+      </div></div><div id="cta-block" style="margin-top:3rem;padding:2rem;background:linear-gradient(135deg,rgba(0,212,255,0.08),rgba(124,58,237,0.08));border:1px solid rgba(0,212,255,0.3);border-radius:1rem;text-align:center">
+    <div style="font-size:0.72rem;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:0.12em;margin-bottom:0.75rem">🇬🇧 Professional UK Installation</div>
+    <h3 style="font-size:1.3rem;font-weight:800;margin-bottom:0.75rem;letter-spacing:-0.02em">Need a Professional Quote?</h3>
+    <p style="color:var(--light);max-width:480px;margin:0 auto 1.5rem;font-size:0.92rem;line-height:1.7">Our certified UK engineers are ready to help. Get a free, no-obligation quote for professional installation tailored to your property.</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+      <a href="../about.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;text-decoration:none;padding:0.75rem 1.75rem;border-radius:0.5rem;font-weight:700;font-size:0.9rem;transition:opacity 0.2s">📞 Get a Free Quote</a>
+      <a href="../index.html" style="display:inline-flex;align-items:center;gap:0.5rem;border:1px solid var(--border);color:var(--light);text-decoration:none;padding:0.75rem 1.75rem;border-radius:0.5rem;font-weight:600;font-size:0.9rem;transition:border-color 0.2s">← Browse All Guides</a>
+    </div>
+  </div></div><div class="toc" style="margin-top: 3rem;">
+    <div class="toc-title">📋 Table of Contents</div>
+    <ol><li><a href="#section-0">What is a Network Switch & Why Do You Need One?</a></li><li><a href="#section-1">Managed vs Unmanaged Switches: Simple Comparisons</a></li><li><a href="#section-2">PoE Switches: Calculating Your Power Budget</a></li><li><a href="#section-3">Switch Speeds: Gigabit, 2.5Gbps, and Future-Proofing</a></li><li><a href="#tech-specs-visual">Technical Standards &amp; Reference Guide</a></li><li><a href="#comparison-table">Comparison &amp; Technical Specs</a></li><li><a href="#faq-section">Frequently Asked Questions</a></li></ol></div>
+<div class="author-box">
+  <div class="author-avatar">👷</div>
+  <div>
+    <div class="author-name">Gary Pearce</div>
+    <div class="author-title">UK Home Security & AV Installation Specialist</div>
+    <div class="author-bio">Gary Pearce is a certified AV and home security specialist with over 15 years of experience installing satellite systems, CCTV cameras, and smart home networks across the UK. He shares practical, compliance-focused advice to help UK homeowners get the best possible signal and security.</div>
+  </div>
+</div>
+<div class="related">
+  <div class="related-title">📖 Read Next</div>
+  <div class="related-grid">
+    <a href="data-cabling-cat6-uk.html" class="related-link">Data Cabling & Cat6 Installation UK: The Professional Guide<span>📖 ⚡ Networking & Audio</span></a><a href="hdmi-over-ethernet-baluns-uk.html" class="related-link">HDMI Over Ethernet UK: HDBaseT Baluns & Extension Guide<span>📖 ⚡ Networking & Audio</span></a><a href="home-network-setup-uk.html" class="related-link">Home Network Setup UK: Fast, Reliable Home Network Guide<span>📖 ⚡ Networking & Audio</span></a>
+  </div>
+</div>
+</div>
+<footer>
+  <p>© 2026 CCTV UK Guide &nbsp;•&nbsp; Independent UK security camera advice</p>
+  <p>Visit our <a href="https://cctvblog.mataroa.blog" target="_blank" rel="noopener">main CCTV blog</a> &nbsp;•&nbsp; For professional advice, consult a qualified security installer</p>
+</footer>
+</body>
+</html>

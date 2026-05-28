@@ -51,7 +51,7 @@ disableHugoGeneratorInject = true
 
   [params.homeInfoParams]
     Title = "Expert CCTV & Security Guides for 2026"
-    Content = "Authoritative, up-to-date guides on CCTV installation, security systems, and compliance across the UK. Written by Gary Pearce — NSI/SSAIB certified installer with years of hands-on experience across Newcastle, Durham, Sunderland, Middlesbrough, and beyond."
+    Content = "Authoritative, up-to-date guides on CCTV installation, security systems, and compliance across the UK. Written by Gary Pearce — NSI/SSAIB certified installer with years of hands-on experience across Newcastle, Durham, Sunderland, Middlesbrough, and beyond. Explore our [blogs network](/about/#blogs-network) to view all our authority platforms and regional guides."
 
   [[params.socialIcons]]
     name = "github"
